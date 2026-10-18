@@ -9,7 +9,7 @@ GIVE_UP_DAYS = 3       # 接口只保留 3 天比分，超过就标记为无法�
 
 
 def run(db, meta):
-    key = os.environ.get("ODDS_API_KEY")
+    key = (os.environ.get("ODDS_API_KEY") or "").strip()
     if not key:
         log(meta, "赛果：缺少 ODDS_API_KEY，跳过")
         return

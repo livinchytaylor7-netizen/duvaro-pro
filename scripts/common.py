@@ -52,7 +52,7 @@ def load(path, default):
 def redact(text):
     """把密钥从任何要保存的文本里抹掉（仓库是公开的）。"""
     for name in ("ODDS_API_KEY", "GEMINI_API_KEY"):
-        v = os.environ.get(name)
+        v = (os.environ.get(name) or "").strip()
         if v and len(v) >= 8:
             text = text.replace(v, "***")
     text = re.sub(r"https://vertexaisearch\.cloud\.google\.com/[^\"\s]*", "", text)

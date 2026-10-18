@@ -101,7 +101,7 @@ def _plan(db, meta, league, t):
 
 
 def run(db, meta, force=False):
-    key = os.environ.get("ODDS_API_KEY")
+    key = (os.environ.get("ODDS_API_KEY") or "").strip()
     if not key:
         log(meta, "赔率：缺少 ODDS_API_KEY，跳过")
         return

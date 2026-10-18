@@ -162,7 +162,7 @@ def analyze(match, key, t):
 
 
 def run(db, meta):
-    key = os.environ.get("GEMINI_API_KEY")
+    key = (os.environ.get("GEMINI_API_KEY") or "").strip()
     if not key:
         log(meta, "AI：缺少 GEMINI_API_KEY，跳过")
         return
