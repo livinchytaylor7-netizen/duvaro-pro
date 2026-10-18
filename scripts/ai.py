@@ -190,6 +190,11 @@ def _analyze_any(m, key, t, meta):
         except ModelUnavailable as e:
             errs.append(str(e)[:700])
     meta["gemini_errors"] = errs
+    # 诊断：不带搜索调用一次最便宜的模型，判断是“搜索不免费”还是“整个账号没有免费额度”
+    st, data, _ = http_json(GEMINI_URL.format(model="gemini-3.5-flash-lite"),
+                            body={"contents": [{"role": "user", "parts": [{"text": "Reply with OK"}]}]},
+                            headers={"x-goog-api-key": key}, timeout=60)
+    meta["gemini_probe_no_search"] = {"status": st, "body": str(data)[:400], "at": iso(now())}
     raise RuntimeError("所有模型都不可用（详见 meta.gemini_errors）")
 
 

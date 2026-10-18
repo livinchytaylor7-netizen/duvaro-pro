@@ -2191,12 +2191,6 @@
    "odds_at": "2026-10-18T15:43:40Z"
   },
   "f9403dd597edbfaa73abdc974e55344c": {
-   "ai": {
-    "at": "2026-10-18T15:48:15Z",
-    "error": "所有模型都不可用（详见 meta.gemini_errors）",
-    "status": "failed",
-    "tries": 1
-   },
    "away": "Atalanta BC",
    "books": {
     "betfair_ex_uk": {
