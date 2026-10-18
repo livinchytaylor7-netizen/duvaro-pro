@@ -1,6 +1,12 @@
 {
  "matches": {
   "07014d9adc65ca39710bd9f0c7c0d3f0": {
+   "ai": {
+    "at": "2026-10-18T16:06:23Z",
+    "error": "Gemini gemini-3.8-flash 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+    "status": "failed",
+    "tries": 1
+   },
    "away": "Torino",
    "books": {
     "betfair_ex_uk": {
@@ -336,6 +342,105 @@
    "odds_at": "2026-10-18T15:43:40Z"
   },
   "1051298b4aca6f07113309bff598a5c1": {
+   "ai": {
+    "adjustments": [],
+    "at": "2026-10-18T16:05:34Z",
+    "base": {
+     "lam_a": 1.736,
+     "lam_h": 1.319
+    },
+    "confidence": "high",
+    "lam_a": 1.736,
+    "lam_h": 1.319,
+    "model": "gemini-3.8-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.4642,
+     "d": 0.2522,
+     "h": 0.2835
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-18",
+      "source": "Yahoo Sports",
+      "team": "home",
+      "title": "🚨Line-ups confirmed: Málaga aim to bounce back against Real Sociedad",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "OneFootball",
+      "team": "home",
+      "title": "Real Sociedad’s possible line-up to face Málaga in LaLiga EA Sports",
+      "url": "https://onefootball.com"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "OneFootball",
+      "team": "home",
+      "title": "El Sur supporters’ club hosts Real Sociedad fans in Málaga",
+      "url": "https://onefootball.com"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "Sportsgambler",
+      "team": "home",
+      "title": "Málaga vs Real Sociedad Prediction, Betting Tips, Lineups & Odds | 18 Oct 2026",
+      "url": "https://www.sportsgambler.com"
+     },
+     {
+      "date": "2026-10-17",
+      "source": "OneFootball",
+      "team": "home",
+      "title": "La Real seek to rediscover their smile at Málaga",
+      "url": "https://onefootball.com"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "WhoScored.com",
+      "team": "away",
+      "title": "Malaga vs Real Sociedad: Lineups, Prediction, Odds & Bet Builder Tip",
+      "url": "https://www.whoscored.com"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "Oddschecker",
+      "team": "away",
+      "title": "Malaga vs Real Sociedad: Lineups, Prediction, Betting Tips & Odds",
+      "url": "https://www.oddschecker.com"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "The New York Times",
+      "team": "away",
+      "title": "How to watch Real Sociedad vs. Malaga CF in the U.S.: TV channel and streaming options for October 18",
+      "url": "https://www.nytimes.com"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "WhoScored.com",
+      "team": "away",
+      "title": "Malaga vs Real Sociedad Confirmed Lineups",
+      "url": "https://www.whoscored.com"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "OneFootball",
+      "team": "away",
+      "title": "Real Sociedad’s possible line-up to face Málaga in LaLiga EA Sports",
+      "url": "https://onefootball.com"
+     }
+    ],
+    "status": "ok",
+    "summary": "新闻仅包含常规赛前预览与首发确认，未见具体伤停突发信息",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1165,
+    "tries": 1
+   },
    "away": "Real Sociedad",
    "books": {
     "betfair_ex_uk": {
@@ -736,6 +841,113 @@
    "odds_at": "2026-10-18T15:43:40Z"
   },
   "4a88bc4de574d43ef34677fd8d78722f": {
+   "ai": {
+    "adjustments": [
+     {
+      "category": "injury",
+      "delta": 0.05,
+      "reason": "伊西与库姆布拉伤愈回归，主力右后卫拉蒂乌伤缺",
+      "source": "Comuniate",
+      "team": "away"
+     }
+    ],
+    "at": "2026-10-18T16:06:37Z",
+    "base": {
+     "lam_a": 1.097,
+     "lam_h": 1.015
+    },
+    "confidence": "medium",
+    "lam_a": 1.147,
+    "lam_h": 1.015,
+    "model": "gemini-3.8-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.376,
+     "d": 0.315,
+     "h": 0.3091
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-18",
+      "source": "Sportsgambler",
+      "team": "home",
+      "title": "Getafe vs Rayo Vallecano Prediction, Betting Tips, Lineups & Odds | 19 Oct 2026",
+      "url": "https://www.sportsgambler.com"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "Sportsgambler",
+      "team": "home",
+      "title": "La Liga Injuries & Suspensions",
+      "url": "https://www.sportsgambler.com"
+     },
+     {
+      "date": "2026-10-17",
+      "source": "beIN SPORTS",
+      "team": "home",
+      "title": "Getafe vs Rayo Vallecano",
+      "url": "https://www.beinsports.com"
+     },
+     {
+      "date": "2026-10-17",
+      "source": "Yahoo Sports",
+      "team": "home",
+      "title": "PREVIEW | Getafe CF vs Rayo Vallecano: team news, lineups, predictions (La Liga 19/10)",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-17",
+      "source": "Sports Mole",
+      "team": "home",
+      "title": "Preview: Getafe vs Rayo Vallecano - prediction, team news, lineups",
+      "url": "https://www.sportsmole.co.uk"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "Sportsgambler",
+      "team": "away",
+      "title": "La Liga Injuries & Suspensions",
+      "url": "https://www.sportsgambler.com"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "Sportsgambler",
+      "team": "away",
+      "title": "Getafe vs Rayo Vallecano Prediction, Betting Tips, Lineups & Odds | 19 Oct 2026",
+      "url": "https://www.sportsgambler.com"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "Comuniate",
+      "team": "away",
+      "title": "Beñat gets Isi and Kumbulla back, rules out Ratiu",
+      "url": "https://www.comuniate.com"
+     },
+     {
+      "date": "2026-10-17",
+      "source": "Goal.com",
+      "team": "away",
+      "title": "Rayo Vallecano handed double blow! La Liga side must finish Athletic Club clash behind closed doors and cover opponents' travel expenses after crowd trouble",
+      "url": "https://www.goal.com"
+     },
+     {
+      "date": "2026-10-17",
+      "source": "Yahoo Sports",
+      "team": "away",
+      "title": "PREVIEW | Getafe CF vs Rayo Vallecano: team news, lineups, predictions (La Liga 19/10)",
+      "url": "https://sports.yahoo.com"
+     }
+    ],
+    "status": "ok",
+    "summary": "巴列卡诺迎回核心伊西与库姆布拉，进攻与防守端均有改善",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1447,
+    "tries": 1
+   },
    "away": "Rayo Vallecano",
    "books": {
     "betfair_ex_uk": {
@@ -816,6 +1028,105 @@
    "odds_at": "2026-10-18T15:43:40Z"
   },
   "4c4026e2782f09d6f0ff2bde2a390513": {
+   "ai": {
+    "adjustments": [],
+    "at": "2026-10-18T16:05:47Z",
+    "base": {
+     "lam_a": 0.848,
+     "lam_h": 1.874
+    },
+    "confidence": "high",
+    "lam_a": 0.848,
+    "lam_h": 1.874,
+    "model": "gemini-3.8-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.1561,
+     "d": 0.2365,
+     "h": 0.6073
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-18",
+      "source": "The False 9",
+      "team": "home",
+      "title": "Lazio Predicted Lineup at Juventus: Noslin Starts",
+      "url": "https://thefalse9.com"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "Juventus.com",
+      "team": "home",
+      "title": "Preview | Juventus-Lazio | 10 things to know",
+      "url": "https://www.juventus.com"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "Football Italia",
+      "team": "home",
+      "title": "Who will replace Spalletti for Juventus vs. Lazio after Cagliari red card?",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "Football Italia",
+      "team": "home",
+      "title": "Serie A: Juventus vs. Lazio – Probable line-ups and where to watch on TV",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "Football Italia",
+      "team": "home",
+      "title": "Official: Spalletti confirms 23-man Juventus squad to take on Lazio",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "The False 9",
+      "team": "away",
+      "title": "Lazio Predicted Lineup at Juventus: Noslin Starts",
+      "url": "https://thefalse9.com"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "Football Italia",
+      "team": "away",
+      "title": "Who will replace Spalletti for Juventus vs. Lazio after Cagliari red card?",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "Football Italia",
+      "team": "away",
+      "title": "Serie A: Juventus vs. Lazio – Probable line-ups and where to watch on TV",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "The Laziali",
+      "team": "away",
+      "title": "Five Key Battles in Juventus vs Lazio: Can Noslin Hang With Bremer?",
+      "url": "https://thelaziali.com"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "WhoScored.com",
+      "team": "away",
+      "title": "Juventus vs Lazio: Lineups, Prediction, Odds & Bet Builder Tip",
+      "url": "https://www.whoscored.com"
+     }
+    ],
+    "status": "ok",
+    "summary": "新闻仅为常规赛前前瞻与名单公布，市场已充分定价，无预期差",
+    "top": [
+     2,
+     0
+    ],
+    "top_p": 0.1154,
+    "tries": 1
+   },
    "away": "Lazio",
    "books": {
     "betfair_ex_uk": {
@@ -2026,6 +2337,105 @@
    "odds_at": "2026-10-18T15:43:40Z"
   },
   "ce94aca384a20f6af459366da6e1dd21": {
+   "ai": {
+    "adjustments": [],
+    "at": "2026-10-18T16:06:14Z",
+    "base": {
+     "lam_a": 1.158,
+     "lam_h": 1.333
+    },
+    "confidence": "high",
+    "lam_a": 1.158,
+    "lam_h": 1.333,
+    "model": "gemini-3.8-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.3134,
+     "d": 0.2898,
+     "h": 0.3968
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-18",
+      "source": "The False 9",
+      "team": "home",
+      "title": "Lazio Predicted Lineup at Juventus: Noslin Starts",
+      "url": "https://thefalse9.com"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "cagliaricalcio.com",
+      "team": "home",
+      "title": "Monza-Cagliari, Pisacane’s squad list",
+      "url": "https://cagliaricalcio.com"
+     },
+     {
+      "date": "2026-10-17",
+      "source": "LiveScore",
+      "team": "home",
+      "title": "Gattuso: ‘Juventus stronger than Lazio but we have no fear’",
+      "url": "https://www.livescore.com"
+     },
+     {
+      "date": "2026-10-17",
+      "source": "Yahoo Sports",
+      "team": "home",
+      "title": "PREVIEW | Monza vs Cagliari: team news, lineups, predictions (Serie A 19/10)",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-17",
+      "source": "cagliaricalcio.com",
+      "team": "home",
+      "title": "Towards Monza-Cagliari",
+      "url": "https://cagliaricalcio.com"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "Football Italia",
+      "team": "away",
+      "title": "Who will replace Spalletti for Juventus vs. Lazio after Cagliari red card?",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-17",
+      "source": "Yahoo Sports",
+      "team": "away",
+      "title": "PREVIEW | Monza vs Cagliari: team news, lineups, predictions (Serie A 19/10)",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-17",
+      "source": "Sports Mole",
+      "team": "away",
+      "title": "Preview: Monza vs Cagliari - prediction, team news, lineups",
+      "url": "https://www.sportsmole.co.uk"
+     },
+     {
+      "date": "2026-10-16",
+      "source": "FreeTips",
+      "team": "away",
+      "title": "Monza vs Cagliari Predictions & Tips - Both Teams Backed to Score in Serie A Contest",
+      "url": "https://www.freetips.com"
+     },
+     {
+      "date": "2026-10-15",
+      "source": "L'Unione Sarda.it",
+      "team": "away",
+      "title": "Work on the Cagliari-Oristano line: trains suspended for two weekends in October.",
+      "url": "https://www.unionesarda.it"
+     }
+    ],
+    "status": "ok",
+    "summary": "新闻仅包含通用前瞻与无关资讯，无具体伤停异动，无需调整",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1381,
+    "tries": 1
+   },
    "away": "Cagliari",
    "books": {
     "betfair_ex_uk": {
@@ -2111,6 +2521,113 @@
    "odds_at": "2026-10-18T15:43:40Z"
   },
   "eccd63bf768e2f2a358b871d3f33a63d": {
+   "ai": {
+    "adjustments": [
+     {
+      "category": "suspension",
+      "delta": -0.15,
+      "reason": "维尼修斯遭遇停赛缺阵，皇马边路进攻端火力受损",
+      "source": "OneFootball",
+      "team": "home"
+     }
+    ],
+    "at": "2026-10-18T16:06:01Z",
+    "base": {
+     "lam_a": 0.781,
+     "lam_h": 2.738
+    },
+    "confidence": "medium",
+    "lam_a": 0.781,
+    "lam_h": 2.588,
+    "model": "gemini-3.8-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.0843,
+     "d": 0.1593,
+     "h": 0.7564
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-18",
+      "source": "thefalse9.com",
+      "team": "home",
+      "title": "Sevilla Predicted Lineup at Real Madrid: Ure Starts",
+      "url": "https://thefalse9.com"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "Real Madrid CF | Web Oficial",
+      "team": "home",
+      "title": "Web oficial del Real Madrid CF",
+      "url": "https://www.realmadrid.com"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "Daily Mirror",
+      "team": "home",
+      "title": "Jose Mourinho admits Vinicius Junior should've joined Arsenal before Real Madrid U-turn",
+      "url": "https://www.mirror.co.uk"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "Yahoo Sports",
+      "team": "home",
+      "title": "Barcelona coach identifies Real Madrid target as a priority ahead of January transfer window",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "Diario AS",
+      "team": "home",
+      "title": "Possible Real Madrid starting lineup vs. Sevilla in LaLiga today",
+      "url": "https://en.as.com"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "thefalse9.com",
+      "team": "away",
+      "title": "Sevilla Predicted Lineup at Real Madrid: Ure Starts",
+      "url": "https://thefalse9.com"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "Real Madrid CF | Web Oficial",
+      "team": "away",
+      "title": "Real Madrid-Sevilla: aiming to extend the winning streak at the Bernabéu",
+      "url": "https://www.realmadrid.com"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "OneFootball",
+      "team": "away",
+      "title": "Real Madrid host Sevilla without suspended Vini Jr",
+      "url": "https://onefootball.com"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "Sports Illustrated",
+      "team": "away",
+      "title": "Real Madrid vs. Sevilla: Preview, Predictions and Lineups",
+      "url": "https://www.si.com"
+     },
+     {
+      "date": "2026-10-18",
+      "source": "Diario AS",
+      "team": "away",
+      "title": "Possible Real Madrid starting lineup vs. Sevilla in LaLiga today",
+      "url": "https://en.as.com"
+     }
+    ],
+    "status": "ok",
+    "summary": "维尼修斯处于停赛状态无法出战，皇马前场进攻预期进球略有下降。",
+    "top": [
+     2,
+     0
+    ],
+    "top_p": 0.1153,
+    "tries": 1
+   },
    "away": "Sevilla",
    "books": {
     "betfair_ex_uk": {
@@ -2276,5 +2793,5 @@
    "odds_at": "2026-10-18T15:43:40Z"
   }
  },
- "updated": "2026-10-18T15:49:13Z"
+ "updated": "2026-10-18T16:06:37Z"
 }

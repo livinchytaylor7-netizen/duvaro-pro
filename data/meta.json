@@ -10,13 +10,14 @@
   "gemini-3.5-flash-lite 429: {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}]}}",
   "gemini-2.5-flash-lite 404: {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).', 'status': 'NOT_FOUND'}}"
  ],
+ "gemini_model": "gemini-3.8-flash",
  "gemini_probe_no_search": {
   "at": "2026-10-18T15:49:13Z",
   "body": "{'candidates': [{'content': {'parts': [{'text': 'OK', 'thoughtSignature': 'EmAKXgFpFH0TTsGaY86Ikt5hXFIQZMNlY21UgnBRI4gAE3H+KBRBD4BgvmW0ZETl/hHQJPBOpLbqGmcbVn6KdQbVR+tcpPKele7qMg6CmGPqJ8hpMB3JP5oLHN9xlHJiZdM='}], 'role': 'model'}, 'finishReason': 'STOP', 'index': 0}], 'usageMetadata': {'promptTokenCount': 4, 'candidatesTokenCount': 1, 'totalTokenCount': 5, 'promptTokensDetails': [{'modality': 'TEXT",
   "status": 200
  },
  "last_run": {
-  "at": "2026-10-18T15:49:12Z",
+  "at": "2026-10-18T16:05:27Z",
   "ok": true,
   "step": "ai"
  },
@@ -43,6 +44,9 @@
   "2026-10-18T15:48:15Z 完成：共 28 场比赛记录",
   "2026-10-18T15:49:13Z AI：所有模型都不可用，本次停止",
   "2026-10-18T15:49:13Z AI：分析 0 场，失败 1 场，待分析 7 场",
-  "2026-10-18T15:49:13Z 完成：共 28 场比赛记录"
+  "2026-10-18T15:49:13Z 完成：共 28 场比赛记录",
+  "2026-10-18T16:05:34Z AI：使用模型 gemini-3.8-flash",
+  "2026-10-18T16:06:37Z AI：分析 5 场，失败 1 场，待分析 6 场",
+  "2026-10-18T16:06:37Z 完成：共 28 场比赛记录"
  ]
 }
