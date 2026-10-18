@@ -27,7 +27,6 @@ COMPARE_BOOKS = [
 
 ODDS_API = "https://api.the-odds-api.com/v4"
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
 
 
 def now():

@@ -1,12 +1,6 @@
 {
  "matches": {
   "07014d9adc65ca39710bd9f0c7c0d3f0": {
-   "ai": {
-    "at": "2026-10-18T15:45:56Z",
-    "error": "Gemini 404: {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs",
-    "status": "failed",
-    "tries": 1
-   },
    "away": "Torino",
    "books": {
     "betfair_ex_uk": {
@@ -342,12 +336,6 @@
    "odds_at": "2026-10-18T15:43:40Z"
   },
   "1051298b4aca6f07113309bff598a5c1": {
-   "ai": {
-    "at": "2026-10-18T15:45:27Z",
-    "error": "Gemini 404: {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs",
-    "status": "failed",
-    "tries": 1
-   },
    "away": "Real Sociedad",
    "books": {
     "betfair_ex_uk": {
@@ -748,12 +736,6 @@
    "odds_at": "2026-10-18T15:43:40Z"
   },
   "4a88bc4de574d43ef34677fd8d78722f": {
-   "ai": {
-    "at": "2026-10-18T15:46:03Z",
-    "error": "Gemini 404: {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs",
-    "status": "failed",
-    "tries": 1
-   },
    "away": "Rayo Vallecano",
    "books": {
     "betfair_ex_uk": {
@@ -834,12 +816,6 @@
    "odds_at": "2026-10-18T15:43:40Z"
   },
   "4c4026e2782f09d6f0ff2bde2a390513": {
-   "ai": {
-    "at": "2026-10-18T15:45:34Z",
-    "error": "Gemini 404: {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs",
-    "status": "failed",
-    "tries": 1
-   },
    "away": "Lazio",
    "books": {
     "betfair_ex_uk": {
@@ -2050,12 +2026,6 @@
    "odds_at": "2026-10-18T15:43:40Z"
   },
   "ce94aca384a20f6af459366da6e1dd21": {
-   "ai": {
-    "at": "2026-10-18T15:45:49Z",
-    "error": "Gemini 404: {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs",
-    "status": "failed",
-    "tries": 1
-   },
    "away": "Cagliari",
    "books": {
     "betfair_ex_uk": {
@@ -2141,12 +2111,6 @@
    "odds_at": "2026-10-18T15:43:40Z"
   },
   "eccd63bf768e2f2a358b871d3f33a63d": {
-   "ai": {
-    "at": "2026-10-18T15:45:42Z",
-    "error": "Gemini 404: {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs",
-    "status": "failed",
-    "tries": 1
-   },
    "away": "Sevilla",
    "books": {
     "betfair_ex_uk": {
@@ -2227,12 +2191,6 @@
    "odds_at": "2026-10-18T15:43:40Z"
   },
   "f9403dd597edbfaa73abdc974e55344c": {
-   "ai": {
-    "at": "2026-10-18T15:45:20Z",
-    "error": "Gemini 404: {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs",
-    "status": "failed",
-    "tries": 1
-   },
    "away": "Atalanta BC",
    "books": {
     "betfair_ex_uk": {

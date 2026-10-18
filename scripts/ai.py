@@ -13,12 +13,20 @@ import time
 from datetime import timedelta
 
 import model
-from common import GEMINI_MODEL, GEMINI_URL, LEAGUES, http_json, iso, log, now, parse_iso
+from common import GEMINI_URL, LEAGUES, http_json, iso, log, now, parse_iso
 
 WINDOW_H = 30
 MAX_PER_RUN = 20
 PAUSE_S = 7
 MAX_TRIES = 3
+# 按顺序尝试，第一个能用 Google 搜索的模型会被记住（meta["gemini_model"]）
+MODELS = [m for m in os.environ.get("GEMINI_MODELS", "").split(",") if m] or [
+    "gemini-3.8-flash", "gemini-flash-latest", "gemini-3.7-flash", "gemini-3.6-flash",
+    "gemini-3.5-flash", "gemini-3.5-flash-lite", "gemini-2.5-flash-lite"]
+
+
+class ModelUnavailable(RuntimeError):
+    pass
 ITEM_CAP = 0.25
 TEAM_CAP = 0.4
 CATEGORIES = {"injury": "伤停", "suspension": "停赛", "lineup": "首发/轮换", "form": "状态/xG",
@@ -127,7 +135,7 @@ def reapply(db):
         m["ai"] = out
 
 
-def analyze(match, key, t):
+def analyze(match, key, t, model_name):
     mk = match["market"]
     tot = mk.get("total")
     total_line = (f"- Total goals line {tot['line']}: over {model.devig([tot['over'], tot['under']])[0]:.0%}"
@@ -140,10 +148,12 @@ def analyze(match, key, t):
     body = {"contents": [{"role": "user", "parts": [{"text": prompt}]}],
             "tools": [{"google_search": {}}],
             "generationConfig": {"temperature": 0.2}}
-    status, data, _ = http_json(GEMINI_URL.format(model=GEMINI_MODEL), body=body,
+    status, data, _ = http_json(GEMINI_URL.format(model=model_name), body=body,
                                 headers={"x-goog-api-key": key}, timeout=120)
+    if status in (400, 403, 404) and isinstance(data, dict):
+        raise ModelUnavailable(f"{model_name} {status}: {str(data)[:300]}")
     if status != 200 or not isinstance(data, dict):
-        raise RuntimeError(f"Gemini {status}: {str(data)[:300]}")
+        raise RuntimeError(f"Gemini {model_name} {status}: {str(data)[:300]}")
     cand = (data.get("candidates") or [{}])[0]
     text = "".join(p.get("text", "") for p in cand.get("content", {}).get("parts", []))
     raw = _extract_json(text)
@@ -159,6 +169,26 @@ def analyze(match, key, t):
     out["sources"] = sources[:8]
     out["searched"] = bool((cand.get("groundingMetadata") or {}).get("webSearchQueries"))
     return out
+
+
+def _analyze_any(m, key, t, meta):
+    """先用上次成功的模型；不可用就按顺序换下一个。"""
+    order = MODELS[:]
+    good = meta.get("gemini_model")
+    if good in order:
+        order.remove(good)
+        order.insert(0, good)
+    errs = []
+    for name in order:
+        try:
+            out = analyze(m, key, t, name)
+            if meta.get("gemini_model") != name:
+                meta["gemini_model"] = name
+                log(meta, f"AI：使用模型 {name}")
+            return out, name
+        except ModelUnavailable as e:
+            errs.append(str(e)[:160])
+    raise RuntimeError("所有模型都不可用：" + " | ".join(errs))
 
 
 def run(db, meta):
@@ -185,7 +215,8 @@ def run(db, meta):
             time.sleep(PAUSE_S)
         tries = (m.get("ai") or {}).get("tries", 0) + 1
         try:
-            out = analyze(m, key, t)
+            out, used = _analyze_any(m, key, t, meta)
+            out["model"] = used
             out.update({"status": "ok", "at": iso(now()), "tries": tries,
                         "base": {"lam_h": m["market"]["lam_h"], "lam_a": m["market"]["lam_a"]}})
             m["ai"] = out
