@@ -68,6 +68,13 @@ def _extract_json(text):
     return json.loads(text[start:end + 1])
 
 
+def _clean_source(src):
+    src = str(src or "")[:200]
+    if "vertexaisearch" in src or "grounding-api-redirect" in src:
+        return ""
+    return src
+
+
 def _clamp(v, lo, hi):
     return max(lo, min(hi, v))
 
@@ -92,7 +99,7 @@ def apply_adjustments(market, raw):
         total[team] += delta
         cat = a.get("category") if a.get("category") in CATEGORIES else "other"
         adjs.append({"team": team, "category": cat, "delta": round(delta, 3),
-                     "reason": str(a.get("reason", ""))[:80], "source": str(a.get("source", ""))[:200]})
+                     "reason": str(a.get("reason", ""))[:80], "source": _clean_source(a.get("source", ""))})
     lh = max(0.15, market["lam_h"] + total["home"])
     la = max(0.15, market["lam_a"] + total["away"])
     out = model.summarize(lh, la)
@@ -144,8 +151,11 @@ def analyze(match, key, t):
     sources = []
     for ch in (cand.get("groundingMetadata") or {}).get("groundingChunks") or []:
         web = ch.get("web") or {}
-        if web.get("uri"):
-            sources.append({"title": web.get("title", "")[:80], "url": web["uri"]})
+        title = (web.get("title") or "").strip()[:80]
+        # Google 返回的是带令牌的跳转链接，不能存进公开仓库；只保留来源网站名
+        if title and title not in [x["title"] for x in sources]:
+            url = f"https://{title}" if re.fullmatch(r"[a-z0-9.-]+\.[a-z]{2,}", title.lower()) else None
+            sources.append({"title": title, "url": url})
     out["sources"] = sources[:8]
     out["searched"] = bool((cand.get("groundingMetadata") or {}).get("webSearchQueries"))
     return out

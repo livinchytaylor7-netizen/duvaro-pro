@@ -55,6 +55,9 @@ def redact(text):
         v = os.environ.get(name)
         if v and len(v) >= 8:
             text = text.replace(v, "***")
+    text = re.sub(r"https://vertexaisearch\.cloud\.google\.com/[^\"\s]*", "", text)
+    text = re.sub(r"\bAQ\.[A-Za-z0-9_\-]{20,}", "***", text)
+    text = re.sub(r"\bAIza[0-9A-Za-z_\-]{30,}", "***", text)
     return re.sub(r"(apiKey|key)=[A-Za-z0-9._\-]{16,}", r"\1=***", text)
 
 

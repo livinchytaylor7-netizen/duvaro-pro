@@ -33,7 +33,7 @@ def fake_http(url, params=None, body=None, headers=None, timeout=60):
         assert headers["x-goog-api-key"] == "g"
         assert body["tools"] == [{"google_search": {}}]
         return 200, {"candidates": [{"content": {"parts": [{"text": GEMINI_TEXT}]},
-                     "groundingMetadata": {"webSearchQueries": ["q"], "groundingChunks": [{"web": {"uri": "https://a.b/c", "title": "src"}}]}}]}, {}
+                     "groundingMetadata": {"webSearchQueries": ["q"], "groundingChunks": [{"web": {"uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AQ.Ab8RN6Kfm123456789012345", "title": "goal.com"}}]}}]}, {}
     raise AssertionError(url)
 
 common.now = fake_now
@@ -72,7 +72,7 @@ def main():
     print("Juventus AI:", a["lam_h"], a["lam_a"], a["top"], [x["delta"] for x in a["adjustments"]])
     assert a["adjustments"][0]["delta"] == -0.25          # 单项上限
     assert abs(a["lam_h"] - (juve["market"]["lam_h"] - 0.25)) < 1e-3
-    assert len(a["adjustments"]) == 2 and a["sources"][0]["url"] == "https://a.b/c"
+    assert len(a["adjustments"]) == 2 and a["sources"][0]["url"] == "https://goal.com"
 
     # 2) 一小时后再跑：不应再拉赔率、不应重复 AI
     n_before = len(calls); clock["t"] = T0 + timedelta(hours=1)
