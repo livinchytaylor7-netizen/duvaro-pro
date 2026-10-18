@@ -150,8 +150,9 @@ def analyze(match, key, t, model_name):
             "generationConfig": {"temperature": 0.2}}
     status, data, _ = http_json(GEMINI_URL.format(model=model_name), body=body,
                                 headers={"x-goog-api-key": key}, timeout=120)
-    if status in (400, 403, 404) and isinstance(data, dict):
-        raise ModelUnavailable(f"{model_name} {status}: {str(data)[:300]}")
+    if status in (400, 403, 404, 429) and isinstance(data, dict):
+        # 429 也换模型：免费版各模型额度分开计算，有的模型免费额度为 0
+        raise ModelUnavailable(f"{model_name} {status}: {str(data)[:700]}")
     if status != 200 or not isinstance(data, dict):
         raise RuntimeError(f"Gemini {model_name} {status}: {str(data)[:300]}")
     cand = (data.get("candidates") or [{}])[0]
@@ -187,8 +188,9 @@ def _analyze_any(m, key, t, meta):
                 log(meta, f"AI：使用模型 {name}")
             return out, name
         except ModelUnavailable as e:
-            errs.append(str(e)[:160])
-    raise RuntimeError("所有模型都不可用：" + " | ".join(errs))
+            errs.append(str(e)[:700])
+    meta["gemini_errors"] = errs
+    raise RuntimeError("所有模型都不可用（详见 meta.gemini_errors）")
 
 
 def run(db, meta):
@@ -224,8 +226,8 @@ def run(db, meta):
         except Exception as e:  # 记录失败，下次运行重试
             m["ai"] = {"status": "failed", "at": iso(now()), "tries": tries, "error": str(e)[:300]}
             failed += 1
-            if "429" in str(e):
-                log(meta, "AI：触发频率限制，本次停止")
+            if "所有模型都不可用" in str(e):
+                log(meta, "AI：所有模型都不可用，本次停止")
                 break
     if todo:
         log(meta, f"AI：分析 {done} 场，失败 {failed} 场，待分析 {len(todo)} 场")
