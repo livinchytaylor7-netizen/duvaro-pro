@@ -1,5 +1,10 @@
-"""每日任务入口：python scripts/run.py [all|odds|ai|scores] [--force-odds]"""
+"""每日任务入口：python scripts/run.py [all|odds|ai|scores] [--force-odds]
+
+每一步单独捕获错误：一步出错不影响其他步骤，错误详情写进 data/meta.json 的 errors，
+数据照常保存。只有所有步骤都出错时才以失败状态退出。
+"""
 import sys
+import traceback
 
 import ai
 import odds
@@ -14,21 +19,32 @@ def main(argv):
     meta = load(META, {})
     t = now()
 
+    plan = []
     if step in ("all", "scores"):
-        scores.run(db, meta)
+        plan.append(("赛果", lambda: scores.run(db, meta)))
     if step in ("all", "odds"):
-        odds.run(db, meta, force=force)
-        ai.reapply(db)
+        plan.append(("赔率", lambda: (odds.run(db, meta, force=force), ai.reapply(db))))
     if step in ("all", "ai"):
-        ai.run(db, meta)
+        plan.append(("AI", lambda: ai.run(db, meta)))
+
+    errors = []
+    for name, fn in plan:
+        try:
+            fn()
+        except Exception:
+            tb = traceback.format_exc()
+            print(tb, file=sys.stderr)
+            errors.append({"step": name, "at": iso(now()), "trace": tb[-3000:]})
+            log(meta, f"{name}：程序出错，详情见 errors")
+    meta["errors"] = (meta.get("errors", []) + errors)[-20:]
 
     db["updated"] = iso(now())
-    meta["last_run"] = {"at": iso(t), "step": step}
+    meta["last_run"] = {"at": iso(t), "step": step, "ok": not errors}
+    log(meta, f"完成：共 {len(db['matches'])} 场比赛记录")
     save(MATCHES, db)
     save(META, meta)
-    log(meta, f"完成：共 {len(db['matches'])} 场比赛记录")
-    save(META, meta)
+    return 1 if plan and len(errors) == len(plan) else 0
 
 
 if __name__ == "__main__":
-    main(sys.argv)
+    sys.exit(main(sys.argv))

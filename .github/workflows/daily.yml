@@ -42,6 +42,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/run.py ${{ inputs.step || 'all' }} ${{ inputs.force_odds && '--force-odds' || '' }}
       - name: 保存数据
+        if: always()
         run: |
           git config user.name "duvaro-bot"
           git config user.email "duvaro-bot@users.noreply.github.com"
