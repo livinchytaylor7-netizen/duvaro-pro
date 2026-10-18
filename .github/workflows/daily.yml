@@ -56,5 +56,5 @@ jobs:
             echo "$out"
             sleep 5
           done
-          echo "::error title=保存数据失败::$(echo "$out" | tail -5 | tr '\n' ' ')"
+          echo "::error title=保存数据失败::$(echo "$out" | grep -v '^remote: *$' | tail -25 | tr '\n' ' ')"
           exit 1

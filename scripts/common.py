@@ -1,6 +1,7 @@
 """公共配置与读写工具。"""
 import json
 import os
+import re
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -48,12 +49,21 @@ def load(path, default):
     return default
 
 
+def redact(text):
+    """把密钥从任何要保存的文本里抹掉（仓库是公开的）。"""
+    for name in ("ODDS_API_KEY", "GEMINI_API_KEY"):
+        v = os.environ.get(name)
+        if v and len(v) >= 8:
+            text = text.replace(v, "***")
+    return re.sub(r"(apiKey|key)=[A-Za-z0-9._\-]{16,}", r"\1=***", text)
+
+
 def save(path, obj):
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(".tmp")
+    text = redact(json.dumps(obj, ensure_ascii=False, indent=1, sort_keys=True))
     with open(tmp, "w", encoding="utf-8") as f:
-        json.dump(obj, f, ensure_ascii=False, indent=1, sort_keys=True)
-        f.write("\n")
+        f.write(text + "\n")
     tmp.replace(path)
 
 
