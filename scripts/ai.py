@@ -13,6 +13,7 @@ import time
 from datetime import timedelta
 
 import model
+import news
 from common import GEMINI_URL, LEAGUES, http_json, iso, log, now, parse_iso
 
 WINDOW_H = 30
@@ -32,8 +33,9 @@ TEAM_CAP = 0.4
 CATEGORIES = {"injury": "伤停", "suspension": "停赛", "lineup": "首发/轮换", "form": "状态/xG",
               "schedule": "赛程/体能", "motivation": "比赛动机", "coach": "主帅/战术", "other": "其他"}
 
-PROMPT = """You are a football analyst. Use Google Search to research this upcoming match and decide whether
-the betting market below has missed any concrete, recent, team-specific information.
+PROMPT = """You are a football analyst. Decide whether the betting market below has missed any concrete,
+recent, team-specific information about this upcoming match. Base your judgement ONLY on the news headlines
+provided below plus well-established facts you are certain of; do not invent injuries or line-ups.
 
 Match: {home} (home) vs {away} (away)
 Competition: {league}
@@ -45,21 +47,22 @@ Market baseline (Pinnacle, de-margined):
 - Expected goals: {home} {lh:.2f}, {away} {la:.2f}
 {total_line}
 
-Research, for BOTH teams, using sources from the last 7 days where possible:
-1. Injuries, suspensions, players returning, likely or confirmed line-ups and rotation
-2. Recent form and underlying numbers (xG for/against) versus actual results
-3. Fixture congestion (European or cup matches in the previous or next 4 days), travel
-4. Motivation and context (relegation, title race, derby, new coach, dressing-room news)
+Recent news headlines (last 7 days, newest first):
+{home} :
+{news_home}
+{away} :
+{news_away}
 
-Then propose adjustments to each team's expected goals. Rules:
-- The market already prices widely known information. Adjust only for specific facts you found.
+Look for: injuries, suspensions, players returning, rotation, fixture congestion (European or cup matches
+around this one), coach changes, motivation. Then propose adjustments to each team's expected goals. Rules:
+- The market already prices widely known information. Adjust only for specific facts in the headlines.
 - Each adjustment between -0.25 and +0.25 goals. Most matches need 0 to 2 adjustments.
 - A key striker missing lowers that team's goals; a key defender or goalkeeper missing raises the opponent's.
-- If you find nothing concrete, return an empty adjustments list.
+- If the headlines contain nothing concrete, return an empty adjustments list.
 
 Reply with ONLY a JSON object, no other text:
 {{"adjustments": [{{"team": "home" or "away", "category": one of {cats}, "delta": number,
-   "reason": "Simplified Chinese, max 40 characters", "source": "site name or URL"}}],
+   "reason": "Simplified Chinese, max 40 characters", "source": "publisher name of the headline used"}}],
  "confidence": "high" or "medium" or "low",
  "summary": "Simplified Chinese, max 60 characters: what the market may have missed, or that nothing was found"}}
 """
@@ -140,13 +143,16 @@ def analyze(match, key, t, model_name):
     tot = mk.get("total")
     total_line = (f"- Total goals line {tot['line']}: over {model.devig([tot['over'], tot['under']])[0]:.0%}"
                   if tot else "- No total goals line available")
+    nh, nh_err = news.team_news(match["home"])
+    na, na_err = news.team_news(match["away"])
+    fmt = lambda items: "\n".join(f"- [{x['date']}] {x['title']} ({x['source']})" for x in items) or "- (no news found)"
     prompt = PROMPT.format(
+        news_home=fmt(nh), news_away=fmt(na),
         home=match["home"], away=match["away"], league=LEAGUES[match["league"]]["sport"],
         kickoff=match["kickoff"], today=iso(t), ph=mk["probs"]["h"], pd=mk["probs"]["d"],
         pa=mk["probs"]["a"], lh=mk["lam_h"], la=mk["lam_a"], total_line=total_line,
         cats="/".join(CATEGORIES))
     body = {"contents": [{"role": "user", "parts": [{"text": prompt}]}],
-            "tools": [{"google_search": {}}],
             "generationConfig": {"temperature": 0.2}}
     status, data, _ = http_json(GEMINI_URL.format(model=model_name), body=body,
                                 headers={"x-goog-api-key": key}, timeout=120)
@@ -159,16 +165,10 @@ def analyze(match, key, t, model_name):
     text = "".join(p.get("text", "") for p in cand.get("content", {}).get("parts", []))
     raw = _extract_json(text)
     out = apply_adjustments(mk, raw)
-    sources = []
-    for ch in (cand.get("groundingMetadata") or {}).get("groundingChunks") or []:
-        web = ch.get("web") or {}
-        title = (web.get("title") or "").strip()[:80]
-        # Google 返回的是带令牌的跳转链接，不能存进公开仓库；只保留来源网站名
-        if title and title not in [x["title"] for x in sources]:
-            url = f"https://{title}" if re.fullmatch(r"[a-z0-9.-]+\.[a-z]{2,}", title.lower()) else None
-            sources.append({"title": title, "url": url})
-    out["sources"] = sources[:8]
-    out["searched"] = bool((cand.get("groundingMetadata") or {}).get("webSearchQueries"))
+    out["sources"] = [{"team": side, "title": x["title"], "source": x["source"], "url": x["url"], "date": x["date"]}
+                      for side, items in (("home", nh), ("away", na)) for x in items[:5]]
+    out["searched"] = bool(nh or na)
+    out["news_error"] = nh_err or na_err
     return out
 
 

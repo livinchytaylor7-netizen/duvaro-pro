@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-import common, odds, scores, ai, model, run  # noqa
+import common, odds, scores, ai, model, run, news  # noqa
 
 SAMPLE = json.loads((ROOT / "tests/sample_odds_seriea.json").read_text())
 T0 = datetime(2026, 10, 18, 12, 0, tzinfo=timezone.utc)
@@ -31,12 +31,13 @@ def fake_http(url, params=None, body=None, headers=None, timeout=60):
         return 200, out, {"x-requests-remaining": "470"}
     if "generativelanguage" in url:
         assert headers["x-goog-api-key"] == "g"
-        assert body["tools"] == [{"google_search": {}}]
+        assert "tools" not in body and "Leao out" in body["contents"][0]["parts"][0]["text"]
         return 200, {"candidates": [{"content": {"parts": [{"text": GEMINI_TEXT}]},
                      "groundingMetadata": {"webSearchQueries": ["q"], "groundingChunks": [{"web": {"uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AQ.Ab8RN6Kfm123456789012345", "title": "goal.com"}}]}}]}, {}
     raise AssertionError(url)
 
 common.now = fake_now
+ai.news.team_news = lambda team: ([{"title": "Leao out for three weeks", "source": "Goal", "url": "https://www.goal.com", "date": "2026-10-17"}], None)
 for mod in (odds, scores, ai):
     mod.http_json = fake_http
     mod.now = fake_now
@@ -72,7 +73,7 @@ def main():
     print("Juventus AI:", a["lam_h"], a["lam_a"], a["top"], [x["delta"] for x in a["adjustments"]])
     assert a["adjustments"][0]["delta"] == -0.25          # 单项上限
     assert abs(a["lam_h"] - (juve["market"]["lam_h"] - 0.25)) < 1e-3
-    assert len(a["adjustments"]) == 2 and a["sources"][0]["url"] == "https://goal.com"
+    assert len(a["adjustments"]) == 2 and a["sources"][0]["source"] == "Goal" and a["searched"]
 
     # 2) 一小时后再跑：不应再拉赔率、不应重复 AI
     n_before = len(calls); clock["t"] = T0 + timedelta(hours=1)

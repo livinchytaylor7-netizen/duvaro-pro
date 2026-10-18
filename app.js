@@ -334,7 +334,7 @@ function detail(id) {
     if (!ai) h += `<p class="hint">还没分析（开赛前 30 小时内自动分析）。</p>`;
     else if (ai.status === "failed") h += `<p class="hint">分析失败，系统会自动重试（第 ${ai.tries} 次）。原因：${esc(ai.error)}</p>`;
     else {
-      h += `<p>${esc(ai.summary)} <span class="tag">信心：${CONF[ai.confidence] || "—"}${ai.searched === false ? " · 未搜索到网页" : ""}</span></p>`;
+      h += `<p>${esc(ai.summary)} <span class="tag">信心：${CONF[ai.confidence] || "—"}${ai.searched === false ? " · 未找到相关新闻" : ""}</span></p>`;
       if (!ai.adjustments.length) h += `<p class="hint">没有找到盘口之外的可靠信息，AI 线 = 盘口线。</p>`;
       for (const a of ai.adjustments) {
         const who = esc(teamZh(a.team === "home" ? m.home : m.away)), up = a.delta > 0;
@@ -342,7 +342,15 @@ function detail(id) {
           <span class="cat">${CAT[a.category] || a.category}</span>${who}：${esc(a.reason)}
           ${a.source ? `<div class="tag">来源：${safeUrl(a.source) ? `<a href="${safeUrl(a.source)}" target="_blank" rel="noopener">${esc(a.source.slice(0, 60))}</a>` : esc(a.source)}</div>` : ""}</div>`;
       }
-      if (ai.sources && ai.sources.length) h += `<div class="tag" style="margin-top:8px">搜索来源：${ai.sources.map(s => safeUrl(s.url) ? `<a href="${safeUrl(s.url)}" target="_blank" rel="noopener">${esc(s.title || "链接")}</a>` : "").join(" · ")}</div>`;
+      if (ai.sources && ai.sources.length) {
+        h += `<h3>AI 参考的新闻（最近 7 天）</h3>`;
+        for (const side of ["home", "away"]) {
+          const items = ai.sources.filter(x => (x.team || "home") === side);
+          if (!items.length) continue;
+          h += `<div class="tag" style="margin:6px 0 2px">${esc(teamZh(side === "home" ? m.home : m.away))}</div>`;
+          h += items.map(x => `<div class="adj"><span class="tag">${esc(x.date || "")} · ${safeUrl(x.url) ? `<a href="${safeUrl(x.url)}" target="_blank" rel="noopener">${esc(x.source)}</a>` : esc(x.source || "")}</span><br>${esc(x.title)}</div>`).join("");
+        }
+      }
       h += `<div class="tag">分析时间：${fFull.format(Date.parse(ai.at))}</div>`;
     }
   }
