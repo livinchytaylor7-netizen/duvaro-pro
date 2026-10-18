@@ -1,0 +1,91 @@
+"""公共配置与读写工具。"""
+import json
+import os
+import urllib.error
+import urllib.parse
+import urllib.request
+from datetime import datetime, timezone
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+DATA = ROOT / "data"
+MATCHES = DATA / "matches.json"
+META = DATA / "meta.json"
+
+LEAGUES = {
+    "laliga": {"sport": "soccer_spain_la_liga", "name": "西甲"},
+    "seriea": {"sport": "soccer_italy_serie_a", "name": "意甲"},
+}
+
+# 市场基准优先用 Pinnacle；其余仅用于胜平负价格对比
+MARKET_BOOK = "pinnacle"
+COMPARE_BOOKS = [
+    "pinnacle", "paddypower", "boylesports", "betfair_ex_uk", "williamhill",
+    "skybet", "ladbrokes_uk", "betvictor", "unibet_uk", "smarkets",
+]
+
+ODDS_API = "https://api.the-odds-api.com/v4"
+GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+
+
+def now():
+    return datetime.now(timezone.utc)
+
+
+def iso(dt):
+    return dt.strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def parse_iso(s):
+    return datetime.fromisoformat(s.replace("Z", "+00:00"))
+
+
+def load(path, default):
+    if path.exists():
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    return default
+
+
+def save(path, obj):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(".tmp")
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(obj, f, ensure_ascii=False, indent=1, sort_keys=True)
+        f.write("\n")
+    tmp.replace(path)
+
+
+def http_json(url, params=None, body=None, headers=None, timeout=60):
+    """返回 (状态码, json 或文本, 响应头)。不抛异常，便于上层记录失败原因。"""
+    if params:
+        url = url + ("&" if "?" in url else "?") + urllib.parse.urlencode(params)
+    data = None
+    hdrs = {"User-Agent": "duvaro-pro/1.0"}
+    if headers:
+        hdrs.update(headers)
+    if body is not None:
+        data = json.dumps(body).encode()
+        hdrs["Content-Type"] = "application/json"
+    req = urllib.request.Request(url, data=data, headers=hdrs)
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            raw = r.read().decode()
+            return r.status, json.loads(raw) if raw else None, dict(r.headers)
+    except urllib.error.HTTPError as e:
+        raw = e.read().decode(errors="replace")
+        try:
+            payload = json.loads(raw)
+        except ValueError:
+            payload = raw[:500]
+        return e.code, payload, dict(e.headers or {})
+    except Exception as e:  # 网络错误
+        return 0, str(e), {}
+
+
+def log(meta, msg):
+    line = f"{iso(now())} {msg}"
+    print(line)
+    meta.setdefault("log", []).append(line)
+    meta["log"] = meta["log"][-200:]
