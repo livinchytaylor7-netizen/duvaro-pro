@@ -404,7 +404,9 @@ document.addEventListener("click", async e => {
   const id = cardEl.dataset.id, m = S.matches[id];
   if (act === "inc" || act === "dec") {
     const i = +e.target.closest("[data-i]").dataset.i, d = (S.draft[id] ||= [0, 0]);
-    d[i] = Math.max(0, Math.min(9, d[i] + (act === "inc" ? 1 : -1))); render(); return;
+    d[i] = Math.max(0, Math.min(9, d[i] + (act === "inc" ? 1 : -1)));
+    cardEl.querySelectorAll(".stepper b").forEach((b, k) => (b.textContent = d[k])); // 只改数字，不重画页面
+    return;
   }
   if (act === "lock" || act === "skip") {
     if (Date.now() >= kt(m)) return toast("已经开赛，不能再选");

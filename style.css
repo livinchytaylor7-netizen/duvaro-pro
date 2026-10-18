@@ -117,3 +117,8 @@ input[type=password], input[type=text] { width: 100%; padding: 12px; border-radi
 .ov th { color: var(--gold2); font-size: 13px; }
 .vd { font-size: 11px; color: var(--muted); } .vd.good { color: var(--hit); } .vd.bad { color: var(--miss); }
 .pick { flex-wrap: wrap; } .actions { margin-left: auto; } .btn { white-space: nowrap; }
+
+/* 手机稳定性：禁止双击放大、禁止左右晃动 */
+html, body { overflow-x: hidden; width: 100%; overscroll-behavior-x: none; -webkit-text-size-adjust: 100%; }
+html, button, a, .card { touch-action: manipulation; }
+button { -webkit-tap-highlight-color: transparent; user-select: none; -webkit-user-select: none; }
