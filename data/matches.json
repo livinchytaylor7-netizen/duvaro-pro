@@ -3151,6 +3151,105 @@
    "odds_at": "2026-10-20T11:33:10Z"
   },
   "a362cccad837f1ffae61ff43a3536688": {
+   "ai": {
+    "adjustments": [],
+    "at": "2026-10-20T15:39:26Z",
+    "base": {
+     "lam_a": 1.502,
+     "lam_h": 1.121
+    },
+    "confidence": "high",
+    "lam_a": 1.502,
+    "lam_h": 1.121,
+    "model": "gemini-3.8-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.4501,
+     "d": 0.2765,
+     "h": 0.2734
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-20",
+      "source": "Levante UD | Web Oficial",
+      "team": "home",
+      "title": "Borja Cortina: \"With the injury, I have learned to appreciate that training with the group is a gift\"",
+      "url": "https://www.levanteud.com"
+     },
+     {
+      "date": "2026-10-20",
+      "source": "Football Whispers",
+      "team": "home",
+      "title": "Levante vs Athletic Bilbao – prediction, preview & betting tips – 21/10/2026",
+      "url": "https://footballwhispers.com"
+     },
+     {
+      "date": "2026-10-20",
+      "source": "Sportsgambler",
+      "team": "home",
+      "title": "La Liga Injuries & Suspensions",
+      "url": "https://www.sportsgambler.com"
+     },
+     {
+      "date": "2026-10-19",
+      "source": "Sevilla FC",
+      "team": "home",
+      "title": "MATCH PREVIEW: LEVANTE UD VS SEVILLA FC LALIGA 2026-2027",
+      "url": "https://sevillafc.es"
+     },
+     {
+      "date": "2026-10-19",
+      "source": "beIN SPORTS",
+      "team": "home",
+      "title": "Getafe sacks Michel as second LaLiga club axes boss in 24 hours",
+      "url": "https://www.beinsports.com"
+     },
+     {
+      "date": "2026-10-20",
+      "source": "Football Whispers",
+      "team": "away",
+      "title": "Levante vs Athletic Bilbao – prediction, preview & betting tips – 21/10/2026",
+      "url": "https://footballwhispers.com"
+     },
+     {
+      "date": "2026-10-20",
+      "source": "Times of Oman",
+      "team": "away",
+      "title": "Barcelona youngsters called into squad for PSG Champions League game",
+      "url": "https://timesofoman.com"
+     },
+     {
+      "date": "2026-10-19",
+      "source": "Flashscore.com",
+      "team": "away",
+      "title": "Athletic Bilbao - Real Sociedad",
+      "url": "https://www.flashscore.com"
+     },
+     {
+      "date": "2026-10-19",
+      "source": "The Straits Times",
+      "team": "away",
+      "title": "Liverpool urge patience with Dominik Szoboszlai injury, Jeremie Frimpong suffers new setback",
+      "url": "https://www.straitstimes.com"
+     },
+     {
+      "date": "2026-10-19",
+      "source": "Daily Voice",
+      "team": "away",
+      "title": "BROMANCE ON HOLD - Pals Iraola & Villarreal coach keep their distance before UCL clash",
+      "url": "https://dailyvoice.co.za"
+     }
+    ],
+    "status": "ok",
+    "summary": "新闻未提供决定性伤停变动，尼科·威廉姆斯仅接近复出，市场已合理定价",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.132,
+    "tries": 1
+   },
    "away": "Athletic Bilbao",
    "books": {
     "betfair_ex_uk": {
@@ -4180,5 +4279,5 @@
    }
   }
  },
- "updated": "2026-10-20T11:33:10Z"
+ "updated": "2026-10-20T15:39:26Z"
 }
