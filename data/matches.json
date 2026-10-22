@@ -742,6 +742,12 @@
    }
   },
   "124c70f8f3248a845bdb983a54e74720": {
+   "ai": {
+    "at": "2026-10-22T15:53:09Z",
+    "error": "Gemini gemini-3.8-flash 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+    "status": "failed",
+    "tries": 1
+   },
    "away": "Monza",
    "books": {
     "betfair_ex_uk": {
@@ -3051,6 +3057,105 @@
    "odds_at": "2026-10-22T11:49:13Z"
   },
   "903eb4941471ffe20d525b02dd3b77aa": {
+   "ai": {
+    "adjustments": [],
+    "at": "2026-10-22T15:53:53Z",
+    "base": {
+     "lam_a": 0.872,
+     "lam_h": 1.638
+    },
+    "confidence": "high",
+    "lam_a": 0.872,
+    "lam_h": 1.638,
+    "model": "gemini-3.8-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.1901,
+     "d": 0.2646,
+     "h": 0.5454
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-22",
+      "source": "ToffeeWeb",
+      "team": "home",
+      "title": "Deportivo Alavés vs Málaga Predictions, Picks & Odds – 23/10/2026",
+      "url": "https://www.toffeeweb.com"
+     },
+     {
+      "date": "2026-10-22",
+      "source": "The Football Faithful",
+      "team": "home",
+      "title": "Deportivo Alavés vs Málaga Prediction & Betting Tips – 23/10/2026",
+      "url": "https://thefootballfaithful.com"
+     },
+     {
+      "date": "2026-10-22",
+      "source": "Dailysports",
+      "team": "home",
+      "title": "Deportivo Alaves vs Malaga prediction and betting tips 23 October 2026",
+      "url": "https://dailysports.net"
+     },
+     {
+      "date": "2026-10-22",
+      "source": "Sportsgambler",
+      "team": "home",
+      "title": "Alavés vs Málaga Prediction, Betting Tips, Lineups & Odds | 23 Oct 2026",
+      "url": "https://www.sportsgambler.com"
+     },
+     {
+      "date": "2026-10-21",
+      "source": "Yahoo Sports",
+      "team": "home",
+      "title": "PREVIEW | Alavés vs Málaga CF: team news, lineups, predictions (La Liga 23/10)",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-22",
+      "source": "ToffeeWeb",
+      "team": "away",
+      "title": "Deportivo Alavés vs Málaga Predictions, Picks & Odds – 23/10/2026",
+      "url": "https://www.toffeeweb.com"
+     },
+     {
+      "date": "2026-10-22",
+      "source": "Málaga CF",
+      "team": "away",
+      "title": "CA Osasuna-Málaga, Sunday 22 November at 18:30",
+      "url": "https://www.malagacf.com"
+     },
+     {
+      "date": "2026-10-22",
+      "source": "The Football Faithful",
+      "team": "away",
+      "title": "Deportivo Alavés vs Málaga Prediction & Betting Tips – 23/10/2026",
+      "url": "https://thefootballfaithful.com"
+     },
+     {
+      "date": "2026-10-22",
+      "source": "Dailysports",
+      "team": "away",
+      "title": "Deportivo Alaves vs Malaga prediction and betting tips 23 October 2026",
+      "url": "https://dailysports.net"
+     },
+     {
+      "date": "2026-10-22",
+      "source": "Sportsgambler",
+      "team": "away",
+      "title": "Alavés vs Málaga Prediction, Betting Tips, Lineups & Odds | 23 Oct 2026",
+      "url": "https://www.sportsgambler.com"
+     }
+    ],
+    "status": "ok",
+    "summary": "新闻仅包含常规赛事前瞻与赛程信息，无具体伤停或阵容变动。",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1254,
+    "tries": 1
+   },
    "away": "Málaga",
    "books": {
     "betfair_ex_uk": {
@@ -4497,5 +4602,5 @@
    }
   }
  },
- "updated": "2026-10-22T11:49:13Z"
+ "updated": "2026-10-22T15:53:53Z"
 }
