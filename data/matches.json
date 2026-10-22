@@ -743,10 +743,10 @@
   },
   "124c70f8f3248a845bdb983a54e74720": {
    "ai": {
-    "at": "2026-10-22T15:53:09Z",
+    "at": "2026-10-22T20:07:46Z",
     "error": "Gemini gemini-3.8-flash 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
     "status": "failed",
-    "tries": 1
+    "tries": 2
    },
    "away": "Monza",
    "books": {
@@ -4602,5 +4602,5 @@
    }
   }
  },
- "updated": "2026-10-22T15:53:53Z"
+ "updated": "2026-10-22T20:07:46Z"
 }
