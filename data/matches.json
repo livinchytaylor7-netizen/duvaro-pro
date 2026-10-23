@@ -304,10 +304,111 @@
   },
   "08ffd99b2249c81d8a7410598f32b9b0": {
    "ai": {
-    "at": "2026-10-23T15:45:00Z",
-    "error": "Gemini gemini-3.8-flash 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-    "status": "failed",
-    "tries": 2
+    "adjustments": [
+     {
+      "category": "injury",
+      "delta": -0.05,
+      "reason": "利贝拉利在欧冠热身时受伤，本场出战成疑",
+      "source": "La Gazzetta dello Sport",
+      "team": "home"
+     }
+    ],
+    "at": "2026-10-23T19:58:11Z",
+    "base": {
+     "lam_a": 1.119,
+     "lam_h": 2.325
+    },
+    "confidence": "medium",
+    "lam_a": 1.119,
+    "lam_h": 2.275,
+    "model": "gemini-3.8-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.1681,
+     "d": 0.2052,
+     "h": 0.6267
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-23",
+      "source": "The Times",
+      "team": "home",
+      "title": "London Irish eye return next year with new ownership inspired by Como",
+      "url": "https://www.thetimes.com"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "Football Italia",
+      "team": "home",
+      "title": "Liberali a doubt for Como vs Sassuolo as reason for Man Utd omission emerges",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "London Evening Standard",
+      "team": "home",
+      "title": "Will Fernandes be dropped by Man Utd? Carrick reveals update",
+      "url": "https://www.standard.co.uk"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "Football Italia",
+      "team": "home",
+      "title": "Carrick: ‘It hurt me to see’ how Man Utd played against Como",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "Football Italia",
+      "team": "home",
+      "title": "Fabregas: ‘If I start thinking about leaving Como, it could be the end for me here’",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "Football Italia",
+      "team": "away",
+      "title": "Liberali a doubt for Como vs Sassuolo as reason for Man Utd omission emerges",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "Football Italia",
+      "team": "away",
+      "title": "Fabregas: ‘If I start thinking about leaving Como, it could be the end for me here’",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "Yahoo Sports",
+      "team": "away",
+      "title": "PREVIEW | Atalanta vs Frosinone: team news, lineups, predictions (Serie A 25/10)",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "La Gazzetta dello Sport",
+      "team": "away",
+      "title": "Como, Liberali blow: he was injured in warm-up against Manchester and is now a doubt for Sassuolo",
+      "url": "https://www.gazzetta.it"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "Goal.com",
+      "team": "away",
+      "title": "Fàbregas reveals the moment that will mark his end with Como",
+      "url": "https://www.goal.com"
+     }
+    ],
+    "status": "ok",
+    "summary": "科莫刚经历欧冠恶战且利贝拉利受伤出战成疑，进攻端或有微调",
+    "top": [
+     2,
+     1
+    ],
+    "top_p": 0.0972,
+    "tries": 3
    },
    "away": "Sassuolo",
    "books": {
@@ -395,10 +496,10 @@
   },
   "0b4894e9fb123ef3045269f97e339eba": {
    "ai": {
-    "at": "2026-10-23T15:47:39Z",
-    "error": "Gemini gemini-3.8-flash 0: The read operation timed out",
+    "at": "2026-10-23T20:02:41Z",
+    "error": "Gemini gemini-3.8-flash 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
     "status": "failed",
-    "tries": 2
+    "tries": 3
    },
    "away": "AS Roma",
    "books": {
@@ -486,10 +587,10 @@
   },
   "0dae715cc56fe201f9e667917c126691": {
    "ai": {
-    "at": "2026-10-23T15:49:47Z",
-    "error": "Gemini gemini-3.8-flash 0: The read operation timed out",
+    "at": "2026-10-23T20:02:53Z",
+    "error": "Gemini gemini-3.8-flash 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
     "status": "failed",
-    "tries": 2
+    "tries": 3
    },
    "away": "Villarreal",
    "books": {
@@ -2001,10 +2102,10 @@
   },
   "5960b1b6c20acfd78e78764fed47d505": {
    "ai": {
-    "at": "2026-10-23T15:45:31Z",
-    "error": "Gemini gemini-3.8-flash 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+    "at": "2026-10-23T20:02:26Z",
+    "error": "Gemini gemini-3.8-flash 0: The read operation timed out",
     "status": "failed",
-    "tries": 2
+    "tries": 3
    },
    "away": "Espanyol",
    "books": {
@@ -2407,10 +2508,103 @@
   },
   "70df1835c3b5ddff1c99e0189532136b": {
    "ai": {
-    "at": "2026-10-23T15:50:13Z",
-    "error": "Gemini gemini-3.8-flash 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-    "status": "failed",
-    "tries": 1
+    "adjustments": [],
+    "at": "2026-10-23T20:05:16Z",
+    "base": {
+     "lam_a": 0.732,
+     "lam_h": 2.434
+    },
+    "confidence": "high",
+    "lam_a": 0.732,
+    "lam_h": 2.434,
+    "model": "gemini-3.6-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.0866,
+     "d": 0.1702,
+     "h": 0.7432
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-23",
+      "source": "Yahoo Sports",
+      "team": "home",
+      "title": "How to watch Atletico Madrid vs Deportivo: La Liga title race heats up",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "Transfermarkt",
+      "team": "home",
+      "title": "Transfer news LIVE: Arsenal to revive Vini Jr interest as Man Utd want Nico Paz",
+      "url": "https://www.transfermarkt.com"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "Sportsgambler",
+      "team": "home",
+      "title": "UEFA Champions League Injuries & Suspensions",
+      "url": "https://www.sportsgambler.com"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "Sportsgambler",
+      "team": "home",
+      "title": "La Liga Injuries & Suspensions",
+      "url": "https://www.sportsgambler.com"
+     },
+     {
+      "date": "2026-10-22",
+      "source": "Yahoo Sports",
+      "team": "home",
+      "title": "Atlético Madrid announce fresh injury blow",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "beIN SPORTS",
+      "team": "away",
+      "title": "Paco Alcacer to Miss El Clasico",
+      "url": "https://www.beinsports.com"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "Goal.com",
+      "team": "away",
+      "title": "Simeone challenges Barcelona with a bold statement, and dodges the Clasico question",
+      "url": "https://www.goal.com"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "스타뉴스",
+      "team": "away",
+      "title": "\"Hopeful news\" Lee Kang-in, who had skipped even the warm-up, returns to 'team training'",
+      "url": "https://www.starnewskorea.com"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "Futbol24",
+      "team": "away",
+      "title": "Club Deportivo Alavés - Málaga CF betting tip & best odds | 23.10.2026",
+      "url": "https://www.futbol24.com"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "Soccer News",
+      "team": "away",
+      "title": "Prediction: Atletico Madrid vs Deportivo La Coruna",
+      "url": "https://www.soccernews.com"
+     }
+    ],
+    "status": "ok",
+    "summary": "新闻未提供具体的伤停球员名单，当前市场盘口已充分反映现有资讯",
+    "top": [
+     2,
+     0
+    ],
+    "top_p": 0.1249,
+    "tries": 2
    },
    "away": "Deportivo La Coruña",
    "books": {
@@ -2578,10 +2772,10 @@
   },
   "734ad601156f5f4e6bc42317e5141516": {
    "ai": {
-    "at": "2026-10-23T15:44:50Z",
+    "at": "2026-10-23T19:57:39Z",
     "error": "Gemini gemini-3.8-flash 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
     "status": "failed",
-    "tries": 2
+    "tries": 3
    },
    "away": "Elche CF",
    "books": {
@@ -3703,10 +3897,10 @@
   },
   "b27cb3ea731fa3f18d05e6a627bdf984": {
    "ai": {
-    "at": "2026-10-23T15:49:57Z",
-    "error": "Gemini gemini-3.8-flash 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+    "at": "2026-10-23T20:05:01Z",
+    "error": "Gemini gemini-flash-latest 0: The read operation timed out",
     "status": "failed",
-    "tries": 1
+    "tries": 2
    },
    "away": "Parma",
    "books": {
@@ -3794,10 +3988,10 @@
   },
   "b7f0880e3da978f9481f7cb5697e2aa5": {
    "ai": {
-    "at": "2026-10-23T15:45:11Z",
-    "error": "Gemini gemini-3.8-flash 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+    "at": "2026-10-23T20:00:19Z",
+    "error": "Gemini gemini-3.8-flash 0: The read operation timed out",
     "status": "failed",
-    "tries": 2
+    "tries": 3
    },
    "away": "Bologna",
    "books": {
@@ -4648,5 +4842,5 @@
    }
   }
  },
- "updated": "2026-10-23T15:50:13Z"
+ "updated": "2026-10-23T20:05:16Z"
 }
