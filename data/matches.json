@@ -949,7 +949,12 @@
      "under": 2.08
     }
    },
-   "odds_at": "2026-10-23T11:35:54Z"
+   "odds_at": "2026-10-23T11:35:54Z",
+   "result": {
+    "a": 2,
+    "at": "2026-10-24T01:07:25Z",
+    "h": 3
+   }
   },
   "2013e3955186ebe5258e85eb741a7553": {
    "away": "Real Betis",
@@ -3466,7 +3471,12 @@
      "under": 2.12
     }
    },
-   "odds_at": "2026-10-23T11:35:54Z"
+   "odds_at": "2026-10-23T11:35:54Z",
+   "result": {
+    "a": 1,
+    "at": "2026-10-24T01:07:25Z",
+    "h": 1
+   }
   },
   "95cfaecfe96bb7ced1fb6af974a4110b": {
    "away": "Venezia",
@@ -3897,10 +3907,118 @@
   },
   "b27cb3ea731fa3f18d05e6a627bdf984": {
    "ai": {
-    "at": "2026-10-23T20:05:01Z",
-    "error": "Gemini gemini-flash-latest 0: The read operation timed out",
-    "status": "failed",
-    "tries": 2
+    "adjustments": [
+     {
+      "category": "injury",
+      "delta": -0.05,
+      "reason": "中场罗韦拉与后卫马鲁西奇确认伤缺",
+      "source": "The Laziali",
+      "team": "home"
+     },
+     {
+      "category": "injury",
+      "delta": 0.05,
+      "reason": "拉齐奥防线主力马鲁西奇缺阵利好帕尔马",
+      "source": "OneFootball",
+      "team": "away"
+     }
+    ],
+    "at": "2026-10-24T01:07:33Z",
+    "base": {
+     "lam_a": 0.702,
+     "lam_h": 2.044
+    },
+    "confidence": "medium",
+    "lam_a": 0.752,
+    "lam_h": 1.994,
+    "model": "gemini-3.6-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.124,
+     "d": 0.2185,
+     "h": 0.6575
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-23",
+      "source": "DAZN",
+      "team": "home",
+      "title": "Lazio vs. Parma preview: Team news, prediction, date, and how to watch Serie A on DAZN",
+      "url": "https://www.dazn.com"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "The Laziali",
+      "team": "home",
+      "title": "Gattuso Warns Lazio About Parma: “We’ll Get Slapped in the Face”",
+      "url": "https://thelaziali.com"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "Football Italia",
+      "team": "home",
+      "title": "Gattuso: ‘Tell me if you had a night out, but nobody ruins my training sessions’",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "The Laziali",
+      "team": "home",
+      "title": "Double Blow for Gattuso as Lazio Duo Skip Parma & Sassuolo Games",
+      "url": "https://thelaziali.com"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "The Laziali",
+      "team": "home",
+      "title": "Done Deal – Lazio Full-Back Set to Sign New Contract Next Week",
+      "url": "https://thelaziali.com"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "DAZN",
+      "team": "away",
+      "title": "Lazio vs. Parma preview: Team news, prediction, date, and how to watch Serie A on DAZN",
+      "url": "https://www.dazn.com"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "FloRugby",
+      "team": "away",
+      "title": "Connacht Rugby vs Zebre Parma Lineups, Kickoff Time | URC Round 4",
+      "url": "https://www.florugby.com"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "OneFootball",
+      "team": "away",
+      "title": "Gattuso hit by double setback, Parma and Sassuolo come too soon for Rovella and Marusic",
+      "url": "https://onefootball.com"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "The Laziali",
+      "team": "away",
+      "title": "Double Blow for Gattuso as Lazio Duo Skip Parma & Sassuolo Games",
+      "url": "https://thelaziali.com"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "The Laziali",
+      "team": "away",
+      "title": "Gattuso Warns Lazio About Parma: “We’ll Get Slapped in the Face”",
+      "url": "https://thelaziali.com"
+     }
+    ],
+    "status": "ok",
+    "summary": "拉齐奥关键中后场球员罗韦拉与马鲁西奇伤缺，对主队攻防两端略有不利。",
+    "top": [
+     2,
+     0
+    ],
+    "top_p": 0.1276,
+    "tries": 3
    },
    "away": "Parma",
    "books": {
@@ -4842,5 +4960,5 @@
    }
   }
  },
- "updated": "2026-10-23T20:05:16Z"
+ "updated": "2026-10-24T01:07:33Z"
 }
