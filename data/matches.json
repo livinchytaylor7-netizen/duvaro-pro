@@ -495,7 +495,12 @@
      "under": 1.92
     }
    },
-   "odds_at": "2026-10-24T10:55:59Z"
+   "odds_at": "2026-10-24T10:55:59Z",
+   "result": {
+    "a": 0,
+    "at": "2026-10-24T18:48:00Z",
+    "h": 2
+   }
   },
   "0b4894e9fb123ef3045269f97e339eba": {
    "ai": {
@@ -586,7 +591,12 @@
      "under": 2.05
     }
    },
-   "odds_at": "2026-10-24T10:55:59Z"
+   "odds_at": "2026-10-24T10:55:59Z",
+   "result": {
+    "a": 3,
+    "at": "2026-10-24T18:48:00Z",
+    "h": 3
+   }
   },
   "0dae715cc56fe201f9e667917c126691": {
    "ai": {
@@ -1375,10 +1385,111 @@
   },
   "3564688383b255192409c9deb8e526ed": {
    "ai": {
-    "at": "2026-10-24T14:32:36Z",
-    "error": "Gemini gemini-3.6-flash 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-    "status": "failed",
-    "tries": 1
+    "adjustments": [
+     {
+      "category": "injury",
+      "delta": -0.1,
+      "reason": "拉比奥特、楚克乌泽等多名关键球员伤缺",
+      "source": "Goal.com",
+      "team": "away"
+     }
+    ],
+    "at": "2026-10-24T18:48:06Z",
+    "base": {
+     "lam_a": 1.796,
+     "lam_h": 0.923
+    },
+    "confidence": "high",
+    "lam_a": 1.696,
+    "lam_h": 0.923,
+    "model": "gemini-3.6-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.5468,
+     "d": 0.2584,
+     "h": 0.1948
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-24",
+      "source": "Get Italian Football News",
+      "team": "home",
+      "title": "Milan face major injury crisis ahead of Udinese clash",
+      "url": "https://www.getfootballnewsitaly.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "LiveScore",
+      "team": "home",
+      "title": "MN: Milan’s predicted XI to face Udinese – Modric and Pulisic return",
+      "url": "https://www.livescore.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "SempreMilan",
+      "team": "home",
+      "title": "CorSport: The true starters return – Amorim to name strongest possible side vs. Udinese",
+      "url": "https://sempremilan.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "The Cult of Calcio",
+      "team": "home",
+      "title": "Serie A Preview: Udinese vs Milan – Team News, Lineups & Prediction",
+      "url": "https://cultofcalcio.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "LiveScore",
+      "team": "home",
+      "title": "Serie A preview: Udinese vs. AC Milan – Team news, opposition insight, stats and prediction",
+      "url": "https://www.livescore.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "The False 9",
+      "team": "away",
+      "title": "Milan Derby History: The Madonnina Matches That Mattered",
+      "url": "https://thefalse9.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "AC Milan | Sito Ufficiale",
+      "team": "away",
+      "title": "MILAN FUTURO vs. CLUB MILANO: MATCH PREVIEW",
+      "url": "https://www.acmilan.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Goal.com",
+      "team": "away",
+      "title": "AC Milan, full-blown injury crisis for Udine trip: Rabiot, Moreira and Gila stay at home with muscle problems",
+      "url": "https://www.goal.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "The False 9",
+      "team": "away",
+      "title": "Diego Gomez to Atletico? Brighton Unlikely to Sell in January",
+      "url": "https://thefalse9.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Yahoo Sports",
+      "team": "away",
+      "title": "Amorim vows AC Milan will not repeat mistakes of Bournemouth humbling",
+      "url": "https://sports.yahoo.com"
+     }
+    ],
+    "status": "ok",
+    "summary": "AC米兰面临伤病危机，拉比奥特与楚克乌泽等多名主力缺阵。",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1232,
+    "tries": 2
    },
    "away": "AC Milan",
    "books": {
@@ -2424,7 +2535,12 @@
      "under": 2.16
     }
    },
-   "odds_at": "2026-10-24T10:55:59Z"
+   "odds_at": "2026-10-24T10:55:59Z",
+   "result": {
+    "a": 1,
+    "at": "2026-10-24T18:48:00Z",
+    "h": 2
+   }
   },
   "63aa6e3f679ee4c68de5b4bd8d3361bb": {
    "ai": {
@@ -4963,7 +5079,12 @@
      "under": 1.88
     }
    },
-   "odds_at": "2026-10-24T10:55:59Z"
+   "odds_at": "2026-10-24T10:55:59Z",
+   "result": {
+    "a": 2,
+    "at": "2026-10-24T18:48:00Z",
+    "h": 0
+   }
   },
   "c7445242bf16a8f37afef7863af45a78": {
    "away": "Lazio",
@@ -5834,5 +5955,5 @@
    }
   }
  },
- "updated": "2026-10-24T14:32:56Z"
+ "updated": "2026-10-24T18:48:06Z"
 }
