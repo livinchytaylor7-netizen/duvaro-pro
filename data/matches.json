@@ -1374,6 +1374,12 @@
    "odds_at": "2026-10-24T10:55:59Z"
   },
   "3564688383b255192409c9deb8e526ed": {
+   "ai": {
+    "at": "2026-10-24T14:32:36Z",
+    "error": "Gemini gemini-3.6-flash 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+    "status": "failed",
+    "tries": 1
+   },
    "away": "AC Milan",
    "books": {
     "betfair_ex_uk": {
@@ -1539,6 +1545,113 @@
    "odds_at": "2026-10-24T10:55:59Z"
   },
   "3cb8660cd2375b60e81144a7572cfb89": {
+   "ai": {
+    "adjustments": [
+     {
+      "category": "injury",
+      "delta": 0.05,
+      "reason": "埃雷拉与阿兰布鲁伤愈恢复完整训练",
+      "source": "OneFootball",
+      "team": "home"
+     }
+    ],
+    "at": "2026-10-24T14:32:26Z",
+    "base": {
+     "lam_a": 1.071,
+     "lam_h": 2.063
+    },
+    "confidence": "medium",
+    "lam_a": 1.071,
+    "lam_h": 2.113,
+    "model": "gemini-3.6-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.1765,
+     "d": 0.2186,
+     "h": 0.605
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-24",
+      "source": "OneFootball",
+      "team": "home",
+      "title": "Matarazzo previews Levante visit as Yangel Herrera and Aramburu return for Real Sociedad",
+      "url": "https://onefootball.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Málaga CF",
+      "team": "home",
+      "title": "Real Sociedad B - Málaga match preview",
+      "url": "https://www.malagacf.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Sportsgambler",
+      "team": "home",
+      "title": "La Liga Injuries & Suspensions",
+      "url": "https://www.sportsgambler.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Citi Sports Online",
+      "team": "home",
+      "title": "“Going to the Camp Nou is no big deal”- Jose Mourinho ahead of El Clasico",
+      "url": "https://citisportsonline.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Sportsgambler",
+      "team": "home",
+      "title": "Real Sociedad vs Levante Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026",
+      "url": "https://www.sportsgambler.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "OneFootball",
+      "team": "away",
+      "title": "Matarazzo previews Levante visit as Yangel Herrera and Aramburu return for Real Sociedad",
+      "url": "https://onefootball.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Levante UD | Web Oficial",
+      "team": "away",
+      "title": "PRESS CONFERENCE | Luís Castro: \"We will try to be Levante UD, as always\"",
+      "url": "https://www.levanteud.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Sportsgambler",
+      "team": "away",
+      "title": "Real Sociedad vs Levante Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026",
+      "url": "https://www.sportsgambler.com"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "Yahoo Sports",
+      "team": "away",
+      "title": "PREVIEW | Real Sociedad vs Levante: team news, lineups, predictions (La Liga 25/10)",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "Flashscore.com",
+      "team": "away",
+      "title": "Barcelona - Levante",
+      "url": "https://www.flashscore.com"
+     }
+    ],
+    "status": "ok",
+    "summary": "皇家社会迎来埃雷拉和阿兰布鲁复出，主队阵容深度与实力得到微幅提升。",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1012,
+    "tries": 1
+   },
    "away": "Levante",
    "books": {
     "betfair_ex_uk": {
@@ -2506,6 +2619,113 @@
    "odds_at": "2026-10-24T10:55:59Z"
   },
   "63af660d4d0d52f8ac7685172ef939c4": {
+   "ai": {
+    "adjustments": [
+     {
+      "category": "injury",
+      "delta": -0.15,
+      "reason": "冈萨雷斯等球员新增伤缺，尤文伤病危机加剧",
+      "source": "Juvefc.com",
+      "team": "away"
+     }
+    ],
+    "at": "2026-10-24T14:32:09Z",
+    "base": {
+     "lam_a": 1.972,
+     "lam_h": 0.777
+    },
+    "confidence": "medium",
+    "lam_a": 1.822,
+    "lam_h": 0.777,
+    "model": "gemini-3.6-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.6138,
+     "d": 0.2401,
+     "h": 0.1461
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-24",
+      "source": "LiveScore",
+      "team": "home",
+      "title": "Serie A Preview: Lecce vs Juventus – Team News, Lineups & Prediction",
+      "url": "https://www.livescore.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Juvefc.com",
+      "team": "home",
+      "title": "Celik and Nico Gonzalez Injury: Juventus Blow Before Lecce",
+      "url": "https://www.juvefc.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Yahoo Sports",
+      "team": "home",
+      "title": "Lecce v Juventus match preview and prediction",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Sportsgambler",
+      "team": "home",
+      "title": "Lecce vs Juventus Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026",
+      "url": "https://www.sportsgambler.com"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "The False 9",
+      "team": "home",
+      "title": "Juventus Predicted Lineup at Lecce: Gonzalez Starts",
+      "url": "https://thefalse9.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Football Italia",
+      "team": "away",
+      "title": "Today’s Papers – Juventus injury crisis deepens as Torino fly",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Yahoo Sports",
+      "team": "away",
+      "title": "Juventus injury crisis deepens with two more players sidelined",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "LiveScore",
+      "team": "away",
+      "title": "Serie A Preview: Lecce vs Juventus – Team News, Lineups & Prediction",
+      "url": "https://www.livescore.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Yahoo Sports",
+      "team": "away",
+      "title": "Kaio Jorge admits injuries ruined his career at Juventus",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Yahoo Sports",
+      "team": "away",
+      "title": "Michelangelo Rampulla explains where Juventus is being hurt",
+      "url": "https://sports.yahoo.com"
+     }
+    ],
+    "status": "ok",
+    "summary": "尤文图斯赛前新增冈萨雷斯等多名伤员，进攻端火力受损",
+    "top": [
+     0,
+     1
+    ],
+    "top_p": 0.127,
+    "tries": 1
+   },
    "away": "Juventus",
    "books": {
     "betfair_ex_uk": {
@@ -2918,6 +3138,120 @@
    "odds_at": "2026-10-24T10:55:59Z"
   },
   "72089d103a5fe6a922c35e17efba6ffc": {
+   "ai": {
+    "adjustments": [
+     {
+      "category": "suspension",
+      "delta": -0.2,
+      "reason": "维尼修斯停赛且罗德里戈缺阵，皇马进攻严重受损",
+      "source": "The False 9",
+      "team": "away"
+     },
+     {
+      "category": "injury",
+      "delta": 0.1,
+      "reason": "孔德单独训练出战成疑，巴萨后防存在隐患",
+      "source": "The False 9",
+      "team": "away"
+     }
+    ],
+    "at": "2026-10-24T14:32:56Z",
+    "base": {
+     "lam_a": 1.757,
+     "lam_h": 2.707
+    },
+    "confidence": "high",
+    "lam_a": 1.657,
+    "lam_h": 2.707,
+    "model": "gemini-3.6-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.219,
+     "d": 0.1857,
+     "h": 0.5953
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-24",
+      "source": "London Evening Standard",
+      "team": "home",
+      "title": "Barcelona vs Real Madrid lineups: Confirmed team news, predicted XIs and injury latest for El Clasico",
+      "url": "https://www.standard.co.uk"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "The False 9",
+      "team": "home",
+      "title": "Real Madrid Injury News vs Barcelona: Vinicius Banned, Rodrygo Out",
+      "url": "https://thefalse9.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "The False 9",
+      "team": "home",
+      "title": "Kounde Injury Update: Trains Alone Again, a Major Doubt for El Clasico",
+      "url": "https://thefalse9.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "The False 9",
+      "team": "home",
+      "title": "Barcelona vs Real Madrid Predicted Lineups: Vinicius Banned, Kounde a Doubt",
+      "url": "https://thefalse9.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "The False 9",
+      "team": "home",
+      "title": "Barcelona vs Real Madrid Tactics: Yamal, Mbappe and Life Without Vinicius",
+      "url": "https://thefalse9.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "The False 9",
+      "team": "away",
+      "title": "Real Madrid Injury News vs Barcelona: Vinicius Banned, Rodrygo Out",
+      "url": "https://thefalse9.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "London Evening Standard",
+      "team": "away",
+      "title": "Barcelona vs Real Madrid lineups: Confirmed team news, predicted XIs and injury latest for El Clasico",
+      "url": "https://www.standard.co.uk"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Real Madrid CF | Web Oficial",
+      "team": "away",
+      "title": "Mourinho: “The global dimension of the Clasico is unique, and we hope to see a great match and win”",
+      "url": "https://www.realmadrid.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "The False 9",
+      "team": "away",
+      "title": "Barcelona vs Real Madrid Head to Head Record: Level on 106 Wins Each",
+      "url": "https://thefalse9.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "The False 9",
+      "team": "away",
+      "title": "Barcelona vs Real Madrid Tactics: Yamal, Mbappe and Life Without Vinicius",
+      "url": "https://thefalse9.com"
+     }
+    ],
+    "status": "ok",
+    "summary": "皇马维尼修斯与罗德里戈同时缺阵削弱进攻，巴萨孔德成疑或对防守产生不利影响。",
+    "top": [
+     2,
+     1
+    ],
+    "top_p": 0.0773,
+    "tries": 1
+   },
    "away": "Real Madrid",
    "books": {
     "betfair_ex_uk": {
@@ -3091,7 +3425,12 @@
      "under": 2.12
     }
    },
-   "odds_at": "2026-10-24T10:55:59Z"
+   "odds_at": "2026-10-24T10:55:59Z",
+   "result": {
+    "a": 3,
+    "at": "2026-10-24T14:31:49Z",
+    "h": 0
+   }
   },
   "77383723574e3d39c7aba22eec6c4ce3": {
    "away": "Celta Vigo",
@@ -3707,10 +4046,103 @@
   },
   "95cfaecfe96bb7ced1fb6af974a4110b": {
    "ai": {
-    "at": "2026-10-24T10:56:49Z",
-    "error": "Gemini gemini-3.6-flash 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-    "status": "failed",
-    "tries": 1
+    "adjustments": [],
+    "at": "2026-10-24T14:31:56Z",
+    "base": {
+     "lam_a": 1.098,
+     "lam_h": 1.488
+    },
+    "confidence": "high",
+    "lam_a": 1.098,
+    "lam_h": 1.488,
+    "model": "gemini-3.6-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.2698,
+     "d": 0.2785,
+     "h": 0.4518
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-24",
+      "source": "WXOW",
+      "team": "home",
+      "title": "Nuclear power could return to Genoa under new agreement",
+      "url": "https://www.wxow.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Sports Mole",
+      "team": "home",
+      "title": "Preview: Genoa vs Venezia - prediction, team news, lineups",
+      "url": "https://www.sportsmole.co.uk"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Sportsgambler",
+      "team": "home",
+      "title": "Genoa vs Venezia Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026",
+      "url": "https://www.sportsgambler.com"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "Yahoo Sports",
+      "team": "home",
+      "title": "PREVIEW | Genoa vs Venezia: team news, lineups, predictions (Serie A 25/10)",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "VernonReporter",
+      "team": "home",
+      "title": "Dairyland Power Cooperative evaluates nuclear return to Genoa site with small modular reactor agreement",
+      "url": "https://vernonreporter.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Sports Mole",
+      "team": "away",
+      "title": "Preview: Genoa vs Venezia - prediction, team news, lineups",
+      "url": "https://www.sportsmole.co.uk"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "Yahoo Sports",
+      "team": "away",
+      "title": "PREVIEW | Genoa vs Venezia: team news, lineups, predictions (Serie A 25/10)",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "AllNigeriaSoccer",
+      "team": "away",
+      "title": "'He was on our list' - Genoa coach confirms Akor Adams was a transfer target before Venezia move",
+      "url": "https://www.allnigeriasoccer.com"
+     },
+     {
+      "date": "2026-10-20",
+      "source": "The Stats Zone",
+      "team": "away",
+      "title": "Genoa vs Venezia Preview: Team News & Prediction",
+      "url": "https://www.thestatszone.com"
+     },
+     {
+      "date": "2026-10-19",
+      "source": "Sports247 Nigeria",
+      "team": "away",
+      "title": "What Venezia's Coach Said That Motivated Akor Adam's Winning Goal Against Napoli In Serie A",
+      "url": "https://www.sports247.ng"
+     }
+    ],
+    "status": "ok",
+    "summary": "市场已充分包含现有信息，未发现未定价的具体伤停或变动",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1329,
+    "tries": 2
    },
    "away": "Venezia",
    "books": {
@@ -5402,5 +5834,5 @@
    }
   }
  },
- "updated": "2026-10-24T10:57:03Z"
+ "updated": "2026-10-24T14:32:56Z"
 }
