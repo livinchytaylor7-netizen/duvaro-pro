@@ -3937,6 +3937,12 @@
    "odds_at": "2026-10-25T11:23:47Z"
   },
   "85e464708d03287f24590e1478aeca31": {
+   "ai": {
+    "at": "2026-10-25T14:57:03Z",
+    "error": "Gemini gemini-3.6-flash 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+    "status": "failed",
+    "tries": 1
+   },
    "away": "CA Osasuna",
    "books": {
     "betfair_ex_uk": {
@@ -5495,7 +5501,12 @@
      "under": 1.95
     }
    },
-   "odds_at": "2026-10-25T11:23:47Z"
+   "odds_at": "2026-10-25T11:23:47Z",
+   "result": {
+    "a": 1,
+    "at": "2026-10-25T14:56:58Z",
+    "h": 2
+   }
   },
   "ce94aca384a20f6af459366da6e1dd21": {
    "ai": {
@@ -6127,5 +6138,5 @@
    }
   }
  },
- "updated": "2026-10-25T11:23:48Z"
+ "updated": "2026-10-25T14:57:03Z"
 }
