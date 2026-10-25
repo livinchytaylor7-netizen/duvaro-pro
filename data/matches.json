@@ -1174,7 +1174,12 @@
      "under": 1.88
     }
    },
-   "odds_at": "2026-10-25T11:23:47Z"
+   "odds_at": "2026-10-25T11:23:47Z",
+   "result": {
+    "a": 0,
+    "at": "2026-10-25T19:03:57Z",
+    "h": 0
+   }
   },
   "2db2b55e71574a19ff0557898d3e9933": {
    "away": "Alavés",
@@ -2799,7 +2804,12 @@
      "under": 2.03
     }
    },
-   "odds_at": "2026-10-25T11:23:47Z"
+   "odds_at": "2026-10-25T11:23:47Z",
+   "result": {
+    "a": 4,
+    "at": "2026-10-25T19:03:57Z",
+    "h": 4
+   }
   },
   "63af660d4d0d52f8ac7685172ef939c4": {
    "ai": {
@@ -3938,10 +3948,103 @@
   },
   "85e464708d03287f24590e1478aeca31": {
    "ai": {
-    "at": "2026-10-25T14:57:03Z",
-    "error": "Gemini gemini-3.6-flash 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-    "status": "failed",
-    "tries": 1
+    "adjustments": [],
+    "at": "2026-10-25T19:04:04Z",
+    "base": {
+     "lam_a": 0.904,
+     "lam_h": 1.491
+    },
+    "confidence": "high",
+    "lam_a": 0.904,
+    "lam_h": 1.491,
+    "model": "gemini-3.6-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.2187,
+     "d": 0.2819,
+     "h": 0.4994
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-25",
+      "source": "Mozzart Sport Kenya",
+      "team": "home",
+      "title": "BETTING GUIDE: Sevilla vs Osasuna, match preview, team news and prediction",
+      "url": "https://www.mozzartsport.co.ke"
+     },
+     {
+      "date": "2026-10-25",
+      "source": "Dailysports",
+      "team": "home",
+      "title": "Sevilla vs Osasuna prediction and betting tips 26 October 2026",
+      "url": "https://dailysports.net"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Yahoo Sports",
+      "team": "home",
+      "title": "PREVIEW | Sevilla FC vs Osasuna: team news, lineups, predictions (La Liga 26/10)",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Sports Mole",
+      "team": "home",
+      "title": "Preview: Sevilla vs Osasuna - prediction, team news, lineups",
+      "url": "https://www.sportsmole.co.uk"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Khel Now",
+      "team": "home",
+      "title": "Sevilla vs Osasuna Preview, prediction, injury news & lineups | LaLiga 2026-27",
+      "url": "https://khelnow.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Firstpost",
+      "team": "away",
+      "title": "Team A vs Team B Football Playing XI | Confirmed Team Line-ups & Substitutes",
+      "url": "https://www.firstpost.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Khel Now",
+      "team": "away",
+      "title": "Sevilla vs Osasuna Preview, prediction, injury news & lineups | LaLiga 2026-27",
+      "url": "https://khelnow.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Sportskeeda",
+      "team": "away",
+      "title": "Sevilla vs Osasuna Prediction and Betting Tips | October 26th 2026",
+      "url": "https://www.sportskeeda.com"
+     },
+     {
+      "date": "2026-10-24",
+      "source": "Comuniate",
+      "team": "away",
+      "title": "Osasuna - Levante. Preview, likely lineups and fantasy tips. Matchday 2 of LaLiga.",
+      "url": "https://www.comuniate.com"
+     },
+     {
+      "date": "2026-10-23",
+      "source": "Transfermarkt",
+      "team": "away",
+      "title": "Sevilla FC - CA Osasuna prediction & tips 26.10.2026",
+      "url": "https://www.transfermarkt.com"
+     }
+    ],
+    "status": "ok",
+    "summary": "头条新闻未包含具体的伤停或阵容变动信息，市场定价合理。",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1327,
+    "tries": 2
    },
    "away": "CA Osasuna",
    "books": {
@@ -4474,7 +4577,12 @@
      "under": 1.86
     }
    },
-   "odds_at": "2026-10-25T11:23:47Z"
+   "odds_at": "2026-10-25T11:23:47Z",
+   "result": {
+    "a": 0,
+    "at": "2026-10-25T19:03:57Z",
+    "h": 1
+   }
   },
   "9c4254cba9944a839b421db27260504d": {
    "ai": {
@@ -4664,7 +4772,12 @@
      "under": 1.99
     }
    },
-   "odds_at": "2026-10-25T11:23:47Z"
+   "odds_at": "2026-10-25T11:23:47Z",
+   "result": {
+    "a": 0,
+    "at": "2026-10-25T19:03:57Z",
+    "h": 4
+   }
   },
   "a362cccad837f1ffae61ff43a3536688": {
    "ai": {
@@ -6138,5 +6251,5 @@
    }
   }
  },
- "updated": "2026-10-25T14:57:03Z"
+ "updated": "2026-10-25T19:04:04Z"
 }
