@@ -1,5 +1,5 @@
 {
- "credits_remaining": 374,
+ "credits_remaining": 366,
  "errors": [],
  "gemini_errors": [
   "gemini-3.8-flash 429: {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}]}}",
@@ -17,16 +17,16 @@
   "status": 200
  },
  "last_run": {
-  "at": "2026-10-26T00:43:41Z",
+  "at": "2026-10-26T12:58:05Z",
   "ok": true,
   "step": "all"
  },
  "leagues": {
   "laliga": {
-   "odds_at": "2026-10-25T11:23:47Z"
+   "odds_at": "2026-10-26T12:58:05Z"
   },
   "seriea": {
-   "odds_at": "2026-10-25T11:23:47Z"
+   "odds_at": "2026-10-26T12:58:05Z"
   }
  },
  "log": [
@@ -123,6 +123,10 @@
   "2026-10-25T19:04:04Z 完成：共 48 场比赛记录",
   "2026-10-26T00:43:41Z 赛果：西甲 结算 2/2 场，剩余额度 376",
   "2026-10-26T00:43:41Z 赛果：意甲 结算 2/2 场，剩余额度 374",
-  "2026-10-26T00:43:41Z 完成：共 48 场比赛记录"
+  "2026-10-26T00:43:41Z 完成：共 48 场比赛记录",
+  "2026-10-26T12:58:05Z 赔率：西甲（1 场即将开赛，刷新）新增 10 场，更新 21 场，剩余额度 370",
+  "2026-10-26T12:58:06Z 赔率：意甲（3 场即将开赛，刷新）新增 10 场，更新 20 场，剩余额度 366",
+  "2026-10-26T12:59:14Z AI：分析 1 场，失败 0 场，待分析 1 场",
+  "2026-10-26T12:59:14Z 完成：共 68 场比赛记录"
  ]
 }
