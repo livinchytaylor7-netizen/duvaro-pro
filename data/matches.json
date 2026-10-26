@@ -4532,6 +4532,105 @@
    "odds_at": "2026-10-26T12:58:05Z"
   },
   "7d989a0a7bae47eb957731e97c5bd9c1": {
+   "ai": {
+    "adjustments": [],
+    "at": "2026-10-26T17:22:54Z",
+    "base": {
+     "lam_a": 1.916,
+     "lam_h": 1.081
+    },
+    "confidence": "high",
+    "lam_a": 1.916,
+    "lam_h": 1.081,
+    "model": "gemini-3.6-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.56,
+     "d": 0.2375,
+     "h": 0.2024
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-26",
+      "source": "beIN SPORTS",
+      "team": "home",
+      "title": "Torino vs Como",
+      "url": "https://www.beinsports.com"
+     },
+     {
+      "date": "2026-10-26",
+      "source": "Soccer News",
+      "team": "home",
+      "title": "Prediction: Torino vs Como",
+      "url": "https://www.soccernews.com"
+     },
+     {
+      "date": "2026-10-26",
+      "source": "The Stats Zone",
+      "team": "home",
+      "title": "Torino vs Como Preview: Team News & Prediction",
+      "url": "https://www.thestatszone.com"
+     },
+     {
+      "date": "2026-10-25",
+      "source": "DAZN",
+      "team": "home",
+      "title": "Watch Torino vs. Como Highlights Online | DAZN GB",
+      "url": "https://www.dazn.com"
+     },
+     {
+      "date": "2026-10-25",
+      "source": "Yahoo Sports",
+      "team": "home",
+      "title": "PREVIEW | Torino vs Como 1907: team news, lineups, predictions (Serie A 27/10)",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-26",
+      "source": "Yahoo Sports",
+      "team": "away",
+      "title": "Official: Como hand new contract extension to top goalscorer Douvikas",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-25",
+      "source": "The New York Times",
+      "team": "away",
+      "title": "Bruno Fernandes left out of Manchester United starting line-up vs. Bournemouth after Como outburst",
+      "url": "https://www.nytimes.com"
+     },
+     {
+      "date": "2026-10-25",
+      "source": "Yahoo Sports",
+      "team": "away",
+      "title": "PREVIEW | Torino vs Como 1907: team news, lineups, predictions (Serie A 27/10)",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-25",
+      "source": "Como 1907",
+      "team": "away",
+      "title": "Primavera 1 | Cagliari",
+      "url": "https://comofootball.com"
+     },
+     {
+      "date": "2026-10-25",
+      "source": "Channels Television",
+      "team": "away",
+      "title": "Carrick Drops Fernandes After Como Outburst",
+      "url": "https://www.channelstv.com"
+     }
+    ],
+    "status": "ok",
+    "summary": "新闻未提及影响战力的重大伤停或轮换，市场定价已充分反映",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1117,
+    "tries": 1
+   },
    "away": "Como",
    "books": {
     "betfair_ex_uk": {
@@ -4617,6 +4716,105 @@
    "odds_at": "2026-10-26T12:58:05Z"
   },
   "7eecf109ae6a5f87441a79b0e4111982": {
+   "ai": {
+    "adjustments": [],
+    "at": "2026-10-26T17:23:09Z",
+    "base": {
+     "lam_a": 0.734,
+     "lam_h": 2.283
+    },
+    "confidence": "high",
+    "lam_a": 0.734,
+    "lam_h": 2.283,
+    "model": "gemini-3.6-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.0972,
+     "d": 0.1856,
+     "h": 0.7172
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-26",
+      "source": "Football Italia",
+      "team": "home",
+      "title": "Gasperini: ‘Unfortunate’ Allegri outburst, Dybala ‘might’ be back for Cagliari",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-26",
+      "source": "Yahoo Sports",
+      "team": "home",
+      "title": "Liverpool keen to move for €90m Serie A star",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-26",
+      "source": "beIN SPORTS",
+      "team": "home",
+      "title": "Dybala closing in on return from calf injury for Roma",
+      "url": "https://www.beinsports.com"
+     },
+     {
+      "date": "2026-10-26",
+      "source": "The Straits Times",
+      "team": "home",
+      "title": "Napoli coach Allegri handed two-match ban over outbursts in Roma clash",
+      "url": "https://www.straitstimes.com"
+     },
+     {
+      "date": "2026-10-26",
+      "source": "Goal.com",
+      "team": "home",
+      "title": "AS Roma vs Cagliari Predictions: Hosts to maintain unbeaten run",
+      "url": "https://www.goal.com"
+     },
+     {
+      "date": "2026-10-26",
+      "source": "ToffeeWeb",
+      "team": "away",
+      "title": "Roma vs Cagliari Predictions, Picks & Odds – 27/10/2026",
+      "url": "https://www.toffeeweb.com"
+     },
+     {
+      "date": "2026-10-26",
+      "source": "The Cult of Calcio",
+      "team": "away",
+      "title": "Serie A Preview: Roma vs Cagliari – Team News, Lineups & Prediction",
+      "url": "https://cultofcalcio.com"
+     },
+     {
+      "date": "2026-10-26",
+      "source": "Football Italia",
+      "team": "away",
+      "title": "Gasperini: ‘Unfortunate’ Allegri outburst, Dybala ‘might’ be back for Cagliari",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-26",
+      "source": "Yahoo Sports",
+      "team": "away",
+      "title": "Gasperini shares Dybala, Kone injury update in Cagliari pre-match presser",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-26",
+      "source": "Yahoo Sports",
+      "team": "away",
+      "title": "Lulli to start in Roma-Cagliari, Cristante back in midfield",
+      "url": "https://sports.yahoo.com"
+     }
+    ],
+    "status": "ok",
+    "summary": "市场已充分反映迪巴拉接近复出与克里斯坦特回归的信息，无需调整。",
+    "top": [
+     2,
+     0
+    ],
+    "top_p": 0.1276,
+    "tries": 1
+   },
    "away": "Cagliari",
    "books": {
     "betfair_ex_uk": {
@@ -7778,5 +7976,5 @@
    }
   }
  },
- "updated": "2026-10-26T12:59:14Z"
+ "updated": "2026-10-26T17:23:09Z"
 }
