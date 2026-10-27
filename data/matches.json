@@ -2826,10 +2826,103 @@
   },
   "482c18a8081afdfa310324fa8f37e95a": {
    "ai": {
-    "at": "2026-10-27T16:37:46Z",
-    "error": "Gemini gemini-3.6-flash 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-    "status": "failed",
-    "tries": 2
+    "adjustments": [],
+    "at": "2026-10-27T20:43:12Z",
+    "base": {
+     "lam_a": 1.235,
+     "lam_h": 1.131
+    },
+    "confidence": "high",
+    "lam_a": 1.235,
+    "lam_h": 1.131,
+    "model": "gemini-3.6-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.3756,
+     "d": 0.2995,
+     "h": 0.3249
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-27",
+      "source": "vtb league",
+      "team": "home",
+      "title": "Dynamo faces Avtodor, CSKA to host BETCITY PARMA. Preview October 27",
+      "url": "https://vtb-league.com"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "Sports Mole",
+      "team": "home",
+      "title": "Preview: Parma vs. Udinese - prediction, team news, lineups",
+      "url": "https://www.sportsmole.co.uk"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "Afrik-Foot",
+      "team": "home",
+      "title": "Parma vs Udinese preview, prediction, h2h, team news",
+      "url": "https://www.afrik-foot.com"
+     },
+     {
+      "date": "2026-10-26",
+      "source": "playmakerstats.com",
+      "team": "home",
+      "title": "PREVIEW | Parma vs Udinese: team news, lineups, predictions (Serie A 28/10)",
+      "url": "https://www.playmakerstats.com"
+     },
+     {
+      "date": "2026-10-26",
+      "source": "The Stats Zone",
+      "team": "home",
+      "title": "Parma vs Udinese Preview: Team News & Prediction",
+      "url": "https://www.thestatszone.com"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "SempreMilan",
+      "team": "away",
+      "title": "How Amorim effectively navigated an injury crisis: Tactical analysis of Udinese 0-2 AC Milan",
+      "url": "https://sempremilan.com"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "SempreMilan",
+      "team": "away",
+      "title": "Sporting Judge: Udinese fined €3,000 for ‘repeatedly directed offensive chants’ against Maignan",
+      "url": "https://sempremilan.com"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "Sports Mole",
+      "team": "away",
+      "title": "Preview: Parma vs. Udinese - prediction, team news, lineups",
+      "url": "https://www.sportsmole.co.uk"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "Afrik-Foot",
+      "team": "away",
+      "title": "Parma vs Udinese preview, prediction, h2h, team news",
+      "url": "https://www.afrik-foot.com"
+     },
+     {
+      "date": "2026-10-26",
+      "source": "SempreMilan",
+      "team": "away",
+      "title": "GdS: The ‘real Milan’ – how Amorim overcame an injury crisis to beat Udinese with bold choices",
+      "url": "https://sempremilan.com"
+     }
+    ],
+    "status": "ok",
+    "summary": "新闻未提供具体的关键球员伤停或教练变动信息，市场定价已反映现状。",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1416,
+    "tries": 3
    },
    "away": "Udinese",
    "books": {
@@ -7422,7 +7515,12 @@
      "under": 1.98
     }
    },
-   "odds_at": "2026-10-27T12:08:30Z"
+   "odds_at": "2026-10-27T12:08:30Z",
+   "result": {
+    "a": 6,
+    "at": "2026-10-27T20:43:04Z",
+    "h": 2
+   }
   },
   "c9b6c7048d8dc33dae618f67f462f67a": {
    "ai": {
@@ -8451,5 +8549,5 @@
    }
   }
  },
- "updated": "2026-10-27T16:38:37Z"
+ "updated": "2026-10-27T20:43:12Z"
 }
