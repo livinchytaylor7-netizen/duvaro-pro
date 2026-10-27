@@ -1834,6 +1834,105 @@
    "odds_at": "2026-10-26T12:58:05Z"
   },
   "34848497b90b1392f6a767fc183d3ac1": {
+   "ai": {
+    "adjustments": [],
+    "at": "2026-10-27T16:38:07Z",
+    "base": {
+     "lam_a": 1.639,
+     "lam_h": 0.813
+    },
+    "confidence": "high",
+    "lam_a": 1.639,
+    "lam_h": 0.813,
+    "model": "gemini-3.6-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.5608,
+     "d": 0.2636,
+     "h": 0.1755
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-27",
+      "source": "The False 9",
+      "team": "home",
+      "title": "Juventus Predicted Lineup at Genoa: Woltemade Starts",
+      "url": "https://thefalse9.com"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "Football Italia",
+      "team": "home",
+      "title": "Spalletti set to drop Kolo Muani for Juventus’ clash against Genoa",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "Goal.com",
+      "team": "home",
+      "title": "Juventus, Spalletti: “Genoa are ready for a battle, like De Rossi. Sarr has recovered, there could be changes up front. Kolo Muani is not yet at the required level, but he worries opponents”",
+      "url": "https://www.goal.com"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "La Gazzetta dello Sport",
+      "team": "home",
+      "title": "Serie A unavailable players: injured and suspended for matchday 9",
+      "url": "https://www.gazzetta.it"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "vijesti.me",
+      "team": "home",
+      "title": "Osmagic for the fans, important for De Rossi in the locker room too",
+      "url": "https://en.vijesti.me"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "The False 9",
+      "team": "away",
+      "title": "Juventus Predicted Lineup at Genoa: Woltemade Starts",
+      "url": "https://thefalse9.com"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "Football Italia",
+      "team": "away",
+      "title": "Spalletti set to drop Kolo Muani for Juventus’ clash against Genoa",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "Yahoo Sports",
+      "team": "away",
+      "title": "Video: Nottingham Forest give Savona a special welcome back after nightmare injury",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "Football Italia",
+      "team": "away",
+      "title": "Today’s Papers – Double Napoli blow, Juventus drop Kolo Muani?",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "Football Italia",
+      "team": "away",
+      "title": "Spalletti: ‘Juventus players wouldn’t dare to dictate the system we play with’",
+      "url": "https://football-italia.net"
+     }
+    ],
+    "status": "ok",
+    "summary": "赛前新闻仅涵盖常规阵容轮换与主教练发言，市场已充分定价。",
+    "top": [
+     0,
+     1
+    ],
+    "top_p": 0.132,
+    "tries": 1
+   },
    "away": "Juventus",
    "books": {
     "betfair_ex_uk": {
@@ -2727,10 +2826,10 @@
   },
   "482c18a8081afdfa310324fa8f37e95a": {
    "ai": {
-    "at": "2026-10-27T12:09:22Z",
+    "at": "2026-10-27T16:37:46Z",
     "error": "Gemini gemini-3.6-flash 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
     "status": "failed",
-    "tries": 1
+    "tries": 2
    },
    "away": "Udinese",
    "books": {
@@ -6444,6 +6543,113 @@
    }
   },
   "abec89862e33762414fcb8b2232aba08": {
+   "ai": {
+    "adjustments": [
+     {
+      "category": "coach",
+      "delta": -0.05,
+      "reason": "主教练阿莱格里被禁赛两场无法场边指挥",
+      "source": "Football Italia",
+      "team": "away"
+     }
+    ],
+    "at": "2026-10-27T16:38:37Z",
+    "base": {
+     "lam_a": 1.841,
+     "lam_h": 1.095
+    },
+    "confidence": "medium",
+    "lam_a": 1.791,
+    "lam_h": 1.095,
+    "model": "gemini-3.6-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.5279,
+     "d": 0.2496,
+     "h": 0.2224
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-27",
+      "source": "ToffeeWeb",
+      "team": "home",
+      "title": "Monza vs Napoli Predictions, Picks & Odds – 28/10/2026",
+      "url": "https://www.toffeeweb.com"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "Football Italia",
+      "team": "home",
+      "title": "Official: Allegri confirms 20-man Napoli squad for Monza clash with two absences",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "The Football Faithful",
+      "team": "home",
+      "title": "Monza vs Napoli Prediction & Betting Tips – 28/10/2026",
+      "url": "https://thefootballfaithful.com"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "ATS.io",
+      "team": "home",
+      "title": "Monza vs Napoli Preview: Predicted Lineups & Picks",
+      "url": "https://ats.io"
+     },
+     {
+      "date": "2026-10-26",
+      "source": "Yahoo Sports",
+      "team": "home",
+      "title": "PREVIEW | Monza vs Napoli: team news, lineups, predictions (Serie A 28/10)",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "Football Italia",
+      "team": "away",
+      "title": "Official: Allegri confirms 20-man Napoli squad for Monza clash with two absences",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "Football Italia",
+      "team": "away",
+      "title": "Allegri: ‘Given up on the appeal, might end up with a four-game ban instead of two’",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "Football Italia",
+      "team": "away",
+      "title": "Today’s Papers – Double Napoli blow, Juventus drop Kolo Muani?",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "سانا",
+      "team": "away",
+      "title": "Napoli coach Allegri handed two-match ban after Roma draw",
+      "url": "https://sana.sy"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "ToffeeWeb",
+      "team": "away",
+      "title": "Monza vs Napoli Predictions, Picks & Odds – 28/10/2026",
+      "url": "https://www.toffeeweb.com"
+     }
+    ],
+    "status": "ok",
+    "summary": "那不勒斯主帅阿莱格里被禁赛两场，且球队大名单存在人员缺失。",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1182,
+    "tries": 1
+   },
    "away": "Napoli",
    "books": {
     "betfair_ex_uk": {
@@ -8245,5 +8451,5 @@
    }
   }
  },
- "updated": "2026-10-27T12:09:22Z"
+ "updated": "2026-10-27T16:38:37Z"
 }
