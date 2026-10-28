@@ -4167,10 +4167,103 @@
   },
   "667cf69986b200753742c90cb9c5126c": {
    "ai": {
-    "at": "2026-10-28T12:51:25Z",
-    "error": "Gemini gemini-3.6-flash 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-    "status": "failed",
-    "tries": 1
+    "adjustments": [],
+    "at": "2026-10-28T17:10:00Z",
+    "base": {
+     "lam_a": 1.242,
+     "lam_h": 2.171
+    },
+    "confidence": "high",
+    "lam_a": 1.242,
+    "lam_h": 2.171,
+    "model": "gemini-3.6-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.2045,
+     "d": 0.2172,
+     "h": 0.5783
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-28",
+      "source": "ESPN India",
+      "team": "home",
+      "title": "Frosinone vs. Torino (1 Nov, 2026) Live Score",
+      "url": "https://www.espn.in"
+     },
+     {
+      "date": "2026-10-28",
+      "source": "Dailysports",
+      "team": "home",
+      "title": "Frosinone vs Lecce prediction and betting tips 29 October 2026",
+      "url": "https://dailysports.net"
+     },
+     {
+      "date": "2026-10-28",
+      "source": "Sportsgambler",
+      "team": "home",
+      "title": "Frosinone vs Lecce Prediction, Betting Tips, Lineups & Odds | 29 Oct 2026",
+      "url": "https://www.sportsgambler.com"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "Yahoo Sports",
+      "team": "home",
+      "title": "PREVIEW | Frosinone vs Lecce: team news, lineups, predictions (Serie A 29/10)",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "Squawka",
+      "team": "home",
+      "title": "Frosinone vs Lecce predictions and betting tips: Hosts to edge an open contest",
+      "url": "https://www.squawka.com"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "Yahoo Sports",
+      "team": "away",
+      "title": "PREVIEW | Frosinone vs Lecce: team news, lineups, predictions (Serie A 29/10)",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "Sports Mole",
+      "team": "away",
+      "title": "Preview: Frosinone vs Lecce - prediction, team news, lineups",
+      "url": "https://www.sportsmole.co.uk"
+     },
+     {
+      "date": "2026-10-26",
+      "source": "The Stats Zone",
+      "team": "away",
+      "title": "Frosinone vs Lecce Preview: Team News & Prediction",
+      "url": "https://www.thestatszone.com"
+     },
+     {
+      "date": "2026-10-26",
+      "source": "GhanaSoccernet",
+      "team": "away",
+      "title": "📊 Frosinone vs Lecce :, H2H Prediction (29 Oct 2026) Odds & Betting Stats",
+      "url": "https://ghanasoccernet.com"
+     },
+     {
+      "date": "2026-10-26",
+      "source": "Quotidiano Sportivo",
+      "team": "away",
+      "title": "Lecce: Di Francesco, it's a shame he didn't find the net",
+      "url": "https://sport.quotidiano.net"
+     }
+    ],
+    "status": "ok",
+    "summary": "头条新闻未包含确切的伤停或阵容变动信息，市场已充分定价。",
+    "top": [
+     2,
+     1
+    ],
+    "top_p": 0.0964,
+    "tries": 2
    },
    "away": "Lecce",
    "books": {
@@ -8043,6 +8136,12 @@
    }
   },
   "da159a6b84dbb548b4d7b94c722caac5": {
+   "ai": {
+    "at": "2026-10-28T17:10:17Z",
+    "error": "Gemini gemini-3.6-flash 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+    "status": "failed",
+    "tries": 1
+   },
    "away": "Atalanta BC",
    "books": {
     "betfair_ex_uk": {
@@ -8715,5 +8814,5 @@
    }
   }
  },
- "updated": "2026-10-28T12:51:25Z"
+ "updated": "2026-10-28T17:10:17Z"
 }
