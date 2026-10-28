@@ -1,5 +1,5 @@
 {
- "credits_remaining": 352,
+ "credits_remaining": 350,
  "errors": [],
  "gemini_errors": [
   "gemini-3.8-flash 429: {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}]}}",
@@ -17,7 +17,7 @@
   "status": 200
  },
  "last_run": {
-  "at": "2026-10-28T17:09:52Z",
+  "at": "2026-10-28T21:06:15Z",
   "ok": true,
   "step": "all"
  },
@@ -147,6 +147,9 @@
   "2026-10-28T12:51:25Z AI：分析 0 场，失败 1 场，待分析 1 场",
   "2026-10-28T12:51:25Z 完成：共 68 场比赛记录",
   "2026-10-28T17:10:17Z AI：分析 1 场，失败 1 场，待分析 2 场",
-  "2026-10-28T17:10:17Z 完成：共 68 场比赛记录"
+  "2026-10-28T17:10:17Z 完成：共 68 场比赛记录",
+  "2026-10-28T21:06:16Z 赛果：意甲 结算 3/3 场，剩余额度 350",
+  "2026-10-28T21:06:25Z AI：分析 1 场，失败 0 场，待分析 1 场",
+  "2026-10-28T21:06:25Z 完成：共 68 场比赛记录"
  ]
 }

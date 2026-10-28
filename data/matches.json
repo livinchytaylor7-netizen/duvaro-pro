@@ -1794,7 +1794,12 @@
      "under": 1.86
     }
    },
-   "odds_at": "2026-10-28T12:51:23Z"
+   "odds_at": "2026-10-28T12:51:23Z",
+   "result": {
+    "a": 2,
+    "at": "2026-10-28T21:06:15Z",
+    "h": 0
+   }
   },
   "339a6465fa5153fd8f31e487cf557cf0": {
    "away": "Rayo Vallecano",
@@ -2796,7 +2801,12 @@
      "under": 2.05
     }
    },
-   "odds_at": "2026-10-28T12:51:23Z"
+   "odds_at": "2026-10-28T12:51:23Z",
+   "result": {
+    "a": 4,
+    "at": "2026-10-28T21:06:15Z",
+    "h": 2
+   }
   },
   "3f9f4bc9a19bf36dcb74be2f29610d55": {
    "away": "Cagliari",
@@ -3063,7 +3073,12 @@
      "under": 2.01
     }
    },
-   "odds_at": "2026-10-28T12:51:23Z"
+   "odds_at": "2026-10-28T12:51:23Z",
+   "result": {
+    "a": 0,
+    "at": "2026-10-28T21:06:15Z",
+    "h": 0
+   }
   },
   "4a88bc4de574d43ef34677fd8d78722f": {
    "ai": {
@@ -8137,10 +8152,111 @@
   },
   "da159a6b84dbb548b4d7b94c722caac5": {
    "ai": {
-    "at": "2026-10-28T17:10:17Z",
-    "error": "Gemini gemini-3.6-flash 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-    "status": "failed",
-    "tries": 1
+    "adjustments": [
+     {
+      "category": "injury",
+      "delta": 0.05,
+      "reason": "佛罗伦萨后卫蓬格拉契奇遭遇肌肉损伤患伤缺阵",
+      "source": "La Gazzetta dello Sport",
+      "team": "away"
+     }
+    ],
+    "at": "2026-10-28T21:06:25Z",
+    "base": {
+     "lam_a": 1.416,
+     "lam_h": 1.672
+    },
+    "confidence": "medium",
+    "lam_a": 1.466,
+    "lam_h": 1.672,
+    "model": "gemini-3.6-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.3294,
+     "d": 0.2526,
+     "h": 0.418
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-28",
+      "source": "To The Lane And Back",
+      "team": "home",
+      "title": "Inter Milan boss backs Tottenham loanee to do well at Fiorentina after recovering from long-term injury",
+      "url": "https://tothelaneandback.com"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "Goal.com",
+      "team": "home",
+      "title": "Fiorentina, Pongracic has an injury: the medical report",
+      "url": "https://www.goal.com"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "Football Italia",
+      "team": "home",
+      "title": "De Gea: Fiorentina goalkeeper posts picture in support of under-fire Carrick",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "Yahoo",
+      "team": "home",
+      "title": "PREVIEW | Fiorentina vs Atalanta: team news, lineups, predictions (Serie A 29/10)",
+      "url": "https://ca.sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "Flashscore.com",
+      "team": "home",
+      "title": "Fiorentina - Atalanta",
+      "url": "https://www.flashscore.com"
+     },
+     {
+      "date": "2026-10-27",
+      "source": "Sports Mole",
+      "team": "away",
+      "title": "Preview: Fiorentina vs Atalanta BC - prediction, team news, lineups",
+      "url": "https://www.sportsmole.co.uk"
+     },
+     {
+      "date": "2026-10-26",
+      "source": "YSscores",
+      "team": "away",
+      "title": "Atalanta hold on to Sarri despite injuries and includ…",
+      "url": "https://www.ysscores.com"
+     },
+     {
+      "date": "2026-10-26",
+      "source": "Sportsgambler",
+      "team": "away",
+      "title": "Atalanta vs Frosinone Prediction, Betting Tips, Lineups & Odds | 25 Oct 2026",
+      "url": "https://www.sportsgambler.com"
+     },
+     {
+      "date": "2026-10-25",
+      "source": "Football Italia",
+      "team": "away",
+      "title": "Serie A | Atalanta 4-4 Frosinone: Eight-goal thriller is pure entertainment",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-25",
+      "source": "Football Italia",
+      "team": "away",
+      "title": "Sarri: ‘Atalanta feared Frosinone’ ahead of crazy 4-4 draw",
+      "url": "https://football-italia.net"
+     }
+    ],
+    "status": "ok",
+    "summary": "佛罗伦萨主力中卫蓬格拉契奇确诊肌肉损伤，或略微提升亚特兰大的进攻预期。",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1148,
+    "tries": 2
    },
    "away": "Atalanta BC",
    "books": {
@@ -8814,5 +8930,5 @@
    }
   }
  },
- "updated": "2026-10-28T17:10:17Z"
+ "updated": "2026-10-28T21:06:25Z"
 }
