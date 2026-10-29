@@ -86,6 +86,120 @@
    "odds_at": "2026-10-29T12:57:33Z"
   },
   "00b03cb40c27ed23e2ecb18f062a5122": {
+   "ai": {
+    "adjustments": [
+     {
+      "category": "lineup",
+      "delta": 0.1,
+      "reason": "尼古拉斯·佩佩伤愈复出回归阵容",
+      "source": "Dailysports",
+      "team": "home"
+     },
+     {
+      "category": "coach",
+      "delta": -0.1,
+      "reason": "国王杯打满加时爆冷出局且临阵更换主教练",
+      "source": "LiveScore",
+      "team": "away"
+     }
+    ],
+    "at": "2026-10-29T17:25:50Z",
+    "base": {
+     "lam_a": 0.952,
+     "lam_h": 2.33
+    },
+    "confidence": "medium",
+    "lam_a": 0.852,
+    "lam_h": 2.43,
+    "model": "gemini-3.6-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.1062,
+     "d": 0.1786,
+     "h": 0.7153
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-28",
+      "source": "Yahoo Sports",
+      "team": "home",
+      "title": "PREVIEW | Villarreal CF vs Espanyol: team news, lineups, predictions (La Liga 30/10)",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-28",
+      "source": "Squawka",
+      "team": "home",
+      "title": "Villarreal vs Paris Saint-Germain: Predictions, Picks, Odds & Lineups",
+      "url": "https://www.squawka.com"
+     },
+     {
+      "date": "2026-10-28",
+      "source": "roundtable.io",
+      "team": "home",
+      "title": "Liverpool v Chelsea: Predicted Lineup & Match Preview",
+      "url": "https://roundtable.io"
+     },
+     {
+      "date": "2026-10-28",
+      "source": "Sports Mole",
+      "team": "home",
+      "title": "Preview: Villarreal vs Espanyol - prediction, team news, lineups",
+      "url": "https://www.sportsmole.co.uk"
+     },
+     {
+      "date": "2026-10-28",
+      "source": "Soccer News",
+      "team": "home",
+      "title": "Prediction: Villarreal vs Espanyol",
+      "url": "https://www.soccernews.com"
+     },
+     {
+      "date": "2026-10-29",
+      "source": "OneFootball",
+      "team": "away",
+      "title": "Former Valencia CF target Álvaro González joins Espanyol bench after retirement",
+      "url": "https://onefootball.com"
+     },
+     {
+      "date": "2026-10-29",
+      "source": "SABC Sport",
+      "team": "away",
+      "title": "Eder Sarabia takes charge at Espanyol after Copa del Rey shock",
+      "url": "https://www.sabcsport.com"
+     },
+     {
+      "date": "2026-10-28",
+      "source": "RCD Espanyol",
+      "team": "away",
+      "title": "Eder Sarabia appointed as RCD Espanyol coach",
+      "url": "https://www.rcdespanyol.com"
+     },
+     {
+      "date": "2026-10-28",
+      "source": "OneFootball",
+      "team": "away",
+      "title": "Espanyol appoint Eder Sarabia as new head coach",
+      "url": "https://onefootball.com"
+     },
+     {
+      "date": "2026-10-28",
+      "source": "Diari ARA",
+      "team": "away",
+      "title": "Espanyol announces by surprise Eder Sarabia as new coach",
+      "url": "https://en.ara.cat"
+     }
+    ],
+    "status": "ok",
+    "summary": "比利亚雷亚尔迎回边锋佩佩；西班牙人经历国王杯加时出局与临阵换帅动荡。",
+    "top": [
+     2,
+     0
+    ],
+    "top_p": 0.1109,
+    "tries": 1
+   },
    "away": "Espanyol",
    "books": {
     "betfair_ex_uk": {
@@ -9011,5 +9125,5 @@
    }
   }
  },
- "updated": "2026-10-29T12:57:34Z"
+ "updated": "2026-10-29T17:25:50Z"
 }
