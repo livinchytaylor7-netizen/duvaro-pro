@@ -1783,6 +1783,12 @@
    "odds_at": "2026-10-30T12:51:31Z"
   },
   "2db2b55e71574a19ff0557898d3e9933": {
+   "ai": {
+    "at": "2026-10-30T17:01:17Z",
+    "error": "Gemini gemini-3.6-flash 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+    "status": "failed",
+    "tries": 1
+   },
    "away": "Alavés",
    "books": {
     "betfair_ex_uk": {
@@ -5494,10 +5500,111 @@
   },
   "77383723574e3d39c7aba22eec6c4ce3": {
    "ai": {
-    "at": "2026-10-30T12:52:10Z",
-    "error": "Gemini gemini-3.6-flash 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-    "status": "failed",
-    "tries": 1
+    "adjustments": [
+     {
+      "category": "schedule",
+      "delta": -0.1,
+      "reason": "周中欧战客场挑战利物浦，仅隔两日连续作客体能受限",
+      "source": "Flashscore.com",
+      "team": "away"
+     }
+    ],
+    "at": "2026-10-30T17:00:44Z",
+    "base": {
+     "lam_a": 1.12,
+     "lam_h": 1.275
+    },
+    "confidence": "medium",
+    "lam_a": 1.02,
+    "lam_h": 1.275,
+    "model": "gemini-3.6-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.2861,
+     "d": 0.3021,
+     "h": 0.4118
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-29",
+      "source": "Levante UD",
+      "team": "home",
+      "title": "PRESS CONFERENCE | Luís Castro: \"We have to give our best version if we want to come back with the three points\"",
+      "url": "https://www.levanteud.com"
+     },
+     {
+      "date": "2026-10-29",
+      "source": "Sports Mole",
+      "team": "home",
+      "title": "Preview: Rayo Vallecano vs Celta Vigo - prediction, team news, lineups",
+      "url": "https://www.sportsmole.co.uk"
+     },
+     {
+      "date": "2026-10-29",
+      "source": "Playmakerstats",
+      "team": "home",
+      "title": "PREVIEW | Rayo Vallecano vs Celta de Vigo: team news, lineups, predictions (La Liga 31/10)",
+      "url": "https://www.playmakerstats.com"
+     },
+     {
+      "date": "2026-10-29",
+      "source": "The Stats Zone",
+      "team": "home",
+      "title": "Rayo Vallecano vs Celta Vigo Preview: Team News & Prediction",
+      "url": "https://www.thestatszone.com"
+     },
+     {
+      "date": "2026-10-29",
+      "source": "Sportsgambler",
+      "team": "home",
+      "title": "Rayo Vallecano vs Celta Vigo Prediction, Betting Tips, Lineups & Odds | 31 Oct 2026",
+      "url": "https://www.sportsgambler.com"
+     },
+     {
+      "date": "2026-10-30",
+      "source": "Sportsgambler",
+      "team": "away",
+      "title": "La Liga Injuries & Suspensions",
+      "url": "https://www.sportsgambler.com"
+     },
+     {
+      "date": "2026-10-29",
+      "source": "Flashscore.com",
+      "team": "away",
+      "title": "Liverpool - Celta Vigo 0-1",
+      "url": "https://www.flashscore.com"
+     },
+     {
+      "date": "2026-10-29",
+      "source": "Sports Mole",
+      "team": "away",
+      "title": "Preview: Rayo Vallecano vs Celta Vigo - prediction, team news, lineups",
+      "url": "https://www.sportsmole.co.uk"
+     },
+     {
+      "date": "2026-10-29",
+      "source": "The Stats Zone",
+      "team": "away",
+      "title": "Rayo Vallecano vs Celta Vigo Preview: Team News & Prediction",
+      "url": "https://www.thestatszone.com"
+     },
+     {
+      "date": "2026-10-29",
+      "source": "Sportsgambler",
+      "team": "away",
+      "title": "Rayo Vallecano vs Celta Vigo Prediction, Betting Tips, Lineups & Odds | 31 Oct 2026",
+      "url": "https://www.sportsgambler.com"
+     }
+    ],
+    "status": "ok",
+    "summary": "塞尔塔周中刚在欧战客场与利物浦激战，赛程密集且体能消耗较大。",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1415,
+    "tries": 2
    },
    "away": "Celta Vigo",
    "books": {
@@ -9224,6 +9331,120 @@
    "odds_at": "2026-10-30T12:51:31Z"
   },
   "e82f25e981f2ebc731cfaf5716231af5": {
+   "ai": {
+    "adjustments": [
+     {
+      "category": "injury",
+      "delta": 0.1,
+      "reason": "托莫里大腿肌肉拉伤伤缺，利好国米进攻",
+      "source": "SempreMilan",
+      "team": "away"
+     },
+     {
+      "category": "injury",
+      "delta": 0.05,
+      "reason": "米兰在德比前迎来三位伤员复出利好",
+      "source": "Football Italia",
+      "team": "home"
+     }
+    ],
+    "at": "2026-10-30T17:00:59Z",
+    "base": {
+     "lam_a": 1.773,
+     "lam_h": 1.269
+    },
+    "confidence": "medium",
+    "lam_a": 1.873,
+    "lam_h": 1.319,
+    "model": "gemini-3.6-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.4963,
+     "d": 0.2417,
+     "h": 0.262
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-30",
+      "source": "talkSPORT",
+      "team": "home",
+      "title": "Where to watch AC Milan v Inter Milan for free as new stadium plans revealed",
+      "url": "https://talksport.com"
+     },
+     {
+      "date": "2026-10-30",
+      "source": "Goal.com",
+      "team": "home",
+      "title": "Has Ruben Amorim learned from Man Utd failure? Inside new AC Milan boss' mixed start to San Siro life",
+      "url": "https://www.goal.com"
+     },
+     {
+      "date": "2026-10-30",
+      "source": "Flash Scores",
+      "team": "home",
+      "title": "AC Milan v Inter LIVE 31/10/2026 | Football",
+      "url": "https://www.flashscore.co.uk"
+     },
+     {
+      "date": "2026-10-30",
+      "source": "SempreMilan",
+      "team": "home",
+      "title": "MN: Tomori suffered torn musle in his thigh vs. Bologna – the latest on his injury",
+      "url": "https://sempremilan.com"
+     },
+     {
+      "date": "2026-10-30",
+      "source": "Inter.it",
+      "team": "home",
+      "title": "AC Milan vs. Inter, Chivu's press conference on Friday",
+      "url": "https://www.inter.it"
+     },
+     {
+      "date": "2026-10-30",
+      "source": "talkSPORT",
+      "team": "away",
+      "title": "Where to watch AC Milan v Inter Milan for free as new stadium plans revealed",
+      "url": "https://talksport.com"
+     },
+     {
+      "date": "2026-10-30",
+      "source": "The False 9",
+      "team": "away",
+      "title": "Milan vs Inter Derby Preview: Set Pieces, Legs, Gap",
+      "url": "https://thefalse9.com"
+     },
+     {
+      "date": "2026-10-30",
+      "source": "Flash Scores",
+      "team": "away",
+      "title": "AC Milan v Inter LIVE 31/10/2026 | Football",
+      "url": "https://www.flashscore.co.uk"
+     },
+     {
+      "date": "2026-10-30",
+      "source": "Transfermarkt",
+      "team": "away",
+      "title": "Latest transfer news: Trent Alexander-Arnold approached for Liverpool return",
+      "url": "https://www.transfermarkt.com"
+     },
+     {
+      "date": "2026-10-30",
+      "source": "Laodong.vn",
+      "team": "away",
+      "title": "AC Milan vs Inter Milan score prediction in Serie A",
+      "url": "https://news.laodong.vn"
+     }
+    ],
+    "status": "ok",
+    "summary": "米兰主力中卫托莫里伤缺提升国米进球期望，但米兰亦迎来多名伤员复出。",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1096,
+    "tries": 1
+   },
    "away": "Inter Milan",
    "books": {
     "betfair_ex_uk": {
@@ -9591,5 +9812,5 @@
    }
   }
  },
- "updated": "2026-10-30T12:52:43Z"
+ "updated": "2026-10-30T17:01:17Z"
 }
