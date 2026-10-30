@@ -1784,10 +1784,118 @@
   },
   "2db2b55e71574a19ff0557898d3e9933": {
    "ai": {
-    "at": "2026-10-30T17:01:17Z",
-    "error": "Gemini gemini-3.6-flash 503: {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-    "status": "failed",
-    "tries": 1
+    "adjustments": [
+     {
+      "category": "injury",
+      "delta": -0.15,
+      "reason": "拉菲尼亚确认因伤无缘对阵阿拉维斯",
+      "source": "LiveScore",
+      "team": "home"
+     },
+     {
+      "category": "injury",
+      "delta": 0.1,
+      "reason": "巴萨后卫孔德因伤缺席比赛",
+      "source": "Diario AS",
+      "team": "away"
+     }
+    ],
+    "at": "2026-10-30T20:49:05Z",
+    "base": {
+     "lam_a": 0.741,
+     "lam_h": 3.479
+    },
+    "confidence": "medium",
+    "lam_a": 0.841,
+    "lam_h": 3.329,
+    "model": "gemini-3.6-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.0549,
+     "d": 0.1073,
+     "h": 0.8379
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-30",
+      "source": "The False 9",
+      "team": "home",
+      "title": "Barcelona vs Aston Villa Team News: Wan-Bissaka, Ruggeri Out, 8pm Kick-off",
+      "url": "https://thefalse9.com"
+     },
+     {
+      "date": "2026-10-30",
+      "source": "MotorSport Vision",
+      "team": "home",
+      "title": "JHR Developments confirms Lewis Wherrell and Thomas Ingram-Hill for GB3 return in Barcelona",
+      "url": "https://www.msv.com"
+     },
+     {
+      "date": "2026-10-30",
+      "source": "Al Jazeera",
+      "team": "home",
+      "title": "Barcelona’s Flick praises Yamal’s ‘mentality’ after missing out on Ballon d’Or",
+      "url": "https://www.aljazeera.com"
+     },
+     {
+      "date": "2026-10-30",
+      "source": "Barca Universal",
+      "team": "home",
+      "title": "Barcelona injury crisis hands out-of-favour star a potential lifeline to save his career",
+      "url": "https://barcauniversal.com"
+     },
+     {
+      "date": "2026-10-30",
+      "source": "Official FC Barcelona Website",
+      "team": "home",
+      "title": "Hansi Flick: 'We want to show our best'",
+      "url": "https://www.fcbarcelona.com"
+     },
+     {
+      "date": "2026-10-30",
+      "source": "LiveScore",
+      "team": "away",
+      "title": "Barcelona star ruled out against Alavés: Raphinha's injury grabs the headlines",
+      "url": "https://www.livescore.com"
+     },
+     {
+      "date": "2026-10-30",
+      "source": "Diario AS",
+      "team": "away",
+      "title": "Barcelona’s defensive injury crisis deepens with Koundé still sidelined",
+      "url": "https://en.as.com"
+     },
+     {
+      "date": "2026-10-30",
+      "source": "Diari ARA",
+      "team": "away",
+      "title": "The Real Madrid supporter with a bad memory who threatens Flick's Barça",
+      "url": "https://en.ara.cat"
+     },
+     {
+      "date": "2026-10-30",
+      "source": "Yahoo Sports",
+      "team": "away",
+      "title": "How will Barcelona line up against Alavés?",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-30",
+      "source": "Yahoo Sports",
+      "team": "away",
+      "title": "Koundé absent from final training session before Alavés ❌",
+      "url": "https://sports.yahoo.com"
+     }
+    ],
+    "status": "ok",
+    "summary": "巴萨边锋拉菲尼亚缺阵削弱进攻火力，后卫孔德伤缺可能给阿拉维斯创造更多机会。",
+    "top": [
+     3,
+     0
+    ],
+    "top_p": 0.0951,
+    "tries": 2
    },
    "away": "Alavés",
    "books": {
@@ -9812,5 +9920,5 @@
    }
   }
  },
- "updated": "2026-10-30T17:01:17Z"
+ "updated": "2026-10-30T20:49:05Z"
 }
