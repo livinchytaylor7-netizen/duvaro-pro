@@ -188,7 +188,12 @@
      "under": 2.14
     }
    },
-   "odds_at": "2026-10-31T12:24:21Z"
+   "odds_at": "2026-10-31T12:24:21Z",
+   "result": {
+    "a": 2,
+    "at": "2026-10-31T16:05:52Z",
+    "h": 0
+   }
   },
   "00b03cb40c27ed23e2ecb18f062a5122": {
    "ai": {
@@ -2920,6 +2925,105 @@
    }
   },
   "3757bcd765c7da1538cdf2785e784038": {
+   "ai": {
+    "adjustments": [],
+    "at": "2026-10-31T16:06:50Z",
+    "base": {
+     "lam_a": 1.308,
+     "lam_h": 1.664
+    },
+    "confidence": "high",
+    "lam_a": 1.308,
+    "lam_h": 1.664,
+    "model": "gemini-3.6-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.2928,
+     "d": 0.258,
+     "h": 0.4493
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-31",
+      "source": "OneFootball",
+      "team": "home",
+      "title": "Derby feels magical and special, say former Athletic and Real Sociedad players",
+      "url": "https://onefootball.com"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "Yahoo Sports",
+      "team": "home",
+      "title": "Real Sociedad's Talent Machine Gives It The Edge In The Basque Derby",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "OneFootball",
+      "team": "home",
+      "title": "Real Sociedad take 10 unbeaten talismans into San Mamés derby",
+      "url": "https://onefootball.com"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "Football Whispers",
+      "team": "home",
+      "title": "Athletic Bilbao vs Real Sociedad – prediction, preview & betting tips – 01/11/2026",
+      "url": "https://footballwhispers.com"
+     },
+     {
+      "date": "2026-10-30",
+      "source": "Yahoo Sports",
+      "team": "home",
+      "title": "PREVIEW | Athletic Bilbao vs Real Sociedad: team news, lineups, predictions (La Liga 01/11)",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "Sky Sports",
+      "team": "away",
+      "title": "Jon Martin interview: Real Sociedad and Spain defender on why he is staying at his 'home' amid interest from biggest clubs",
+      "url": "https://www.skysports.com"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "OneFootball",
+      "team": "away",
+      "title": "Real Sociedad take 10 unbeaten talismans into San Mamés derby",
+      "url": "https://onefootball.com"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "OneFootball",
+      "team": "away",
+      "title": "Dani Díaz leads Real Sociedad B as Girona arrive in form in LaLiga Hypermotion",
+      "url": "https://onefootball.com"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "OneFootball",
+      "team": "away",
+      "title": "Derby feels magical and special, say former Athletic and Real Sociedad players",
+      "url": "https://onefootball.com"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "Yahoo Sports",
+      "team": "away",
+      "title": "Real Sociedad's Talent Machine Gives It The Edge In The Basque Derby",
+      "url": "https://sports.yahoo.com"
+     }
+    ],
+    "status": "ok",
+    "summary": "新闻未提供具体的关键球员伤停、禁赛或轮换等影响预期的明确信息。",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1204,
+    "tries": 1
+   },
    "away": "Real Sociedad",
    "books": {
     "betfair_ex_uk": {
@@ -8401,6 +8505,120 @@
    }
   },
   "aeadf1388a1075328536501576b3d550": {
+   "ai": {
+    "adjustments": [
+     {
+      "category": "injury",
+      "delta": -0.05,
+      "reason": "那不勒斯中场核心洛博特卡确认因伤缺席",
+      "source": "Yahoo Sports",
+      "team": "away"
+     },
+     {
+      "category": "suspension",
+      "delta": -0.05,
+      "reason": "尤文图斯主教练阿莱格里遭到禁赛处罚",
+      "source": "LiveScore",
+      "team": "home"
+     }
+    ],
+    "at": "2026-10-31T16:06:15Z",
+    "base": {
+     "lam_a": 1.148,
+     "lam_h": 1.438
+    },
+    "confidence": "medium",
+    "lam_a": 1.098,
+    "lam_h": 1.388,
+    "model": "gemini-3.6-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.2871,
+     "d": 0.2878,
+     "h": 0.4251
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-31",
+      "source": "LiveScore",
+      "team": "home",
+      "title": "Juventus and Napoli meet level on 14 points as Allegri ban and Lobotka injury bite",
+      "url": "https://www.livescore.com"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "Football Italia",
+      "team": "home",
+      "title": "Spalletti takes entire Juventus squad on retreat, injured players included, before Napoli clash",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "LiveScore",
+      "team": "home",
+      "title": "Jeff Ekhator back in Juventus group training after injury nightmare",
+      "url": "https://www.livescore.com"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "LiveScore",
+      "team": "home",
+      "title": "Juventus aim to return to winning ways through the gateway of Napoli: Allegri looks to overcome his hoodoo",
+      "url": "https://www.livescore.com"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "Football Italia",
+      "team": "home",
+      "title": "Allegri: ‘Juventus are wounded, not dead, it will be very hard for Napoli’",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "LiveScore",
+      "team": "away",
+      "title": "Juventus and Napoli meet level on 14 points as Allegri ban and Lobotka injury bite",
+      "url": "https://www.livescore.com"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "Football Italia",
+      "team": "away",
+      "title": "Spalletti takes entire Juventus squad on retreat, injured players included, before Napoli clash",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "Football Italia",
+      "team": "away",
+      "title": "Allegri: ‘Juventus are wounded, not dead, it will be very hard for Napoli’",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "LiveScore",
+      "team": "away",
+      "title": "Juventus aim to return to winning ways through the gateway of Napoli: Allegri looks to overcome his hoodoo",
+      "url": "https://www.livescore.com"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "Football Italia",
+      "team": "away",
+      "title": "Cannavaro: ‘Spalletti and Allegri are similar, Kolo Muani and Hojlund less killer than strikers of my era’",
+      "url": "https://football-italia.net"
+     }
+    ],
+    "status": "ok",
+    "summary": "那不勒斯中场洛博特卡伤缺影响组织，尤文主帅阿莱格里停赛无法现场指挥。",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.137,
+    "tries": 1
+   },
    "away": "Napoli",
    "books": {
     "betfair_ex_uk": {
@@ -10617,5 +10835,5 @@
    }
   }
  },
- "updated": "2026-10-31T12:28:55Z"
+ "updated": "2026-10-31T16:06:50Z"
 }
