@@ -2146,6 +2146,105 @@
    }
   },
   "2e488800d615a94e5377c195810303c0": {
+   "ai": {
+    "adjustments": [],
+    "at": "2026-11-01T17:07:49Z",
+    "base": {
+     "lam_a": 0.943,
+     "lam_h": 2.104
+    },
+    "confidence": "high",
+    "lam_a": 0.943,
+    "lam_h": 2.104,
+    "model": "gemini-3.6-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.1516,
+     "d": 0.2153,
+     "h": 0.6332
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-11-01",
+      "source": "Mozzart Sport Kenya",
+      "team": "home",
+      "title": "BETTING GUIDE: Atalanta vs Parma, match preview, team news and prediction",
+      "url": "https://www.mozzartsport.co.ke"
+     },
+     {
+      "date": "2026-11-01",
+      "source": "Football Italia",
+      "team": "home",
+      "title": "Sarri: ‘Atalanta are ambitious, but we can’t underestimate Parma’",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "Sports Mole",
+      "team": "home",
+      "title": "Preview: Atalanta BC vs. Parma - prediction, team news, lineups",
+      "url": "https://www.sportsmole.co.uk"
+     },
+     {
+      "date": "2026-10-30",
+      "source": "theScore",
+      "team": "home",
+      "title": "Fiorentina vs Atalanta | October 29, 2026 | Serie A Matchup",
+      "url": "https://www.thescore.com"
+     },
+     {
+      "date": "2026-10-29",
+      "source": "Football Italia",
+      "team": "home",
+      "title": "Sarri ‘getting worried’ as Atalanta injury crisis intensifies after 2-2 draw",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-11-01",
+      "source": "Atalanta",
+      "team": "away",
+      "title": "Coach Sarri's press conference ahead of Atalanta v Parma",
+      "url": "https://en.atalanta.it"
+     },
+     {
+      "date": "2026-11-01",
+      "source": "Football Italia",
+      "team": "away",
+      "title": "Sarri: ‘Atalanta are ambitious, but we can’t underestimate Parma’",
+      "url": "https://football-italia.net"
+     },
+     {
+      "date": "2026-11-01",
+      "source": "Mozzart Sport Kenya",
+      "team": "away",
+      "title": "BETTING GUIDE: Atalanta vs Parma, match preview, team news and prediction",
+      "url": "https://www.mozzartsport.co.ke"
+     },
+     {
+      "date": "2026-11-01",
+      "source": "La Gazzetta dello Sport",
+      "team": "away",
+      "title": "Parma, Gilardino relies on Troilo to lock down defence with Daffara in goal",
+      "url": "https://www.gazzetta.it"
+     },
+     {
+      "date": "2026-11-01",
+      "source": "Quotidiano Sportivo",
+      "team": "away",
+      "title": "Atalanta faces Parma at the New Balance Arena. Sarri: \"It's a tough match.\"",
+      "url": "https://sport.quotidiano.net"
+     }
+    ],
+    "status": "ok",
+    "summary": "新闻提及亚特兰大伤病危机加剧但未明确具体缺阵主力，市场已充分定价。",
+    "top": [
+     2,
+     0
+    ],
+    "top_p": 0.1051,
+    "tries": 1
+   },
    "away": "Parma",
    "books": {
     "betfair_ex_uk": {
@@ -3841,7 +3940,12 @@
      "under": 1.95
     }
    },
-   "odds_at": "2026-11-01T13:18:15Z"
+   "odds_at": "2026-11-01T13:18:15Z",
+   "result": {
+    "a": 1,
+    "at": "2026-11-01T17:07:38Z",
+    "h": 2
+   }
   },
   "482c18a8081afdfa310324fa8f37e95a": {
    "ai": {
@@ -6676,6 +6780,105 @@
    }
   },
   "7a2cd2744fdf15ea675423a6c23df46b": {
+   "ai": {
+    "adjustments": [],
+    "at": "2026-11-01T17:08:02Z",
+    "base": {
+     "lam_a": 1.01,
+     "lam_h": 1.383
+    },
+    "confidence": "high",
+    "lam_a": 1.01,
+    "lam_h": 1.383,
+    "model": "gemini-3.6-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.2642,
+     "d": 0.2915,
+     "h": 0.4443
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-11-01",
+      "source": "Football Whispers",
+      "team": "home",
+      "title": "Deportivo La Coruna vs Osasuna prediction, preview & betting tips – 02/11/2026",
+      "url": "https://footballwhispers.com"
+     },
+     {
+      "date": "2026-11-01",
+      "source": "Goal.com",
+      "team": "home",
+      "title": "Athletic Bilbao vs Real Sociedad LaLiga preview: Another Basque battle expected",
+      "url": "https://www.goal.com"
+     },
+     {
+      "date": "2026-11-01",
+      "source": "BeSoccer Livescore",
+      "team": "home",
+      "title": "Chinese state TV blacklists entire LaLiga; 'Migu' snubs only Real Madrid",
+      "url": "https://www.besoccer.com"
+     },
+     {
+      "date": "2026-11-01",
+      "source": "Villa de la Orotava",
+      "team": "home",
+      "title": "[TRANSMISIÓN EN VIVO] REAL MADRID RACING DE SANTANDER Ａｏ Ｖｉｖｏ Ｏｎｌｉｎｅ ｔｒａｎｓｍｉｓｓãｏ| ２３ ａｇｏｓｔｏ ２０２６",
+      "url": "https://www.laorotava.es"
+     },
+     {
+      "date": "2026-11-01",
+      "source": "Laodong.vn",
+      "team": "home",
+      "title": "Athletic Bilbao vs Real Sociedad football prediction in La Liga",
+      "url": "https://news.laodong.vn"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "OneFootball",
+      "team": "away",
+      "title": "Villarreal Femenino return to action at CA Osasuna after 27 days out",
+      "url": "https://onefootball.com"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "theScore",
+      "team": "away",
+      "title": "Atlético Calatayud vs Osasuna | October 29, 2026 | Copa del Rey Matchup",
+      "url": "https://www.thescore.com"
+     },
+     {
+      "date": "2026-10-29",
+      "source": "FotMob",
+      "team": "away",
+      "title": "Deportivo Alavés vs Osasuna - live score, predicted lineups and H2H stats",
+      "url": "https://www.fotmob.com"
+     },
+     {
+      "date": "2026-10-29",
+      "source": "YSscores",
+      "team": "away",
+      "title": "Atletico Calatayud vs Osasuna match lineup | Copa del Rey · 29 Oct 2026",
+      "url": "https://www.ysscores.com"
+     },
+     {
+      "date": "2026-10-28",
+      "source": "Valencia CF",
+      "team": "away",
+      "title": "Corberán: “We showed that we wanted the win”",
+      "url": "https://www.valenciacf.com"
+     }
+    ],
+    "status": "ok",
+    "summary": "新闻未提及具体的伤病、停赛或关键阵容变动，市场定价合理。",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1378,
+    "tries": 1
+   },
    "away": "CA Osasuna",
    "books": {
     "betfair_ex_uk": {
@@ -8352,7 +8555,12 @@
      "under": 1.85
     }
    },
-   "odds_at": "2026-10-31T12:24:21Z"
+   "odds_at": "2026-10-31T12:24:21Z",
+   "result": {
+    "a": 0,
+    "at": "2026-11-01T17:07:38Z",
+    "h": 1
+   }
   },
   "95cfaecfe96bb7ced1fb6af974a4110b": {
    "ai": {
@@ -9777,7 +9985,12 @@
      "under": 1.86
     }
    },
-   "odds_at": "2026-11-01T13:18:15Z"
+   "odds_at": "2026-11-01T13:18:15Z",
+   "result": {
+    "a": 0,
+    "at": "2026-11-01T17:07:38Z",
+    "h": 2
+   }
   },
   "b7f0880e3da978f9481f7cb5697e2aa5": {
    "ai": {
@@ -10968,7 +11181,12 @@
      "under": 1.82
     }
    },
-   "odds_at": "2026-10-31T12:24:21Z"
+   "odds_at": "2026-10-31T12:24:21Z",
+   "result": {
+    "a": 1,
+    "at": "2026-11-01T17:07:38Z",
+    "h": 3
+   }
   },
   "de935794b7d93f3607ac9ad54d18f4c7": {
    "away": "Real Racing Club de Santander",
@@ -11685,5 +11903,5 @@
    "odds_at": "2026-11-01T13:18:15Z"
   }
  },
- "updated": "2026-11-01T13:18:21Z"
+ "updated": "2026-11-01T17:08:02Z"
 }
