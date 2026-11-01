@@ -1069,9 +1069,9 @@
    "away": "Levante",
    "books": {
     "betfair_ex_uk": {
-     "a": 4.3,
-     "d": 3.95,
-     "h": 1.83
+     "a": 4.6,
+     "d": 3.8,
+     "h": 1.77
     },
     "betvictor": {
      "a": 4.2,
@@ -1099,9 +1099,9 @@
      "h": 1.75
     },
     "smarkets": {
-     "a": 4.2,
-     "d": 3.9,
-     "h": 1.8
+     "a": 4.5,
+     "d": 3.75,
+     "h": 1.76
     },
     "unibet_uk": {
      "a": 4.2,
@@ -1143,7 +1143,77 @@
      "under": 2.02
     }
    },
-   "odds_at": "2026-10-31T12:24:21Z"
+   "odds_at": "2026-11-01T13:18:15Z"
+  },
+  "0d53a5dbd9d4f4716e923b97e92dfb0d": {
+   "away": "Lecce",
+   "books": {
+    "boylesports": {
+     "a": 4.2,
+     "d": 3.5,
+     "h": 1.75
+    },
+    "paddypower": {
+     "a": 4.2,
+     "d": 3.5,
+     "h": 1.75
+    },
+    "pinnacle": {
+     "a": 4.46,
+     "d": 3.62,
+     "h": 1.82
+    },
+    "skybet": {
+     "a": 4.2,
+     "d": 3.5,
+     "h": 1.8
+    },
+    "smarkets": {
+     "a": 4.0,
+     "d": 3.25,
+     "h": 1.73
+    },
+    "unibet_uk": {
+     "a": 4.35,
+     "d": 3.5,
+     "h": 1.8
+    },
+    "williamhill": {
+     "a": 4.0,
+     "d": 3.5,
+     "h": 1.8
+    }
+   },
+   "home": "Torino",
+   "id": "0d53a5dbd9d4f4716e923b97e92dfb0d",
+   "kickoff": "2026-11-07T14:00:00Z",
+   "league": "seriea",
+   "market": {
+    "h2h": {
+     "a": 4.46,
+     "d": 3.62,
+     "h": 1.82
+    },
+    "lam_a": 0.933,
+    "lam_h": 1.601,
+    "probs": {
+     "a": 0.2102,
+     "d": 0.2691,
+     "h": 0.5207
+    },
+    "source": "Pinnacle",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.128,
+    "total": {
+     "line": 2.25,
+     "over": 1.79,
+     "under": 2.06
+    }
+   },
+   "odds_at": "2026-11-01T13:18:15Z"
   },
   "0dae715cc56fe201f9e667917c126691": {
    "ai": {
@@ -1723,13 +1793,93 @@
     "h": 0
    }
   },
+  "23bf8ea47358ef82f65aa7398a2b3921": {
+   "away": "Lazio",
+   "books": {
+    "betvictor": {
+     "a": 3.7,
+     "d": 3.5,
+     "h": 1.93
+    },
+    "boylesports": {
+     "a": 3.5,
+     "d": 3.6,
+     "h": 1.83
+    },
+    "paddypower": {
+     "a": 3.6,
+     "d": 3.7,
+     "h": 1.87
+    },
+    "pinnacle": {
+     "a": 3.54,
+     "d": 3.98,
+     "h": 1.94
+    },
+    "skybet": {
+     "a": 3.6,
+     "d": 3.75,
+     "h": 1.91
+    },
+    "smarkets": {
+     "a": 3.35,
+     "d": 3.35,
+     "h": 1.86
+    },
+    "unibet_uk": {
+     "a": 3.6,
+     "d": 3.6,
+     "h": 1.95
+    },
+    "williamhill": {
+     "a": 3.4,
+     "d": 3.6,
+     "h": 1.95
+    }
+   },
+   "home": "Napoli",
+   "id": "23bf8ea47358ef82f65aa7398a2b3921",
+   "kickoff": "2026-11-08T11:30:00Z",
+   "league": "seriea",
+   "market": {
+    "h2h": {
+     "a": 3.54,
+     "d": 3.98,
+     "h": 1.94
+    },
+    "lam_a": 1.152,
+    "lam_h": 1.651,
+    "probs": {
+     "a": 0.2569,
+     "d": 0.2623,
+     "h": 0.4809
+    },
+    "source": "Pinnacle",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1245,
+    "total": {
+     "line": 2.5,
+     "over": 1.81,
+     "under": 2.03
+    }
+   },
+   "odds_at": "2026-11-01T13:18:15Z"
+  },
   "262c2c99c38456b8a70cb9daa32f2f6d": {
    "away": "Deportivo La Coruña",
    "books": {
     "betfair_ex_uk": {
-     "a": 3.35,
-     "d": 3.5,
-     "h": 2.22
+     "a": 3.4,
+     "d": 3.45,
+     "h": 2.24
+    },
+    "betvictor": {
+     "a": 3.2,
+     "d": 3.25,
+     "h": 2.1
     },
     "boylesports": {
      "a": 3.1,
@@ -1737,8 +1887,8 @@
      "h": 2.1
     },
     "paddypower": {
-     "a": 3.1,
-     "d": 3.4,
+     "a": 3.25,
+     "d": 3.3,
      "h": 2.1
     },
     "pinnacle": {
@@ -1747,14 +1897,14 @@
      "h": 2.17
     },
     "skybet": {
-     "a": 3.1,
+     "a": 3.25,
      "d": 3.4,
      "h": 2.15
     },
     "smarkets": {
-     "a": 3.3,
-     "d": 3.45,
-     "h": 2.2
+     "a": 3.35,
+     "d": 3.4,
+     "h": 2.22
     },
     "williamhill": {
      "a": 3.2,
@@ -1791,7 +1941,7 @@
      "under": 1.86
     }
    },
-   "odds_at": "2026-10-31T12:24:21Z"
+   "odds_at": "2026-11-01T13:18:15Z"
   },
   "2db2b55e71574a19ff0557898d3e9933": {
    "ai": {
@@ -1999,14 +2149,14 @@
    "away": "Parma",
    "books": {
     "betfair_ex_uk": {
-     "a": 6.4,
+     "a": 6.6,
      "d": 4.7,
-     "h": 1.54
+     "h": 1.55
     },
     "betvictor": {
      "a": 6.0,
      "d": 4.4,
-     "h": 1.45
+     "h": 1.5
     },
     "boylesports": {
      "a": 5.5,
@@ -2020,11 +2170,11 @@
     },
     "paddypower": {
      "a": 5.5,
-     "d": 4.33,
+     "d": 4.5,
      "h": 1.5
     },
     "pinnacle": {
-     "a": 6.14,
+     "a": 6.21,
      "d": 4.65,
      "h": 1.52
     },
@@ -2034,12 +2184,12 @@
      "h": 1.5
     },
     "smarkets": {
-     "a": 6.8,
+     "a": 6.6,
      "d": 4.7,
-     "h": 1.54
+     "h": 1.55
     },
     "unibet_uk": {
-     "a": 5.75,
+     "a": 5.5,
      "d": 4.5,
      "h": 1.52
     },
@@ -2055,30 +2205,30 @@
    "league": "seriea",
    "market": {
     "h2h": {
-     "a": 6.14,
+     "a": 6.21,
      "d": 4.65,
      "h": 1.52
     },
-    "lam_a": 0.946,
-    "lam_h": 2.101,
+    "lam_a": 0.943,
+    "lam_h": 2.104,
     "probs": {
-     "a": 0.1525,
-     "d": 0.2157,
-     "h": 0.6319
+     "a": 0.1514,
+     "d": 0.2152,
+     "h": 0.6333
     },
     "source": "Pinnacle",
     "top": [
      2,
      0
     ],
-    "top_p": 0.1048,
+    "top_p": 0.1052,
     "total": {
      "line": 2.75,
      "over": 1.82,
      "under": 2.09
     }
    },
-   "odds_at": "2026-10-31T12:24:21Z"
+   "odds_at": "2026-11-01T13:18:15Z"
   },
   "33320ad169692216a91dec030e7ef6a6": {
    "ai": {
@@ -2279,14 +2429,14 @@
    "away": "Rayo Vallecano",
    "books": {
     "betfair_ex_uk": {
-     "a": 4.6,
+     "a": 4.5,
      "d": 4.1,
-     "h": 1.76
+     "h": 1.8
     },
     "betvictor": {
-     "a": 4.0,
-     "d": 3.7,
-     "h": 1.75
+     "a": 4.2,
+     "d": 3.75,
+     "h": 1.7
     },
     "boylesports": {
      "a": 4.0,
@@ -2309,19 +2459,19 @@
      "h": 1.75
     },
     "smarkets": {
-     "a": 4.5,
+     "a": 4.4,
      "d": 4.0,
-     "h": 1.74
+     "h": 1.78
     },
     "unibet_uk": {
      "a": 4.2,
      "d": 3.8,
-     "h": 1.78
+     "h": 1.75
     },
     "williamhill": {
-     "a": 4.0,
-     "d": 3.7,
-     "h": 1.83
+     "a": 4.2,
+     "d": 3.75,
+     "h": 1.67
     }
    },
    "home": "Real Sociedad",
@@ -2353,7 +2503,7 @@
      "under": 2.0
     }
    },
-   "odds_at": "2026-10-31T12:24:21Z"
+   "odds_at": "2026-11-01T13:18:15Z"
   },
   "34848497b90b1392f6a767fc183d3ac1": {
    "ai": {
@@ -2944,18 +3094,16 @@
     "adjustments": [],
     "at": "2026-10-31T16:06:50Z",
     "base": {
-     "lam_a": 1.308,
-     "lam_h": 1.664
+     "lam_a": 1.139,
+     "lam_h": 1.66
     },
     "confidence": "high",
-    "lam_a": 1.308,
-    "lam_h": 1.664,
-    "model": "gemini-3.6-flash",
-    "news_error": null,
+    "lam_a": 1.139,
+    "lam_h": 1.66,
     "probs": {
-     "a": 0.2928,
-     "d": 0.258,
-     "h": 0.4493
+     "a": 0.2523,
+     "d": 0.2617,
+     "h": 0.486
     },
     "searched": true,
     "sources": [
@@ -3036,60 +3184,60 @@
      1,
      1
     ],
-    "top_p": 0.1204,
+    "top_p": 0.1243,
     "tries": 1
    },
    "away": "Real Sociedad",
    "books": {
     "betfair_ex_uk": {
-     "a": 3.45,
-     "d": 3.7,
-     "h": 2.24
+     "a": 4.0,
+     "d": 3.75,
+     "h": 2.04
     },
     "betvictor": {
-     "a": 3.25,
-     "d": 3.7,
-     "h": 2.1
+     "a": 3.75,
+     "d": 3.6,
+     "h": 1.95
     },
     "boylesports": {
-     "a": 3.0,
+     "a": 3.3,
      "d": 3.6,
-     "h": 2.05
+     "h": 1.91
     },
     "ladbrokes_uk": {
-     "a": 3.1,
-     "d": 3.7,
-     "h": 2.1
+     "a": 3.7,
+     "d": 3.6,
+     "h": 1.91
     },
     "paddypower": {
-     "a": 3.25,
+     "a": 3.7,
      "d": 3.5,
-     "h": 2.1
+     "h": 1.95
     },
     "pinnacle": {
-     "a": 3.32,
-     "d": 3.71,
-     "h": 2.16
+     "a": 3.88,
+     "d": 3.7,
+     "h": 2.01
     },
     "skybet": {
-     "a": 3.2,
-     "d": 3.4,
-     "h": 2.1
+     "a": 3.7,
+     "d": 3.6,
+     "h": 1.95
     },
     "smarkets": {
-     "a": 3.45,
-     "d": 3.7,
-     "h": 2.24
+     "a": 4.0,
+     "d": 3.75,
+     "h": 2.04
     },
     "unibet_uk": {
-     "a": 3.1,
+     "a": 3.4,
      "d": 3.6,
-     "h": 2.15
+     "h": 2.05
     },
     "williamhill": {
-     "a": 3.25,
+     "a": 3.6,
      "d": 3.5,
-     "h": 2.05
+     "h": 2.0
     }
    },
    "home": "Athletic Bilbao",
@@ -3098,30 +3246,30 @@
    "league": "laliga",
    "market": {
     "h2h": {
-     "a": 3.32,
-     "d": 3.71,
-     "h": 2.16
+     "a": 3.88,
+     "d": 3.7,
+     "h": 2.01
     },
-    "lam_a": 1.308,
-    "lam_h": 1.664,
+    "lam_a": 1.139,
+    "lam_h": 1.66,
     "probs": {
-     "a": 0.2929,
-     "d": 0.2579,
-     "h": 0.4492
+     "a": 0.2524,
+     "d": 0.2616,
+     "h": 0.486
     },
     "source": "Pinnacle",
     "top": [
      1,
      1
     ],
-    "top_p": 0.1203,
+    "top_p": 0.1243,
     "total": {
      "line": 2.75,
-     "over": 1.88,
-     "under": 2.01
+     "over": 2.07,
+     "under": 1.85
     }
    },
-   "odds_at": "2026-10-31T12:24:21Z"
+   "odds_at": "2026-11-01T13:18:15Z"
   },
   "3cb8660cd2375b60e81144a7572cfb89": {
    "ai": {
@@ -3518,18 +3666,16 @@
     "adjustments": [],
     "at": "2026-10-31T12:26:13Z",
     "base": {
-     "lam_a": 0.784,
-     "lam_h": 2.037
+     "lam_a": 0.832,
+     "lam_h": 2.078
     },
     "confidence": "high",
-    "lam_a": 0.784,
-    "lam_h": 2.037,
-    "model": "gemini-3.6-flash",
-    "news_error": null,
+    "lam_a": 0.832,
+    "lam_h": 2.078,
     "probs": {
-     "a": 0.1264,
-     "d": 0.2153,
-     "h": 0.6583
+     "a": 0.1321,
+     "d": 0.2132,
+     "h": 0.6547
     },
     "searched": true,
     "sources": [
@@ -3610,59 +3756,59 @@
      2,
      0
     ],
-    "top_p": 0.1235,
+    "top_p": 0.1176,
     "tries": 1
    },
    "away": "Cagliari",
    "books": {
     "betfair_ex_uk": {
-     "a": 8.0,
-     "d": 4.9,
-     "h": 1.48
+     "a": 7.2,
+     "d": 4.6,
+     "h": 1.55
     },
     "betvictor": {
-     "a": 7.5,
-     "d": 4.5,
-     "h": 1.4
-    },
-    "boylesports": {
      "a": 6.5,
      "d": 4.33,
-     "h": 1.4
+     "h": 1.5
     },
-    "ladbrokes_uk": {
-     "a": 6.5,
-     "d": 4.6,
+    "boylesports": {
+     "a": 5.5,
+     "d": 4.2,
      "h": 1.44
     },
+    "ladbrokes_uk": {
+     "a": 5.75,
+     "d": 4.4,
+     "h": 1.5
+    },
     "paddypower": {
-     "a": 7.0,
-     "d": 4.5,
-     "h": 1.4
-    },
-    "pinnacle": {
-     "a": 7.28,
-     "d": 4.71,
-     "h": 1.46
-    },
-    "skybet": {
-     "a": 7.0,
-     "d": 4.5,
-     "h": 1.4
-    },
-    "smarkets": {
-     "a": 8.0,
-     "d": 4.9,
-     "h": 1.48
-    },
-    "unibet_uk": {
-     "a": 7.0,
-     "d": 4.5,
-     "h": 1.45
-    },
-    "williamhill": {
      "a": 6.5,
      "d": 4.2,
+     "h": 1.44
+    },
+    "pinnacle": {
+     "a": 7.24,
+     "d": 4.63,
+     "h": 1.48
+    },
+    "skybet": {
+     "a": 6.5,
+     "d": 4.5,
+     "h": 1.44
+    },
+    "smarkets": {
+     "a": 7.0,
+     "d": 4.6,
+     "h": 1.54
+    },
+    "unibet_uk": {
+     "a": 6.0,
+     "d": 4.35,
+     "h": 1.52
+    },
+    "williamhill": {
+     "a": 6.0,
+     "d": 4.0,
      "h": 1.44
     }
    },
@@ -3672,30 +3818,30 @@
    "league": "seriea",
    "market": {
     "h2h": {
-     "a": 7.28,
-     "d": 4.71,
-     "h": 1.46
+     "a": 7.24,
+     "d": 4.63,
+     "h": 1.48
     },
-    "lam_a": 0.784,
-    "lam_h": 2.037,
+    "lam_a": 0.832,
+    "lam_h": 2.078,
     "probs": {
-     "a": 0.1266,
-     "d": 0.2154,
-     "h": 0.6581
+     "a": 0.132,
+     "d": 0.2132,
+     "h": 0.6548
     },
     "source": "Pinnacle",
     "top": [
      2,
      0
     ],
-    "top_p": 0.1235,
+    "top_p": 0.1177,
     "total": {
-     "line": 2.5,
-     "over": 1.82,
-     "under": 2.09
+     "line": 2.75,
+     "over": 1.95,
+     "under": 1.95
     }
    },
-   "odds_at": "2026-10-31T12:24:21Z"
+   "odds_at": "2026-11-01T13:18:15Z"
   },
   "482c18a8081afdfa310324fa8f37e95a": {
    "ai": {
@@ -4268,18 +4414,16 @@
     "adjustments": [],
     "at": "2026-10-31T12:28:55Z",
     "base": {
-     "lam_a": 1.184,
-     "lam_h": 1.392
+     "lam_a": 1.199,
+     "lam_h": 1.413
     },
     "confidence": "high",
-    "lam_a": 1.184,
-    "lam_h": 1.392,
-    "model": "gemini-3.6-flash",
-    "news_error": null,
+    "lam_a": 1.199,
+    "lam_h": 1.413,
     "probs": {
-     "a": 0.3093,
-     "d": 0.2837,
-     "h": 0.407
+     "a": 0.3094,
+     "d": 0.2813,
+     "h": 0.4093
     },
     "searched": true,
     "sources": [
@@ -4360,19 +4504,19 @@
      1,
      1
     ],
-    "top_p": 0.1354,
+    "top_p": 0.1343,
     "tries": 1
    },
    "away": "Valencia",
    "books": {
     "betfair_ex_uk": {
      "a": 3.3,
-     "d": 3.4,
-     "h": 2.42
+     "d": 3.45,
+     "h": 2.44
     },
     "betvictor": {
-     "a": 3.1,
-     "d": 3.4,
+     "a": 3.0,
+     "d": 3.5,
      "h": 2.3
     },
     "boylesports": {
@@ -4381,9 +4525,9 @@
      "h": 2.25
     },
     "ladbrokes_uk": {
-     "a": 2.9,
-     "d": 3.3,
-     "h": 2.37
+     "a": 3.0,
+     "d": 3.4,
+     "h": 2.3
     },
     "paddypower": {
      "a": 3.1,
@@ -4391,19 +4535,19 @@
      "h": 2.3
     },
     "pinnacle": {
-     "a": 3.13,
-     "d": 3.41,
-     "h": 2.38
+     "a": 3.22,
+     "d": 3.33,
+     "h": 2.42
     },
     "skybet": {
      "a": 3.1,
-     "d": 3.2,
+     "d": 3.3,
      "h": 2.3
     },
     "smarkets": {
      "a": 3.3,
-     "d": 3.4,
-     "h": 2.42
+     "d": 3.45,
+     "h": 2.44
     },
     "unibet_uk": {
      "a": 3.0,
@@ -4422,30 +4566,105 @@
    "league": "laliga",
    "market": {
     "h2h": {
-     "a": 3.13,
-     "d": 3.41,
-     "h": 2.38
+     "a": 3.22,
+     "d": 3.33,
+     "h": 2.42
     },
-    "lam_a": 1.184,
-    "lam_h": 1.392,
+    "lam_a": 1.199,
+    "lam_h": 1.413,
     "probs": {
      "a": 0.3094,
-     "d": 0.2837,
-     "h": 0.4069
+     "d": 0.2814,
+     "h": 0.4092
     },
     "source": "Pinnacle",
     "top": [
      1,
      1
     ],
-    "top_p": 0.1354,
+    "top_p": 0.1343,
     "total": {
      "line": 2.5,
-     "over": 2.04,
-     "under": 1.85
+     "over": 2.01,
+     "under": 1.9
     }
    },
-   "odds_at": "2026-10-31T12:24:21Z"
+   "odds_at": "2026-11-01T13:18:15Z"
+  },
+  "52b256088d29b4abb82e0c63ea9852fe": {
+   "away": "Frosinone",
+   "books": {
+    "betvictor": {
+     "a": 2.4,
+     "d": 3.7,
+     "h": 2.6
+    },
+    "boylesports": {
+     "a": 2.3,
+     "d": 3.5,
+     "h": 2.4
+    },
+    "paddypower": {
+     "a": 2.4,
+     "d": 3.6,
+     "h": 2.6
+    },
+    "pinnacle": {
+     "a": 2.49,
+     "d": 3.7,
+     "h": 2.66
+    },
+    "skybet": {
+     "a": 2.4,
+     "d": 3.6,
+     "h": 2.63
+    },
+    "smarkets": {
+     "a": 2.32,
+     "d": 3.35,
+     "h": 2.48
+    },
+    "unibet_uk": {
+     "a": 2.45,
+     "d": 3.6,
+     "h": 2.6
+    },
+    "williamhill": {
+     "a": 2.38,
+     "d": 3.7,
+     "h": 2.5
+    }
+   },
+   "home": "Cagliari",
+   "id": "52b256088d29b4abb82e0c63ea9852fe",
+   "kickoff": "2026-11-07T14:00:00Z",
+   "league": "seriea",
+   "market": {
+    "h2h": {
+     "a": 2.49,
+     "d": 3.7,
+     "h": 2.66
+    },
+    "lam_a": 1.624,
+    "lam_h": 1.567,
+    "probs": {
+     "a": 0.3866,
+     "d": 0.2513,
+     "h": 0.3621
+    },
+    "source": "Pinnacle",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1131,
+    "total": {
+     "line": 3.0,
+     "over": 1.88,
+     "under": 1.95
+    }
+   },
+   "odds_at": "2026-11-01T13:18:15Z"
   },
   "5960b1b6c20acfd78e78764fed47d505": {
    "ai": {
@@ -4548,8 +4767,13 @@
    "books": {
     "betfair_ex_uk": {
      "a": 1.37,
-     "d": 6.2,
-     "h": 7.4
+     "d": 6.0,
+     "h": 7.6
+    },
+    "betvictor": {
+     "a": 1.33,
+     "d": 5.0,
+     "h": 7.0
     },
     "boylesports": {
      "a": 1.33,
@@ -4563,8 +4787,8 @@
     },
     "pinnacle": {
      "a": 1.35,
-     "d": 5.83,
-     "h": 6.91
+     "d": 5.84,
+     "h": 6.93
     },
     "skybet": {
      "a": 1.36,
@@ -4573,7 +4797,7 @@
     },
     "smarkets": {
      "a": 1.35,
-     "d": 6.0,
+     "d": 5.9,
      "h": 7.2
     },
     "unibet_uk": {
@@ -4594,15 +4818,15 @@
    "market": {
     "h2h": {
      "a": 1.35,
-     "d": 5.83,
-     "h": 6.91
+     "d": 5.84,
+     "h": 6.93
     },
-    "lam_a": 2.515,
-    "lam_h": 1.014,
+    "lam_a": 2.516,
+    "lam_h": 1.012,
     "probs": {
-     "a": 0.6939,
-     "d": 0.1797,
-     "h": 0.1263
+     "a": 0.6944,
+     "d": 0.1796,
+     "h": 0.126
     },
     "source": "Pinnacle",
     "top": [
@@ -4616,7 +4840,72 @@
      "under": 2.02
     }
    },
-   "odds_at": "2026-10-31T12:24:21Z"
+   "odds_at": "2026-11-01T13:18:15Z"
+  },
+  "5ea6b7050b00fcc1832f7938794dd755": {
+   "away": "Atalanta BC",
+   "books": {
+    "paddypower": {
+     "a": 1.95,
+     "d": 3.75,
+     "h": 3.3
+    },
+    "pinnacle": {
+     "a": 2.03,
+     "d": 3.85,
+     "h": 3.37
+    },
+    "skybet": {
+     "a": 2.0,
+     "d": 3.75,
+     "h": 3.3
+    },
+    "smarkets": {
+     "a": 1.9,
+     "d": 3.35,
+     "h": 2.96
+    },
+    "unibet_uk": {
+     "a": 2.05,
+     "d": 3.7,
+     "h": 3.25
+    },
+    "williamhill": {
+     "a": 2.0,
+     "d": 3.6,
+     "h": 3.2
+    }
+   },
+   "home": "Monza",
+   "id": "5ea6b7050b00fcc1832f7938794dd755",
+   "kickoff": "2026-11-08T14:00:00Z",
+   "league": "seriea",
+   "market": {
+    "h2h": {
+     "a": 2.03,
+     "d": 3.85,
+     "h": 3.37
+    },
+    "lam_a": 1.786,
+    "lam_h": 1.35,
+    "probs": {
+     "a": 0.4694,
+     "d": 0.2479,
+     "h": 0.2827
+    },
+    "source": "Pinnacle",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1131,
+    "total": {
+     "line": 3.0,
+     "over": 1.94,
+     "under": 1.89
+    }
+   },
+   "odds_at": "2026-11-01T13:18:15Z"
   },
   "63aa6e3f679ee4c68de5b4bd8d3361bb": {
    "ai": {
@@ -5008,18 +5297,187 @@
     "h": 0
    }
   },
+  "657fd1ac35832f65fcc6feba93970e10": {
+   "away": "Como",
+   "books": {
+    "boylesports": {
+     "a": 3.6,
+     "d": 4.0,
+     "h": 1.67
+    },
+    "paddypower": {
+     "a": 3.8,
+     "d": 4.2,
+     "h": 1.7
+    },
+    "pinnacle": {
+     "a": 4.11,
+     "d": 4.26,
+     "h": 1.75
+    },
+    "skybet": {
+     "a": 3.9,
+     "d": 4.2,
+     "h": 1.73
+    },
+    "smarkets": {
+     "a": 3.55,
+     "d": 3.7,
+     "h": 1.63
+    },
+    "unibet_uk": {
+     "a": 4.0,
+     "d": 4.2,
+     "h": 1.73
+    },
+    "williamhill": {
+     "a": 3.8,
+     "d": 4.0,
+     "h": 1.73
+    }
+   },
+   "home": "Inter Milan",
+   "id": "657fd1ac35832f65fcc6feba93970e10",
+   "kickoff": "2026-11-08T17:00:00Z",
+   "league": "seriea",
+   "market": {
+    "h2h": {
+     "a": 4.11,
+     "d": 4.26,
+     "h": 1.75
+    },
+    "lam_a": 1.329,
+    "lam_h": 2.1,
+    "probs": {
+     "a": 0.2317,
+     "d": 0.2239,
+     "h": 0.5444
+    },
+    "source": "Pinnacle",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.0977,
+    "total": {
+     "line": 3.25,
+     "over": 1.91,
+     "under": 1.93
+    }
+   },
+   "odds_at": "2026-11-01T13:18:15Z"
+  },
   "66608b64d462d1d3deabe573c8456d86": {
+   "ai": {
+    "adjustments": [],
+    "at": "2026-11-01T13:18:21Z",
+    "base": {
+     "lam_a": 1.687,
+     "lam_h": 1.508
+    },
+    "confidence": "high",
+    "lam_a": 1.687,
+    "lam_h": 1.508,
+    "model": "gemini-3.6-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.4131,
+     "d": 0.2502,
+     "h": 0.3367
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-10-31",
+      "source": "RomaPress",
+      "team": "home",
+      "title": "Kone tipped to make return vs Sassuolo",
+      "url": "https://romapress.net"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "Yahoo Sports",
+      "team": "home",
+      "title": "PREVIEW | Sassuolo vs Fiorentina: team news, lineups, predictions (Serie A 02/11)",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "Sports Mole",
+      "team": "home",
+      "title": "Preview: Sassuolo vs. Fiorentina - prediction, team news, lineups",
+      "url": "https://www.sportsmole.co.uk"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "Soccer News",
+      "team": "home",
+      "title": "Prediction: Sassuolo vs Fiorentina",
+      "url": "https://www.soccernews.com"
+     },
+     {
+      "date": "2026-10-30",
+      "source": "Yahoo Sports",
+      "team": "home",
+      "title": "Kone completes recovery, eyes call-up with Sassuolo",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "Yahoo Sports",
+      "team": "away",
+      "title": "PREVIEW | Sassuolo vs Fiorentina: team news, lineups, predictions (Serie A 02/11)",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "Yahoo Sports",
+      "team": "away",
+      "title": "What happened in Juventus Women's last victory against Fiorentina?",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "Sports Mole",
+      "team": "away",
+      "title": "Preview: Sassuolo vs. Fiorentina - prediction, team news, lineups",
+      "url": "https://www.sportsmole.co.uk"
+     },
+     {
+      "date": "2026-10-31",
+      "source": "Soccer News",
+      "team": "away",
+      "title": "Prediction: Sassuolo vs Fiorentina",
+      "url": "https://www.soccernews.com"
+     },
+     {
+      "date": "2026-10-30",
+      "source": "The Stats Zone",
+      "team": "away",
+      "title": "Sassuolo vs Fiorentina Preview: Team News & Prediction",
+      "url": "https://www.thestatszone.com"
+     }
+    ],
+    "status": "ok",
+    "summary": "市场已充分包含近期赛果与信息，未发现未定价的具体关键伤停。",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1126,
+    "tries": 1
+   },
    "away": "Fiorentina",
    "books": {
     "betfair_ex_uk": {
-     "a": 2.42,
+     "a": 2.44,
      "d": 3.8,
      "h": 3.0
     },
     "betvictor": {
-     "a": 2.25,
-     "d": 3.7,
-     "h": 2.75
+     "a": 2.3,
+     "d": 3.75,
+     "h": 2.8
     },
     "boylesports": {
      "a": 2.2,
@@ -5033,7 +5491,7 @@
     },
     "paddypower": {
      "a": 2.3,
-     "d": 3.5,
+     "d": 3.6,
      "h": 2.8
     },
     "pinnacle": {
@@ -5052,9 +5510,9 @@
      "h": 3.0
     },
     "unibet_uk": {
-     "a": 2.35,
+     "a": 2.38,
      "d": 3.6,
-     "h": 2.8
+     "h": 2.75
     },
     "williamhill": {
      "a": 2.3,
@@ -5091,7 +5549,7 @@
      "under": 1.98
     }
    },
-   "odds_at": "2026-10-31T12:24:21Z"
+   "odds_at": "2026-11-01T13:18:15Z"
   },
   "667cf69986b200753742c90cb9c5126c": {
    "ai": {
@@ -5285,18 +5743,16 @@
     "adjustments": [],
     "at": "2026-10-31T12:27:40Z",
     "base": {
-     "lam_a": 3.215,
-     "lam_h": 1.087
+     "lam_a": 3.138,
+     "lam_h": 0.929
     },
     "confidence": "high",
-    "lam_a": 3.215,
-    "lam_h": 1.087,
-    "model": "gemini-3.6-flash",
-    "news_error": null,
+    "lam_a": 3.138,
+    "lam_h": 0.929,
     "probs": {
-     "a": 0.7823,
-     "d": 0.13,
-     "h": 0.0878
+     "a": 0.8013,
+     "d": 0.1257,
+     "h": 0.073
     },
     "searched": true,
     "sources": [
@@ -5374,18 +5830,18 @@
     "status": "ok",
     "summary": "新闻仅包含常规赛前预测与回顾，未披露重大新增伤停，市场定价充分。",
     "top": [
-     1,
+     0,
      3
     ],
-    "top_p": 0.0816,
+    "top_p": 0.0883,
     "tries": 1
    },
    "away": "Real Madrid",
    "books": {
     "betfair_ex_uk": {
-     "a": 1.24,
+     "a": 1.23,
      "d": 8.6,
-     "h": 12.0
+     "h": 13.5
     },
     "betvictor": {
      "a": 1.2,
@@ -5395,37 +5851,37 @@
     "boylesports": {
      "a": 1.2,
      "d": 6.5,
-     "h": 8.5
-    },
-    "ladbrokes_uk": {
-     "a": 1.25,
-     "d": 7.5,
      "h": 9.0
     },
+    "ladbrokes_uk": {
+     "a": 1.22,
+     "d": 7.0,
+     "h": 8.5
+    },
     "paddypower": {
-     "a": 1.2,
+     "a": 1.17,
      "d": 7.5,
-     "h": 10.0
+     "h": 11.0
     },
     "pinnacle": {
-     "a": 1.22,
-     "d": 7.96,
-     "h": 10.23
+     "a": 1.2,
+     "d": 8.31,
+     "h": 12.21
     },
     "skybet": {
-     "a": 1.2,
-     "d": 7.0,
-     "h": 9.5
+     "a": 1.18,
+     "d": 8.5,
+     "h": 11.0
     },
     "smarkets": {
-     "a": 1.24,
-     "d": 8.6,
-     "h": 11.49
+     "a": 1.22,
+     "d": 8.4,
+     "h": 13.0
     },
     "unibet_uk": {
-     "a": 1.23,
+     "a": 1.22,
      "d": 7.0,
-     "h": 9.5
+     "h": 10.5
     },
     "williamhill": {
      "a": 1.22,
@@ -5439,30 +5895,30 @@
    "league": "laliga",
    "market": {
     "h2h": {
-     "a": 1.22,
-     "d": 7.96,
-     "h": 10.23
+     "a": 1.2,
+     "d": 8.31,
+     "h": 12.21
     },
-    "lam_a": 3.215,
-    "lam_h": 1.087,
+    "lam_a": 3.138,
+    "lam_h": 0.929,
     "probs": {
-     "a": 0.7823,
-     "d": 0.1299,
-     "h": 0.0878
+     "a": 0.8013,
+     "d": 0.1257,
+     "h": 0.073
     },
     "source": "Pinnacle",
     "top": [
-     1,
+     0,
      3
     ],
-    "top_p": 0.0816,
+    "top_p": 0.0883,
     "total": {
-     "line": 4.0,
+     "line": 3.75,
      "over": 1.82,
-     "under": 2.07
+     "under": 2.08
     }
    },
-   "odds_at": "2026-10-31T12:24:21Z"
+   "odds_at": "2026-11-01T13:18:15Z"
   },
   "70df1835c3b5ddff1c99e0189532136b": {
    "ai": {
@@ -5650,9 +6106,14 @@
    "away": "Athletic Bilbao",
    "books": {
     "betfair_ex_uk": {
-     "a": 2.26,
-     "d": 3.35,
-     "h": 3.3
+     "a": 2.28,
+     "d": 3.3,
+     "h": 3.35
+    },
+    "betvictor": {
+     "a": 2.15,
+     "d": 3.25,
+     "h": 3.12
     },
     "boylesports": {
      "a": 2.1,
@@ -5665,9 +6126,9 @@
      "h": 3.2
     },
     "pinnacle": {
-     "a": 2.23,
+     "a": 2.24,
      "d": 3.35,
-     "h": 3.29
+     "h": 3.28
     },
     "skybet": {
      "a": 2.2,
@@ -5675,9 +6136,9 @@
      "h": 3.2
     },
     "smarkets": {
-     "a": 2.22,
+     "a": 2.26,
      "d": 3.25,
-     "h": 3.25
+     "h": 3.3
     },
     "unibet_uk": {
      "a": 2.2,
@@ -5696,30 +6157,30 @@
    "league": "laliga",
    "market": {
     "h2h": {
-     "a": 2.23,
+     "a": 2.24,
      "d": 3.35,
-     "h": 3.29
+     "h": 3.28
     },
-    "lam_a": 1.414,
-    "lam_h": 1.122,
+    "lam_a": 1.411,
+    "lam_h": 1.125,
     "probs": {
-     "a": 0.4265,
-     "d": 0.2845,
-     "h": 0.289
+     "a": 0.4251,
+     "d": 0.2846,
+     "h": 0.2903
     },
     "source": "Pinnacle",
     "top": [
      1,
      1
     ],
-    "top_p": 0.1357,
+    "top_p": 0.1358,
     "total": {
      "line": 2.25,
      "over": 1.79,
      "under": 2.07
     }
    },
-   "odds_at": "2026-10-31T12:24:21Z"
+   "odds_at": "2026-11-01T13:18:15Z"
   },
   "72089d103a5fe6a922c35e17efba6ffc": {
    "ai": {
@@ -6223,9 +6684,9 @@
      "h": 2.26
     },
     "betvictor": {
-     "a": 3.3,
-     "d": 3.2,
-     "h": 2.1
+     "a": 3.4,
+     "d": 3.3,
+     "h": 2.2
     },
     "boylesports": {
      "a": 3.3,
@@ -6240,7 +6701,7 @@
     "paddypower": {
      "a": 3.5,
      "d": 3.1,
-     "h": 2.1
+     "h": 2.15
     },
     "pinnacle": {
      "a": 3.67,
@@ -6254,8 +6715,8 @@
     },
     "smarkets": {
      "a": 3.8,
-     "d": 3.35,
-     "h": 2.26
+     "d": 3.3,
+     "h": 2.24
     },
     "williamhill": {
      "a": 3.4,
@@ -6292,7 +6753,77 @@
      "under": 1.93
     }
    },
-   "odds_at": "2026-10-31T12:24:21Z"
+   "odds_at": "2026-11-01T13:18:15Z"
+  },
+  "7a68b099b47ed7724062b661cd9af464": {
+   "away": "AC Milan",
+   "books": {
+    "boylesports": {
+     "a": 1.7,
+     "d": 3.5,
+     "h": 4.33
+    },
+    "paddypower": {
+     "a": 1.73,
+     "d": 3.6,
+     "h": 4.5
+    },
+    "pinnacle": {
+     "a": 1.78,
+     "d": 3.68,
+     "h": 4.66
+    },
+    "skybet": {
+     "a": 1.75,
+     "d": 3.6,
+     "h": 4.5
+    },
+    "smarkets": {
+     "a": 1.66,
+     "d": 3.2,
+     "h": 4.0
+    },
+    "unibet_uk": {
+     "a": 1.75,
+     "d": 3.6,
+     "h": 4.5
+    },
+    "williamhill": {
+     "a": 1.75,
+     "d": 3.5,
+     "h": 4.33
+    }
+   },
+   "home": "Genoa",
+   "id": "7a68b099b47ed7724062b661cd9af464",
+   "kickoff": "2026-11-08T14:00:00Z",
+   "league": "seriea",
+   "market": {
+    "h2h": {
+     "a": 1.78,
+     "d": 3.68,
+     "h": 4.66
+    },
+    "lam_a": 1.649,
+    "lam_h": 0.928,
+    "probs": {
+     "a": 0.5341,
+     "d": 0.2637,
+     "h": 0.2022
+    },
+    "source": "Pinnacle",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1256,
+    "total": {
+     "line": 2.5,
+     "over": 2.02,
+     "under": 1.83
+    }
+   },
+   "odds_at": "2026-11-01T13:18:15Z"
   },
   "7d989a0a7bae47eb957731e97c5bd9c1": {
    "ai": {
@@ -6668,13 +7199,153 @@
     "h": 4
    }
   },
+  "7f50eb7deaebfbcd45c3f4e7cd3724e4": {
+   "away": "Juventus",
+   "books": {
+    "boylesports": {
+     "a": 1.83,
+     "d": 3.5,
+     "h": 3.6
+    },
+    "paddypower": {
+     "a": 1.87,
+     "d": 3.7,
+     "h": 3.7
+    },
+    "pinnacle": {
+     "a": 1.9,
+     "d": 3.74,
+     "h": 3.92
+    },
+    "skybet": {
+     "a": 1.91,
+     "d": 3.75,
+     "h": 3.75
+    },
+    "smarkets": {
+     "a": 1.78,
+     "d": 3.25,
+     "h": 3.35
+    },
+    "unibet_uk": {
+     "a": 1.9,
+     "d": 3.6,
+     "h": 3.75
+    },
+    "williamhill": {
+     "a": 1.85,
+     "d": 3.6,
+     "h": 3.75
+    }
+   },
+   "home": "Fiorentina",
+   "id": "7f50eb7deaebfbcd45c3f4e7cd3724e4",
+   "kickoff": "2026-11-08T19:45:00Z",
+   "league": "seriea",
+   "market": {
+    "h2h": {
+     "a": 1.9,
+     "d": 3.74,
+     "h": 3.92
+    },
+    "lam_a": 1.726,
+    "lam_h": 1.142,
+    "probs": {
+     "a": 0.5015,
+     "d": 0.2556,
+     "h": 0.2429
+    },
+    "source": "Pinnacle",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1209,
+    "total": {
+     "line": 2.75,
+     "over": 1.96,
+     "under": 1.88
+    }
+   },
+   "odds_at": "2026-11-01T13:18:15Z"
+  },
+  "813cc4970b2dcab8457490a332fb5a6c": {
+   "away": "Bologna",
+   "books": {
+    "boylesports": {
+     "a": 1.75,
+     "d": 3.4,
+     "h": 4.2
+    },
+    "paddypower": {
+     "a": 1.75,
+     "d": 3.5,
+     "h": 4.2
+    },
+    "pinnacle": {
+     "a": 1.84,
+     "d": 3.52,
+     "h": 4.5
+    },
+    "skybet": {
+     "a": 1.8,
+     "d": 3.5,
+     "h": 4.33
+    },
+    "smarkets": {
+     "a": 1.74,
+     "d": 3.2,
+     "h": 4.0
+    },
+    "unibet_uk": {
+     "a": 1.83,
+     "d": 3.5,
+     "h": 4.35
+    },
+    "williamhill": {
+     "a": 1.8,
+     "d": 3.4,
+     "h": 4.2
+    }
+   },
+   "home": "Parma",
+   "id": "813cc4970b2dcab8457490a332fb5a6c",
+   "kickoff": "2026-11-07T17:00:00Z",
+   "league": "seriea",
+   "market": {
+    "h2h": {
+     "a": 1.84,
+     "d": 3.52,
+     "h": 4.5
+    },
+    "lam_a": 1.548,
+    "lam_h": 0.898,
+    "probs": {
+     "a": 0.5157,
+     "d": 0.2753,
+     "h": 0.209
+    },
+    "source": "Pinnacle",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1301,
+    "total": {
+     "line": 2.25,
+     "over": 1.88,
+     "under": 1.96
+    }
+   },
+   "odds_at": "2026-11-01T13:18:15Z"
+  },
   "81ad04996f63fb60b494d243b13ac586": {
    "away": "Getafe",
    "books": {
     "betfair_ex_uk": {
-     "a": 7.0,
-     "d": 4.3,
-     "h": 1.48
+     "a": 7.2,
+     "d": 4.4,
+     "h": 1.49
     },
     "betvictor": {
      "a": 6.5,
@@ -6702,9 +7373,9 @@
      "h": 1.44
     },
     "smarkets": {
-     "a": 6.8,
-     "d": 4.2,
-     "h": 1.45
+     "a": 7.0,
+     "d": 4.3,
+     "h": 1.47
     },
     "unibet_uk": {
      "a": 6.5,
@@ -6746,7 +7417,7 @@
      "under": 1.96
     }
    },
-   "odds_at": "2026-10-31T12:24:21Z"
+   "odds_at": "2026-11-01T13:18:15Z"
   },
   "85e464708d03287f24590e1478aeca31": {
    "ai": {
@@ -7322,18 +7993,16 @@
     ],
     "at": "2026-10-31T12:28:34Z",
     "base": {
-     "lam_a": 1.231,
-     "lam_h": 1.005
+     "lam_a": 1.197,
+     "lam_h": 1.049
     },
     "confidence": "medium",
-    "lam_a": 1.231,
-    "lam_h": 0.905,
-    "model": "gemini-3.6-flash",
-    "news_error": null,
+    "lam_a": 1.197,
+    "lam_h": 0.949,
     "probs": {
-     "a": 0.4265,
-     "d": 0.3123,
-     "h": 0.2612
+     "a": 0.4059,
+     "d": 0.3139,
+     "h": 0.2802
     },
     "searched": true,
     "sources": [
@@ -7414,55 +8083,55 @@
      1,
      1
     ],
-    "top_p": 0.1421,
+    "top_p": 0.1435,
     "tries": 1
    },
    "away": "Genoa",
    "books": {
     "betfair_ex_uk": {
-     "a": 2.46,
-     "d": 3.1,
-     "h": 3.6
+     "a": 2.64,
+     "d": 3.05,
+     "h": 3.35
     },
     "betvictor": {
-     "a": 2.38,
+     "a": 2.45,
      "d": 3.12,
-     "h": 3.2
+     "h": 3.0
     },
     "boylesports": {
-     "a": 2.3,
+     "a": 2.4,
      "d": 2.9,
-     "h": 3.1
+     "h": 3.0
     },
     "ladbrokes_uk": {
-     "a": 2.45,
-     "d": 3.0,
-     "h": 3.1
+     "a": 2.5,
+     "d": 2.9,
+     "h": 3.0
     },
     "paddypower": {
-     "a": 2.4,
-     "d": 3.0,
-     "h": 3.2
+     "a": 2.5,
+     "d": 2.8,
+     "h": 3.1
     },
     "pinnacle": {
-     "a": 2.44,
-     "d": 3.05,
-     "h": 3.41
+     "a": 2.6,
+     "d": 3.01,
+     "h": 3.24
     },
     "skybet": {
-     "a": 2.38,
-     "d": 3.0,
+     "a": 2.5,
+     "d": 2.88,
      "h": 3.1
     },
     "smarkets": {
-     "a": 2.46,
-     "d": 3.1,
-     "h": 3.55
+     "a": 2.62,
+     "d": 3.05,
+     "h": 3.3
     },
     "unibet_uk": {
-     "a": 2.4,
+     "a": 2.5,
      "d": 3.0,
-     "h": 3.2
+     "h": 3.1
     },
     "williamhill": {
      "a": 2.25,
@@ -7476,30 +8145,30 @@
    "league": "seriea",
    "market": {
     "h2h": {
-     "a": 2.44,
-     "d": 3.05,
-     "h": 3.41
+     "a": 2.6,
+     "d": 3.01,
+     "h": 3.24
     },
-    "lam_a": 1.231,
-    "lam_h": 1.005,
+    "lam_a": 1.197,
+    "lam_h": 1.049,
     "probs": {
-     "a": 0.4027,
-     "d": 0.3072,
-     "h": 0.2901
+     "a": 0.3828,
+     "d": 0.308,
+     "h": 0.3092
     },
     "source": "Pinnacle",
     "top": [
      1,
      1
     ],
-    "top_p": 0.1428,
+    "top_p": 0.1435,
     "total": {
-     "line": 2.0,
-     "over": 1.81,
-     "under": 2.1
+     "line": 2.25,
+     "over": 2.15,
+     "under": 1.79
     }
    },
-   "odds_at": "2026-10-31T12:24:21Z"
+   "odds_at": "2026-11-01T13:18:15Z"
   },
   "9507f4bcbcfd4e4953720628a2b86a17": {
    "ai": {
@@ -8071,7 +8740,7 @@
    "away": "Alavés",
    "books": {
     "betfair_ex_uk": {
-     "a": 4.1,
+     "a": 4.2,
      "d": 3.35,
      "h": 2.06
     },
@@ -8091,9 +8760,9 @@
      "h": 2.0
     },
     "pinnacle": {
-     "a": 3.77,
-     "d": 3.3,
-     "h": 2.07
+     "a": 3.79,
+     "d": 3.31,
+     "h": 2.06
     },
     "skybet": {
      "a": 3.6,
@@ -8101,14 +8770,14 @@
      "h": 2.05
     },
     "smarkets": {
-     "a": 4.0,
+     "a": 4.1,
      "d": 3.3,
      "h": 2.04
     },
     "unibet_uk": {
      "a": 3.7,
      "d": 3.25,
-     "h": 2.0
+     "h": 2.05
     },
     "williamhill": {
      "a": 3.6,
@@ -8122,30 +8791,30 @@
    "league": "laliga",
    "market": {
     "h2h": {
-     "a": 3.77,
-     "d": 3.3,
-     "h": 2.07
+     "a": 3.79,
+     "d": 3.31,
+     "h": 2.06
     },
-    "lam_a": 0.974,
-    "lam_h": 1.403,
+    "lam_a": 0.97,
+    "lam_h": 1.407,
     "probs": {
-     "a": 0.2511,
-     "d": 0.2905,
-     "h": 0.4585
+     "a": 0.2494,
+     "d": 0.2902,
+     "h": 0.4604
     },
     "source": "Pinnacle",
     "top": [
      1,
      1
     ],
-    "top_p": 0.137,
+    "top_p": 0.1368,
     "total": {
      "line": 2.25,
      "over": 1.95,
      "under": 1.88
     }
    },
-   "odds_at": "2026-10-31T12:24:21Z"
+   "odds_at": "2026-11-01T13:18:15Z"
   },
   "a362cccad837f1ffae61ff43a3536688": {
    "ai": {
@@ -8549,18 +9218,16 @@
     ],
     "at": "2026-10-31T16:06:15Z",
     "base": {
-     "lam_a": 1.148,
-     "lam_h": 1.438
+     "lam_a": 1.126,
+     "lam_h": 1.465
     },
     "confidence": "medium",
-    "lam_a": 1.098,
-    "lam_h": 1.388,
-    "model": "gemini-3.6-flash",
-    "news_error": null,
+    "lam_a": 1.076,
+    "lam_h": 1.415,
     "probs": {
-     "a": 0.2871,
-     "d": 0.2878,
-     "h": 0.4251
+     "a": 0.2765,
+     "d": 0.2861,
+     "h": 0.4375
     },
     "searched": true,
     "sources": [
@@ -8641,60 +9308,60 @@
      1,
      1
     ],
-    "top_p": 0.137,
+    "top_p": 0.1362,
     "tries": 1
    },
    "away": "Napoli",
    "books": {
     "betfair_ex_uk": {
-     "a": 3.45,
-     "d": 3.35,
-     "h": 2.4
+     "a": 3.6,
+     "d": 3.4,
+     "h": 2.3
     },
     "betvictor": {
-     "a": 3.12,
+     "a": 3.3,
      "d": 3.4,
-     "h": 2.25
-    },
-    "boylesports": {
-     "a": 3.1,
-     "d": 3.25,
      "h": 2.15
     },
-    "ladbrokes_uk": {
+    "boylesports": {
      "a": 3.2,
-     "d": 3.3,
-     "h": 2.25
+     "d": 3.25,
+     "h": 2.1
+    },
+    "ladbrokes_uk": {
+     "a": 3.4,
+     "d": 3.2,
+     "h": 2.15
     },
     "paddypower": {
-     "a": 3.2,
-     "d": 3.3,
+     "a": 3.4,
+     "d": 3.2,
      "h": 2.2
     },
     "pinnacle": {
-     "a": 3.4,
-     "d": 3.31,
-     "h": 2.3
-    },
-    "skybet": {
-     "a": 3.1,
-     "d": 3.25,
+     "a": 3.55,
+     "d": 3.36,
      "h": 2.25
     },
-    "smarkets": {
-     "a": 3.45,
+    "skybet": {
+     "a": 3.4,
      "d": 3.3,
-     "h": 2.38
+     "h": 2.15
     },
-    "unibet_uk": {
-     "a": 3.2,
-     "d": 3.25,
+    "smarkets": {
+     "a": 3.6,
+     "d": 3.4,
      "h": 2.3
     },
-    "williamhill": {
-     "a": 3.1,
-     "d": 3.2,
+    "unibet_uk": {
+     "a": 3.3,
+     "d": 3.25,
      "h": 2.2
+    },
+    "williamhill": {
+     "a": 3.3,
+     "d": 3.1,
+     "h": 2.15
     }
    },
    "home": "Juventus",
@@ -8703,30 +9370,30 @@
    "league": "seriea",
    "market": {
     "h2h": {
-     "a": 3.4,
-     "d": 3.31,
-     "h": 2.3
+     "a": 3.55,
+     "d": 3.36,
+     "h": 2.25
     },
-    "lam_a": 1.148,
-    "lam_h": 1.438,
+    "lam_a": 1.126,
+    "lam_h": 1.465,
     "probs": {
-     "a": 0.2914,
-     "d": 0.2813,
-     "h": 0.4272
+     "a": 0.281,
+     "d": 0.2797,
+     "h": 0.4393
     },
     "source": "Pinnacle",
     "top": [
      1,
      1
     ],
-    "top_p": 0.1343,
+    "top_p": 0.1335,
     "total": {
      "line": 2.5,
      "over": 2.03,
-     "under": 1.87
+     "under": 1.88
     }
    },
-   "odds_at": "2026-10-31T12:24:21Z"
+   "odds_at": "2026-11-01T13:18:15Z"
   },
   "b27cb3ea731fa3f18d05e6a627bdf984": {
    "ai": {
@@ -8935,18 +9602,16 @@
     "adjustments": [],
     "at": "2026-10-31T12:27:10Z",
     "base": {
-     "lam_a": 1.604,
-     "lam_h": 1.935
+     "lam_a": 1.551,
+     "lam_h": 1.993
     },
     "confidence": "high",
-    "lam_a": 1.604,
-    "lam_h": 1.935,
-    "model": "gemini-3.6-flash",
-    "news_error": null,
+    "lam_a": 1.551,
+    "lam_h": 1.993,
     "probs": {
-     "a": 0.3162,
-     "d": 0.233,
-     "h": 0.4508
+     "a": 0.2952,
+     "d": 0.2305,
+     "h": 0.4743
     },
     "searched": true,
     "sources": [
@@ -9027,60 +9692,60 @@
      1,
      1
     ],
-    "top_p": 0.0974,
+    "top_p": 0.0965,
     "tries": 1
    },
    "away": "Torino",
    "books": {
     "betfair_ex_uk": {
-     "a": 3.3,
+     "a": 3.4,
      "d": 4.0,
-     "h": 2.2
+     "h": 2.18
     },
     "betvictor": {
      "a": 3.0,
-     "d": 4.0,
-     "h": 2.1
+     "d": 4.1,
+     "h": 2.05
     },
     "boylesports": {
-     "a": 2.7,
+     "a": 2.9,
      "d": 3.8,
-     "h": 2.0
+     "h": 1.91
     },
     "ladbrokes_uk": {
-     "a": 3.0,
+     "a": 3.2,
+     "d": 3.9,
+     "h": 2.0
+    },
+    "paddypower": {
+     "a": 3.2,
+     "d": 3.75,
+     "h": 2.05
+    },
+    "pinnacle": {
+     "a": 3.41,
+     "d": 3.92,
+     "h": 2.09
+    },
+    "skybet": {
+     "a": 3.2,
+     "d": 3.8,
+     "h": 2.05
+    },
+    "smarkets": {
+     "a": 3.4,
+     "d": 4.0,
+     "h": 2.16
+    },
+    "unibet_uk": {
+     "a": 3.1,
      "d": 3.9,
      "h": 2.1
     },
-    "paddypower": {
-     "a": 3.1,
-     "d": 3.75,
-     "h": 2.1
-    },
-    "pinnacle": {
-     "a": 3.13,
-     "d": 3.96,
-     "h": 2.18
-    },
-    "skybet": {
-     "a": 3.1,
-     "d": 3.75,
-     "h": 2.1
-    },
-    "smarkets": {
-     "a": 3.3,
-     "d": 4.0,
-     "h": 2.2
-    },
-    "unibet_uk": {
-     "a": 3.0,
-     "d": 3.8,
-     "h": 2.15
-    },
     "williamhill": {
-     "a": 2.9,
+     "a": 3.1,
      "d": 3.6,
-     "h": 2.1
+     "h": 2.05
     }
    },
    "home": "Frosinone",
@@ -9089,30 +9754,30 @@
    "league": "seriea",
    "market": {
     "h2h": {
-     "a": 3.13,
-     "d": 3.96,
-     "h": 2.18
+     "a": 3.41,
+     "d": 3.92,
+     "h": 2.09
     },
-    "lam_a": 1.604,
-    "lam_h": 1.935,
+    "lam_a": 1.551,
+    "lam_h": 1.993,
     "probs": {
-     "a": 0.3162,
-     "d": 0.233,
-     "h": 0.4508
+     "a": 0.2951,
+     "d": 0.2304,
+     "h": 0.4744
     },
     "source": "Pinnacle",
     "top": [
      1,
      1
     ],
-    "top_p": 0.0973,
+    "top_p": 0.0965,
     "total": {
-     "line": 3.25,
-     "over": 1.83,
-     "under": 2.06
+     "line": 3.5,
+     "over": 2.06,
+     "under": 1.86
     }
    },
-   "odds_at": "2026-10-31T12:24:21Z"
+   "odds_at": "2026-11-01T13:18:15Z"
   },
   "b7f0880e3da978f9481f7cb5697e2aa5": {
    "ai": {
@@ -9215,8 +9880,8 @@
    "books": {
     "betfair_ex_uk": {
      "a": 2.18,
-     "d": 3.8,
-     "h": 3.15
+     "d": 3.85,
+     "h": 3.2
     },
     "betvictor": {
      "a": 2.05,
@@ -9245,11 +9910,11 @@
     },
     "smarkets": {
      "a": 2.16,
-     "d": 3.75,
-     "h": 3.1
+     "d": 3.8,
+     "h": 3.15
     },
     "unibet_uk": {
-     "a": 2.15,
+     "a": 2.1,
      "d": 3.6,
      "h": 3.1
     },
@@ -9288,7 +9953,7 @@
      "under": 2.01
     }
    },
-   "odds_at": "2026-10-31T12:24:21Z"
+   "odds_at": "2026-11-01T13:18:15Z"
   },
   "c7445242bf16a8f37afef7863af45a78": {
    "ai": {
@@ -10045,14 +10710,14 @@
    "away": "Barcelona",
    "books": {
     "betfair_ex_uk": {
-     "a": 1.85,
+     "a": 1.86,
      "d": 4.3,
      "h": 3.7
     },
     "betvictor": {
      "a": 1.8,
      "d": 4.1,
-     "h": 3.4
+     "h": 3.5
     },
     "boylesports": {
      "a": 1.7,
@@ -10075,14 +10740,14 @@
      "h": 3.5
     },
     "smarkets": {
-     "a": 1.82,
+     "a": 1.84,
      "d": 4.2,
      "h": 3.65
     },
     "unibet_uk": {
-     "a": 1.85,
-     "d": 4.2,
-     "h": 3.5
+     "a": 1.83,
+     "d": 4.0,
+     "h": 3.6
     },
     "williamhill": {
      "a": 1.85,
@@ -10119,7 +10784,7 @@
      "under": 1.98
     }
    },
-   "odds_at": "2026-10-31T12:24:21Z"
+   "odds_at": "2026-11-01T13:18:15Z"
   },
   "ddcc9a51a2d7368e055d1abefacdb74e": {
    "ai": {
@@ -10309,9 +10974,14 @@
    "away": "Real Racing Club de Santander",
    "books": {
     "betfair_ex_uk": {
-     "a": 2.82,
-     "d": 3.65,
+     "a": 2.88,
+     "d": 3.7,
      "h": 2.44
+    },
+    "betvictor": {
+     "a": 2.7,
+     "d": 3.5,
+     "h": 2.3
     },
     "boylesports": {
      "a": 2.6,
@@ -10319,29 +10989,29 @@
      "h": 2.2
     },
     "paddypower": {
-     "a": 2.62,
-     "d": 3.6,
+     "a": 2.7,
+     "d": 3.5,
      "h": 2.3
     },
     "pinnacle": {
-     "a": 2.84,
-     "d": 3.51,
+     "a": 2.85,
+     "d": 3.52,
      "h": 2.42
     },
     "skybet": {
-     "a": 2.63,
-     "d": 3.6,
-     "h": 2.38
-    },
-    "smarkets": {
-     "a": 2.8,
-     "d": 3.6,
-     "h": 2.42
-    },
-    "unibet_uk": {
      "a": 2.75,
      "d": 3.5,
      "h": 2.38
+    },
+    "smarkets": {
+     "a": 2.86,
+     "d": 3.65,
+     "h": 2.4
+    },
+    "unibet_uk": {
+     "a": 2.8,
+     "d": 3.5,
+     "h": 2.35
     },
     "williamhill": {
      "a": 2.75,
@@ -10355,16 +11025,16 @@
    "league": "laliga",
    "market": {
     "h2h": {
-     "a": 2.84,
-     "d": 3.51,
+     "a": 2.85,
+     "d": 3.52,
      "h": 2.42
     },
-    "lam_a": 1.434,
-    "lam_h": 1.566,
+    "lam_a": 1.433,
+    "lam_h": 1.568,
     "probs": {
-     "a": 0.3409,
+     "a": 0.3402,
      "d": 0.2603,
-     "h": 0.3988
+     "h": 0.3995
     },
     "source": "Pinnacle",
     "top": [
@@ -10378,7 +11048,7 @@
      "under": 2.02
     }
    },
-   "odds_at": "2026-10-31T12:24:21Z"
+   "odds_at": "2026-11-01T13:18:15Z"
   },
   "e82f25e981f2ebc731cfaf5716231af5": {
    "ai": {
@@ -10774,6 +11444,81 @@
     "h": 4
    }
   },
+  "f110107bca066ac1a598c89661c88fa3": {
+   "away": "Sassuolo",
+   "books": {
+    "betvictor": {
+     "a": 8.0,
+     "d": 5.25,
+     "h": 1.33
+    },
+    "boylesports": {
+     "a": 7.0,
+     "d": 5.0,
+     "h": 1.3
+    },
+    "paddypower": {
+     "a": 7.5,
+     "d": 5.0,
+     "h": 1.3
+    },
+    "pinnacle": {
+     "a": 8.02,
+     "d": 5.53,
+     "h": 1.34
+    },
+    "skybet": {
+     "a": 7.5,
+     "d": 5.25,
+     "h": 1.33
+    },
+    "smarkets": {
+     "a": 6.2,
+     "d": 4.8,
+     "h": 1.3
+    },
+    "unibet_uk": {
+     "a": 7.0,
+     "d": 5.25,
+     "h": 1.35
+    },
+    "williamhill": {
+     "a": 8.0,
+     "d": 5.0,
+     "h": 1.33
+    }
+   },
+   "home": "AS Roma",
+   "id": "f110107bca066ac1a598c89661c88fa3",
+   "kickoff": "2026-11-07T19:45:00Z",
+   "league": "seriea",
+   "market": {
+    "h2h": {
+     "a": 8.02,
+     "d": 5.53,
+     "h": 1.34
+    },
+    "lam_a": 0.921,
+    "lam_h": 2.471,
+    "probs": {
+     "a": 0.1144,
+     "d": 0.1787,
+     "h": 0.7069
+    },
+    "source": "Pinnacle",
+    "top": [
+     2,
+     0
+    ],
+    "top_p": 0.1027,
+    "total": {
+     "line": 3.25,
+     "over": 1.94,
+     "under": 1.89
+    }
+   },
+   "odds_at": "2026-11-01T13:18:15Z"
+  },
   "f9403dd597edbfaa73abdc974e55344c": {
    "away": "Atalanta BC",
    "books": {
@@ -10863,7 +11608,82 @@
     "at": "2026-10-18T18:39:03Z",
     "h": 3
    }
+  },
+  "fa069801a5c9b49143447a1a1d173fd1": {
+   "away": "Udinese",
+   "books": {
+    "betvictor": {
+     "a": 3.1,
+     "d": 3.5,
+     "h": 2.15
+    },
+    "boylesports": {
+     "a": 3.0,
+     "d": 3.5,
+     "h": 2.05
+    },
+    "paddypower": {
+     "a": 3.0,
+     "d": 3.6,
+     "h": 2.1
+    },
+    "pinnacle": {
+     "a": 3.24,
+     "d": 3.65,
+     "h": 2.15
+    },
+    "skybet": {
+     "a": 3.1,
+     "d": 3.6,
+     "h": 2.1
+    },
+    "smarkets": {
+     "a": 2.94,
+     "d": 3.3,
+     "h": 2.04
+    },
+    "unibet_uk": {
+     "a": 3.1,
+     "d": 3.6,
+     "h": 2.15
+    },
+    "williamhill": {
+     "a": 3.1,
+     "d": 3.4,
+     "h": 2.1
+    }
+   },
+   "home": "Venezia",
+   "id": "fa069801a5c9b49143447a1a1d173fd1",
+   "kickoff": "2026-11-06T19:45:00Z",
+   "league": "seriea",
+   "market": {
+    "h2h": {
+     "a": 3.24,
+     "d": 3.65,
+     "h": 2.15
+    },
+    "lam_a": 1.303,
+    "lam_h": 1.641,
+    "probs": {
+     "a": 0.2954,
+     "d": 0.2599,
+     "h": 0.4447
+    },
+    "source": "Pinnacle",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1216,
+    "total": {
+     "line": 2.75,
+     "over": 1.88,
+     "under": 1.95
+    }
+   },
+   "odds_at": "2026-11-01T13:18:15Z"
   }
  },
- "updated": "2026-11-01T01:28:39Z"
+ "updated": "2026-11-01T13:18:21Z"
 }
