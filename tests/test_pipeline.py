@@ -88,6 +88,11 @@ def main():
     print("settled:", len(settled), [ (m["home"], m["result"]) for m in settled][:3])
     assert settled and all(m["result"]["h"] == 2 for m in settled)
     print("calls:", [c.split("/sports/")[1] if "/sports/" in c else "gemini" for c in calls])
+    # 4) 强制拉赔率：没有历史记录的新联赛也不能报错
+    meta = json.loads((tmp / "meta.json").read_text()); meta["leagues"].pop("champ", None)
+    (tmp / "meta.json").write_text(json.dumps(meta))
+    run.main(["run.py", "odds", "--force-odds"])
+    assert not json.loads((tmp / "meta.json").read_text()).get("errors"), "强制模式出错"
     print("ALL TESTS PASSED")
 
 main()

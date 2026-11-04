@@ -154,5 +154,5 @@ def run(db, meta, force=False):
                 m["books"] = compare
                 m["odds_at"] = iso(t)
                 n_upd += 1
-        meta["leagues"][league]["odds_at"] = iso(t)
+        meta.setdefault("leagues", {}).setdefault(league, {})["odds_at"] = iso(t)
         log(meta, f"赔率：{cfg['name']}（{reason}）新增 {n_new} 场，更新 {n_upd} 场，剩余额度 {meta.get('credits_remaining')}")

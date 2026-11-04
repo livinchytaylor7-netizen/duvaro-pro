@@ -18,7 +18,7 @@ const TEAM_ZH = {
   "strasbourg": "斯特拉斯堡", "rc strasbourg": "斯特拉斯堡", "toulouse": "图卢兹", "brest": "布雷斯特", "stade brestois": "布雷斯特",
   "reims": "兰斯", "stade de reims": "兰斯", "montpellier": "蒙彼利埃", "auxerre": "欧塞尔", "aj auxerre": "欧塞尔",
   "angers": "昂热", "angers sco": "昂热", "le havre": "勒阿弗尔", "saint etienne": "圣埃蒂安", "as saint-etienne": "圣埃蒂安",
-  "lorient": "洛里昂", "metz": "梅斯", "fc metz": "梅斯", "paris fc": "巴黎FC", "nimes": "尼姆", "troyes": "特鲁瓦",
+  "lorient": "洛里昂", "le mans fc": "勒芒", "le mans": "勒芒", "metz": "梅斯", "fc metz": "梅斯", "paris fc": "巴黎FC", "nimes": "尼姆", "troyes": "特鲁瓦",
   // 英冠
   "leicester city": "莱斯特城", "leicester": "莱斯特城", "southampton": "南安普顿", "ipswich town": "伊普斯维奇",
   "west bromwich albion": "西布朗", "west brom": "西布朗", "norwich city": "诺维奇", "middlesbrough": "米德尔斯堡",
@@ -38,7 +38,7 @@ const TEAM_ZH = {
   "celta vigo": "塞尔塔", "celta": "塞尔塔", "ca osasuna": "奥萨苏纳", "osasuna": "奥萨苏纳",
   "getafe": "赫塔费", "rayo vallecano": "巴列卡诺", "alaves": "阿拉维斯", "deportivo alaves": "阿拉维斯",
   "espanyol": "西班牙人", "elche cf": "埃尔切", "elche": "埃尔切", "levante": "莱万特",
-  "deportivo la coruna": "拉科鲁尼亚", "deportivo": "拉科鲁尼亚", "racing santander": "桑坦德竞技",
+  "deportivo la coruna": "拉科鲁尼亚", "deportivo": "拉科鲁尼亚", "racing santander": "桑坦德竞技", "real racing club de santander": "桑坦德竞技",
   "malaga": "马拉加", "mallorca": "马略卡", "girona": "赫罗纳", "las palmas": "拉斯帕尔马斯",
   "leganes": "莱加内斯", "real valladolid": "巴拉多利德", "valladolid": "巴拉多利德",
   "real oviedo": "皇家奥维耶多", "oviedo": "皇家奥维耶多", "granada": "格拉纳达", "almeria": "阿尔梅里亚",
