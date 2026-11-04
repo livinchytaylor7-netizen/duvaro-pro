@@ -22,13 +22,13 @@ LEAGUES = {
 
 # 市场基准优先用 Pinnacle；其余仅用于胜平负价格对比
 MARKET_BOOK = "pinnacle"
+HEDGE_BOOK = "williamhill"   # 总进球对冲只用这一家的大/小 2.5 球
 COMPARE_BOOKS = [
     "pinnacle", "paddypower", "boylesports", "betfair_ex_uk", "williamhill",
     "skybet", "ladbrokes_uk", "betvictor", "unibet_uk", "smarkets",
 ]
 
 ODDS_API = "https://api.the-odds-api.com/v4"
-GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 
 
 def now():
@@ -52,7 +52,7 @@ def load(path, default):
 
 def redact(text):
     """把密钥从任何要保存的文本里抹掉（仓库是公开的）。"""
-    for name in ("ODDS_API_KEY", "GEMINI_API_KEY"):
+    for name in ("ODDS_API_KEY",):
         v = (os.environ.get(name) or "").strip()
         if v and len(v) >= 8:
             text = text.replace(v, "***")

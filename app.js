@@ -7,15 +7,11 @@ const MARGIN = 0.25;        // 博彩公司正确比分约 25% 抽水
 const N = 11;
 const TZ = "Europe/Dublin";
 const LEAGUE = { laliga: "西甲", seriea: "意甲", ligue1: "法甲", champ: "英冠" };
-const T25_MARGIN = 0.05;     // 没有真实 2.5 球赔率时，按模型概率加 5% 抽水估算
 const BOOK = { pinnacle: "Pinnacle", paddypower: "Paddy Power", boylesports: "BoyleSports",
   betfair_ex_uk: "Betfair 交易所", williamhill: "William Hill", skybet: "Sky Bet",
   ladbrokes_uk: "Ladbrokes", betvictor: "BetVictor", unibet_uk: "Unibet", smarkets: "Smarkets" };
-const CAT = { injury: "伤停", suspension: "停赛", lineup: "首发/轮换", form: "状态/xG",
-  schedule: "赛程/体能", motivation: "比赛动机", coach: "主帅/战术", other: "其他" };
-const CONF = { high: "高", medium: "中", low: "低" };
 
-const S = { matches: {}, picks: {}, meta: {}, updated: null, tab: "today", draft: {},
+const S = { matches: {}, picks: {}, meta: {}, updated: null, tab: "today", draft: {}, hedgeDraft: {},
   token: lsGet("duvaro_token"), repo: lsGet("duvaro_repo") || detectRepo() };
 
 // ---------- 工具 ----------
@@ -52,54 +48,66 @@ function matrix(lh, la) {
   for (const r of m) for (let j = 0; j < N; j++) r[j] /= s;
   _mcache.set(key, m); return m;
 }
-// ---------- 总进球对冲 ----------
-// 比分 €10 + 大/小 2.5 球对冲：对冲赢 = 刚好持平；比分中 = 赚；两个都输 = 全输（接受）
-// 比分总进球 ≥3 → 对冲“小 2.5”；≤2 → 对冲“大 2.5”。两者互斥，不会同时赢。
+// ---------- 总进球对冲（William Hill 大/小 2.5 球） ----------
+// 比分 €10 + 一注大/小 2.5 球，金额 = 10 ÷ (赔率 − 1)：对冲赢、比分没中 = 刚好持平；都输 = 全输（接受）
+const HEDGE_BOOK = "William Hill";
+const SIDE = { over: "大 2.5 球", under: "小 2.5 球" };
+const inSide = (side, tot) => side === "under" ? tot <= 2 : tot >= 3;
+function defaultSide(t) { return t[0] + t[1] >= 3 ? "under" : "over"; } // 与比分互斥的一边
 function pTotalSide(mk, side) {
   const g = matrix(mk.lam_h, mk.lam_a); let p = 0;
-  for (let i = 0; i < N; i++) for (let j = 0; j < N; j++) if (side === "under" ? i + j <= 2 : i + j >= 3) p += g[i][j];
+  for (let i = 0; i < N; i++) for (let j = 0; j < N; j++) if (inSide(side, i + j)) p += g[i][j];
   return p;
 }
-function hedgeOf(m, t) {
-  const mk = m.market; if (!mk || !t) return null;
-  const side = t[0] + t[1] >= 3 ? "under" : "over";
-  const pH = pTotalSide(mk, side), pS = pScore(mk, t);
-  const real = mk.t25 && mk.t25[side];
-  const oH = real || Math.max(1.02, (1 / pH) * (1 - T25_MARGIN));
-  const hStake = STAKE / (oH - 1);
+function whOdds(m, side) { const w = m.market && m.market.wh25; return w && w[side] > 1 ? w[side] : null; }
+function hedgeOf(m, t, side, oddsOverride) {
+  const mk = m.market; if (!mk || !t || !side || side === "none") return null;
+  const oH = oddsOverride || whOdds(m, side); if (!oH) return null;
+  const hStake = STAKE / (oH - 1), pS = pScore(mk, t), pSide = pTotalSide(mk, side);
+  const overlap = inSide(side, t[0] + t[1]); // 同向：比分中时对冲也中
+  const pEven = Math.max(0, pSide - (overlap ? pS : 0));
   const oSf = 1 / pS, oSb = Math.max(1.01, oSf * (1 - MARGIN));
-  return { side, label: side === "under" ? "小 2.5 球" : "大 2.5 球", oH, real: !!real, hStake, pS, pH,
-    pLose: Math.max(0, 1 - pS - pH), oSf, oSb,
-    winF: STAKE * (oSf - 1) - hStake, winB: STAKE * (oSb - 1) - hStake, lose: -(STAKE + hStake) };
+  const hitBonus = overlap ? hStake * oH : 0;
+  return { side, label: SIDE[side], oH, hStake, pS, pEven, pLose: Math.max(0, 1 - pS - pEven), oSf, oSb, overlap,
+    winF: STAKE * oSf + hitBonus - STAKE - hStake, winB: STAKE * oSb + hitBonus - STAKE - hStake, lose: -(STAKE + hStake) };
 }
-function hedgeOutcome(m, t) {
-  const r = result(m), h = hedgeOf(m, t); if (!r || !h) return null;
-  const tot = r[0] + r[1];
-  const kind = same(t, r) ? "hit" : (h.side === "under" ? tot <= 2 : tot >= 3) ? "even" : "lose";
-  return { h, kind, netF: kind === "hit" ? h.winF : kind === "even" ? 0 : h.lose,
-    netB: kind === "hit" ? h.winB : kind === "even" ? 0 : h.lose };
+function hedgeFor(m, key) { // key: market | mine
+  const L = lines(m), t = L[key]; if (!t) return null;
+  if (key === "mine") { const p = S.picks[m.id] || {}; return hedgeOf(m, t, p.hedge || null, p.hedge_odds); }
+  return hedgeOf(m, t, defaultSide(t));
+}
+function hedgeOutcome(m, key) {
+  const r = result(m), h = hedgeFor(m, key); if (!r || !h) return null;
+  const t = lines(m)[key];
+  const kind = same(t, r) ? "hit" : inSide(h.side, r[0] + r[1]) ? "even" : "lose";
+  return { h, kind, netF: kind === "hit" ? h.winF : kind === "even" ? 0 : h.lose, netB: kind === "hit" ? h.winB : kind === "even" ? 0 : h.lose };
 }
 function hedgeAgg(list, key) {
   const a = { n: 0, hit: 0, even: 0, lose: 0, eHit: 0, eEven: 0, eLose: 0, cost: 0, netF: 0, netB: 0 };
   for (const m of list) {
-    const t = lines(m)[key]; const o = t && hedgeOutcome(m, t); if (!o) continue;
-    a.n++; a[o.kind]++; a.eHit += o.h.pS; a.eEven += o.h.pH; a.eLose += o.h.pLose;
+    const o = hedgeOutcome(m, key); if (!o) continue;
+    a.n++; a[o.kind]++; a.eHit += o.h.pS; a.eEven += o.h.pEven; a.eLose += o.h.pLose;
     a.cost += STAKE + o.h.hStake; a.netF += o.netF; a.netB += o.netB;
   }
   return a;
 }
-function hedgeHtml(m, t, who) {
-  const h = hedgeOf(m, t); if (!h) return "";
-  const eu = x => `${x >= 0 ? "+" : "−"}€${Math.abs(x).toFixed(2)}`;
+const eu = x => `${x >= 0 ? "+" : "−"}€${Math.abs(x).toFixed(2)}`;
+function hedgeLine(h) { return h ? `对冲：${h.label} €${h.hStake.toFixed(2)}（${HEDGE_BOOK} ${h.oH.toFixed(2)}）` : ""; }
+function hedgeHtml(m, key, who) {
+  const t = lines(m)[key]; if (!t) return "";
+  const p = S.picks[m.id] || {};
+  if (key === "mine" && (!p.hedge || p.hedge === "none")) return `<h3>总进球对冲（${who} ${sc(t)}）</h3><p class="hint">这场没有对冲。</p>`;
+  const h = hedgeFor(m, key);
+  if (!h) return `<h3>总进球对冲（${who} ${sc(t)}）</h3><p class="hint">${HEDGE_BOOK} 这场没有开大小 2.5 球盘，不对冲。</p>`;
   return `<h3>总进球对冲（${who} ${sc(t)}）</h3>
     <table><tr><th>投注</th><th>金额</th><th>赔率</th></tr>
     <tr><td>比分 ${sc(t)}</td><td>€${STAKE.toFixed(2)}</td><td>${h.oSf.toFixed(1)} 公平 / ${h.oSb.toFixed(1)} 扣水</td></tr>
-    <tr><td>${h.label}</td><td>€${h.hStake.toFixed(2)}</td><td>${h.oH.toFixed(2)}${h.real ? "" : "（估算）"}</td></tr></table>
+    <tr><td>${h.label}</td><td>€${h.hStake.toFixed(2)}</td><td>${h.oH.toFixed(2)}（${HEDGE_BOOK}）</td></tr></table>
     <table style="margin-top:8px"><tr><th>结果</th><th>概率</th><th>盈亏</th></tr>
-    <tr><td>比分命中</td><td>${pct(h.pS, 1)}</td><td class="pos">${eu(h.winF)} / ${eu(h.winB)}</td></tr>
-    <tr><td>对冲命中（持平）</td><td>${pct(h.pH, 1)}</td><td>€0.00</td></tr>
+    <tr><td>比分命中${h.overlap ? "（对冲也中）" : ""}</td><td>${pct(h.pS, 1)}</td><td class="pos">${eu(h.winF)} / ${eu(h.winB)}</td></tr>
+    <tr><td>对冲命中（持平）</td><td>${pct(h.pEven, 1)}</td><td>€0.00</td></tr>
     <tr><td>全部失败</td><td>${pct(h.pLose, 1)}</td><td class="neg">${eu(h.lose)}</td></tr></table>
-    <div class="legend">总投入 €${(STAKE + h.hStake).toFixed(2)}。比分总进球${h.side === "under" ? "≥3，对冲小 2.5" : "≤2，对冲大 2.5"}，两者不会同时赢。概率按 Pinnacle 推算；${h.real ? `2.5 球赔率取 ${m.market.t25.n} 家庄家中位数` : "没有真实 2.5 球赔率，按模型加 5% 抽水估算"}。</div>`;
+    <div class="legend">总投入 €${(STAKE + h.hStake).toFixed(2)}。概率按 Pinnacle 推算${h.overlap ? "；你选的对冲和比分同方向，比分中时两注都赢" : "；比分和对冲互斥，不会同时赢"}。${key === "mine" ? "赔率为锁定时的价格。" : ""}</div>`;
 }
 
 function pScore(mk, t) { return t && t[0] < N && t[1] < N ? matrix(mk.lam_h, mk.lam_a)[t[0]][t[1]] : 0; }
@@ -111,8 +119,7 @@ function pickOf(m) {
   return [p.h, p.a];
 }
 function lines(m) {
-  const ai = m.ai && m.ai.status === "ok" ? m.ai.top : null;
-  return { market: m.market ? m.market.top : null, ai, aiOrMarket: ai || (m.market && m.market.top), mine: pickOf(m) };
+  return { market: m.market ? m.market.top : null, mine: pickOf(m) };
 }
 function revealed(m) { return !!S.picks[m.id] || Date.now() >= kt(m); }
 function result(m) { return m.result && m.result.h != null ? [m.result.h, m.result.a] : null; }
@@ -187,9 +194,16 @@ function chipsHtml(m) {
     return `<div class="chip ${cls}${st}"><small>${label}</small><b>${sc(t)}</b>${mark}${extra}</div>`;
   };
   const p = S.picks[m.id];
-  const aiExtra = m.ai && m.ai.status === "failed" ? `<small>分析失败</small>` : (!m.ai ? `<small>待分析</small>` : "");
   const meExtra = p && p.skip ? `<small>跳过</small>` : (!p ? `<small>未选</small>` : "");
-  return `<div class="lines">${one("mk", "盘口线", L.market)}${one("ai", "AI 线", L.ai, aiExtra)}${one("me", "我的线", L.mine, meExtra)}</div>`;
+  const hm = L.mine && hedgeFor(m, "mine");
+  return `<div class="lines">${one("mk", "盘口线", L.market)}${one("me", "我的线", L.mine, meExtra)}</div>${hm ? `<div class="hedge-line">${hedgeLine(hm)}</div>` : ""}`;
+}
+function hedgePickerHtml(m, d) {
+  const chosen = (S.hedgeDraft || {})[m.id] || defaultSide(d);
+  const btn = side => { const o = whOdds(m, side);
+    return `<button class="hbtn ${chosen === side ? "on" : ""}" data-act="hedge" data-side="${side}" ${o ? "" : "disabled"}>${SIDE[side]}<small>${o ? `€${(STAKE / (o - 1)).toFixed(2)} · ${o.toFixed(2)}` : "未开盘"}</small></button>`; };
+  return `<div class="hedge-pick"><span class="tag">对冲（${HEDGE_BOOK}）</span>${btn("over")}${btn("under")}
+    <button class="hbtn ${chosen === "none" ? "on" : ""}" data-act="hedge" data-side="none">不对冲</button></div>`;
 }
 function card(m) {
   const res = result(m), started = Date.now() >= kt(m);
@@ -197,14 +211,15 @@ function card(m) {
   let bottom = "";
   if (revealed(m)) bottom = chipsHtml(m);
   if (!started && !S.picks[m.id] && m.market) {
-    if (!S.token) bottom = `<div class="hint">登录后才能选比分。选好并锁定后，才会显示盘口线和 AI 线。</div>`;
+    if (!S.token) bottom = `<div class="hint">登录后才能选比分。选好并锁定后，才会显示盘口线。</div>`;
     else {
       const d = S.draft[m.id] || [0, 0];
       bottom = `<div class="pick">
         <div class="stepper"><button data-act="dec" data-i="0">−</button><b>${d[0]}</b><button data-act="inc" data-i="0">+</button></div>
         <span class="colon">:</span>
         <div class="stepper"><button data-act="dec" data-i="1">−</button><b>${d[1]}</b><button data-act="inc" data-i="1">+</button></div>
-        <div class="actions"><button class="btn ghost" data-act="skip">跳过</button><button class="btn" data-act="lock">锁定</button></div></div>`;
+        <div class="actions"><button class="btn ghost" data-act="skip">跳过</button><button class="btn" data-act="lock">锁定</button></div></div>
+        ${hedgePickerHtml(m, d)}`;
     }
   }
   if (m.result && m.result.void) bottom += `<div class="hint">${esc(m.result.note || "无法结算")}</div>`;
@@ -276,9 +291,9 @@ function itemsFor(list, key) {
 }
 const signed = x => `<span class="${x >= 0 ? "pos" : "neg"}">${x >= 0 ? "+" : ""}${(x * 100).toFixed(0)}%</span>`;
 function overview(A) {
-  const cols = [["盘口线", A.market], ["AI 线", A.ai], ["我的线", A.mine]];
+  const cols = [["盘口线", A.market], ["我的线", A.mine]];
   const r = (label, f) => `<tr><td>${label}</td>${cols.map(([, a]) => `<td>${a.n ? f(a) : "—"}</td>`).join("")}</tr>`;
-  return `<div class="sec ov"><h3>三条线总览</h3><table>
+  return `<div class="sec ov"><h3>两条线总览</h3><table>
     <tr><th></th>${cols.map(([t]) => `<th>${t}</th>`).join("")}</tr>
     ${r("命中 / 场数", a => `<b>${a.hits}</b>/${a.n}`)}
     ${r("市场预期命中", a => a.exp.toFixed(1))}
@@ -294,15 +309,15 @@ function row(label, a, b) {
 }
 function viewStats() {
   const all = settledList();
-  const A = { market: agg(itemsFor(all, "market")), ai: agg(itemsFor(all, "aiOrMarket")), mine: agg(itemsFor(all, "mine")) };
+  const A = { market: agg(itemsFor(all, "market")), mine: agg(itemsFor(all, "mine")) };
   let out = `${overview(A)}
     <p class="hint">“市场预期”= 按 Pinnacle 概率，这条线本应命中的场数。命中数长期高于预期，才说明方法真的有效。ROI 按每场 €10 模拟：“公平”用无抽水赔率，“扣水”按博彩公司约 25% 抽水估算。</p>`;
 
   // 总进球对冲
   {
-    const cols = [["盘口线", hedgeAgg(all, "market")], ["AI 线", hedgeAgg(all, "aiOrMarket")], ["我的线", hedgeAgg(all, "mine")]];
+    const cols = [["盘口线", hedgeAgg(all, "market")], ["我的线", hedgeAgg(all, "mine")]];
     const r = (label, f) => `<tr><td>${label}</td>${cols.map(([, a]) => `<td>${a.n ? f(a) : "—"}</td>`).join("")}</tr>`;
-    out += `<div class="sec ov"><h3>加总进球对冲后</h3><p>每场比分 €10，再按赔率配一注大/小 2.5 球，使对冲赢时刚好持平。括号内为按概率的预期次数。</p><table>
+    out += `<div class="sec ov"><h3>加总进球对冲后</h3><p>每场比分 €10，再配一注 William Hill 大/小 2.5 球，金额让对冲赢时刚好持平。盘口线自动选与比分互斥的一边；我的线按你锁定时的选择，不对冲的场次不计入。括号内为按概率的预期次数。</p><table>
       <tr><th></th>${cols.map(([t]) => `<th>${t}</th>`).join("")}</tr>
       ${r("比分命中", a => `<b>${a.hit}</b>（${a.eHit.toFixed(1)}）`)}
       ${r("对冲持平", a => `${a.even}（${a.eEven.toFixed(1)}）`)}
@@ -313,24 +328,11 @@ function viewStats() {
     </table></div>`;
   }
 
-  // AI 改了比分的场次
-  const changed = all.filter(m => m.ai && m.ai.status === "ok" && !same(m.ai.top, m.market.top));
-  out += `<div class="sec"><h3>AI 改了比分的场次</h3><p>只看 AI 和盘口选了不同比分的比赛，场外信息有没有用一目了然。</p>
-    <table><tr><th></th><th>命中 / 场数</th></tr>${row("AI 线", agg(itemsFor(changed, "ai")))}${row("盘口线", agg(itemsFor(changed, "market")))}</table></div>`;
-
-  // 按调整类别
-  const cats = {};
-  for (const m of all) for (const a of (m.ai && m.ai.status === "ok" && m.ai.adjustments) || []) (cats[a.category] ||= new Set()).add(m);
-  let cr = "";
-  for (const [c, set] of Object.entries(cats)) { const l = [...set]; cr += row(CAT[c] || c, agg(itemsFor(l, "ai")), agg(itemsFor(l, "market"))); }
-  out += `<div class="sec"><h3>按 AI 调整类别</h3><p>哪类场外信息真正有用：同一批比赛上 AI 线和盘口线的对比。</p>
-    ${cr ? `<table><tr><th>类别</th><th>AI 线</th><th>盘口线</th></tr>${cr}</table>` : `<p>还没有数据。</p>`}</div>`;
-
-  // 按比分类型（三条线所选比分合并，同场同比分只算一次）
+  // 按比分类型（两条线所选比分合并，同场同比分只算一次）
   const byScore = {};
   for (const m of all) {
     const seen = new Set();
-    for (const k of ["market", "ai", "mine"]) {
+    for (const k of ["market", "mine"]) {
       const t = lines(m)[k]; if (!t || seen.has(sc(t))) continue; seen.add(sc(t));
       (byScore[sc(t)] ||= []).push({ p: pScore(m.market, t), hit: same(t, result(m)) });
     }
@@ -355,12 +357,10 @@ function viewStats() {
 
   // 系统状态
   const meta = S.meta || {}, logs = (meta.log || []).slice(-10).reverse().join("\n");
-  const failed = Object.values(S.matches).filter(m => m.ai && m.ai.status === "failed").length;
   out += `<div class="sec"><h3>系统状态</h3>
     <table><tr><td>最近运行</td><td>${meta.last_run ? fFull.format(Date.parse(meta.last_run.at)) : "—"}</td></tr>
     <tr><td>赔率接口剩余额度（本月）</td><td>${meta.credits_remaining ?? "—"} / 500</td></tr>
-    <tr><td>比赛记录</td><td>${Object.keys(S.matches).length} 场</td></tr>
-    <tr><td>AI 分析失败待重试</td><td>${failed} 场</td></tr></table>
+    <tr><td>比赛记录</td><td>${Object.keys(S.matches).length} 场</td></tr></table>
     <h3 style="margin-top:12px">运行日志</h3><div class="log">${esc(logs) || "—"}</div></div>`;
   return out;
 }
@@ -376,13 +376,12 @@ function detail(id) {
     <h2>${esc(teamZh(m.home))} ${res ? `${res[0]} : ${res[1]}` : "vs"} ${esc(teamZh(m.away))}</h2>`;
   if (!mk) return openSheet(h + `<p class="hint">赔率未到。</p>`);
   h += barHtml(mk);
-  if (!rv) h += `<p class="hint">选好比分并锁定（或跳过）后，才显示比分概率、盘口线和 AI 分析，避免影响你的判断。</p>`;
+  if (!rv) h += `<p class="hint">选好比分并锁定（或跳过）后，才显示比分概率和盘口线，避免影响你的判断。</p>`;
   else {
     h += chipsHtml(m);
-    h += L.mine ? hedgeHtml(m, L.mine, "我的线") : hedgeHtml(m, L.market, "盘口线");
+    h += L.mine ? hedgeHtml(m, "mine", "我的线") : hedgeHtml(m, "market", "盘口线");
     h += `<h3>预期进球</h3><table><tr><th></th><th>${esc(teamZh(m.home))}</th><th>${esc(teamZh(m.away))}</th></tr>
-      <tr><td>盘口（${esc(mk.source)}）</td><td>${mk.lam_h.toFixed(2)}</td><td>${mk.lam_a.toFixed(2)}</td></tr>
-      ${m.ai && m.ai.status === "ok" ? `<tr><td>AI 修正后</td><td>${m.ai.lam_h.toFixed(2)}</td><td>${m.ai.lam_a.toFixed(2)}</td></tr>` : ""}</table>`;
+      <tr><td>盘口（${esc(mk.source)}）</td><td>${mk.lam_h.toFixed(2)}</td><td>${mk.lam_a.toFixed(2)}</td></tr></table>`;
     if (mk.total) h += `<p class="hint">大小球 ${mk.total.line}：大 ${mk.total.over} / 小 ${mk.total.under}</p>`;
 
     const g = matrix(mk.lam_h, mk.lam_a), mx = Math.max(...g.slice(0, 6).flatMap(r => r.slice(0, 6)));
@@ -390,36 +389,11 @@ function detail(id) {
     for (let i = 0; i < 6; i++) {
       h += `<div class="ax">${i}</div>`;
       for (let j = 0; j < 6; j++) {
-        const t = [i, j], cls = ["c", same(t, L.market) ? "mk" : "", same(t, L.ai) ? "ai" : "", same(t, L.mine) ? "me" : ""].join(" ");
+        const t = [i, j], cls = ["c", same(t, L.market) ? "mk" : "", same(t, L.mine) ? "me" : ""].join(" ");
         h += `<div class="${cls}" style="--a:${(0.08 + 0.6 * g[i][j] / mx).toFixed(2)}">${(g[i][j] * 100).toFixed(1)}</div>`;
       }
     }
-    h += `</div><div class="legend">单位 %。金框 = 盘口线，蓝框 = AI 线，下划线 = 我的线。${L.mine ? `我的比分市场概率 ${pct(pScore(mk, L.mine), 1)}，公平赔率 ${(1 / pScore(mk, L.mine)).toFixed(1)}。` : ""}</div>`;
-
-    h += `<h3>AI 分析</h3>`;
-    const ai = m.ai;
-    if (!ai) h += `<p class="hint">还没分析（开赛前 30 小时内自动分析）。</p>`;
-    else if (ai.status === "failed") h += `<p class="hint">分析失败，系统会自动重试（第 ${ai.tries} 次）。原因：${esc(ai.error)}</p>`;
-    else {
-      h += `<p>${esc(ai.summary)} <span class="tag">信心：${CONF[ai.confidence] || "—"}${ai.searched === false ? " · 未找到相关新闻" : ""}</span></p>`;
-      if (!ai.adjustments.length) h += `<p class="hint">没有找到盘口之外的可靠信息，AI 线 = 盘口线。</p>`;
-      for (const a of ai.adjustments) {
-        const who = esc(teamZh(a.team === "home" ? m.home : m.away)), up = a.delta > 0;
-        h += `<div class="adj"><span class="d ${up ? "up" : "dn"}">${up ? "+" : ""}${a.delta.toFixed(2)} 球</span>
-          <span class="cat">${CAT[a.category] || a.category}</span>${who}：${esc(a.reason)}
-          ${a.source ? `<div class="tag">来源：${safeUrl(a.source) ? `<a href="${safeUrl(a.source)}" target="_blank" rel="noopener">${esc(a.source.slice(0, 60))}</a>` : esc(a.source)}</div>` : ""}</div>`;
-      }
-      if (ai.sources && ai.sources.length) {
-        h += `<h3>AI 参考的新闻（最近 7 天）</h3>`;
-        for (const side of ["home", "away"]) {
-          const items = ai.sources.filter(x => (x.team || "home") === side);
-          if (!items.length) continue;
-          h += `<div class="tag" style="margin:6px 0 2px">${esc(teamZh(side === "home" ? m.home : m.away))}</div>`;
-          h += items.map(x => `<div class="adj"><span class="tag">${esc(x.date || "")} · ${safeUrl(x.url) ? `<a href="${safeUrl(x.url)}" target="_blank" rel="noopener">${esc(x.source)}</a>` : esc(x.source || "")}</span><br>${esc(x.title)}</div>`).join("");
-        }
-      }
-      h += `<div class="tag">分析时间：${fFull.format(Date.parse(ai.at))}</div>`;
-    }
+    h += `</div><div class="legend">单位 %。金框 = 盘口线，下划线 = 我的线。${L.mine ? `我的比分市场概率 ${pct(pScore(mk, L.mine), 1)}，公平赔率 ${(1 / pScore(mk, L.mine)).toFixed(1)}。` : ""}</div>`;
   }
   const books = Object.entries(m.books || {});
   if (books.length) {
@@ -473,16 +447,25 @@ document.addEventListener("click", async e => {
     const i = +e.target.closest("[data-i]").dataset.i, d = (S.draft[id] ||= [0, 0]);
     d[i] = Math.max(0, Math.min(9, d[i] + (act === "inc" ? 1 : -1)));
     cardEl.querySelectorAll(".stepper b").forEach((b, k) => (b.textContent = d[k])); // 只改数字，不重画页面
+    const hp = cardEl.querySelector(".hedge-pick"); if (hp) hp.outerHTML = hedgePickerHtml(m, d); // 对冲默认边随比分更新
+    return;
+  }
+  if (act === "hedge") {
+    S.hedgeDraft[id] = e.target.closest("[data-side]").dataset.side;
+    const hp = cardEl.querySelector(".hedge-pick"); if (hp) hp.outerHTML = hedgePickerHtml(m, S.draft[id] || [0, 0]);
     return;
   }
   if (act === "lock" || act === "skip") {
     if (Date.now() >= kt(m)) return toast("已经开赛，不能再选");
     const d = S.draft[id] || [0, 0];
-    const ok = act === "lock" ? confirm(`锁定 ${teamZh(m.home)} ${d[0]} : ${d[1]} ${teamZh(m.away)}？\n锁定后不能修改。`) : confirm("跳过这场？跳过后不能再选。");
+    let side = S.hedgeDraft[id] || defaultSide(d), hOdds = side !== "none" ? whOdds(m, side) : null;
+    if (side !== "none" && !hOdds) side = "none";
+    const hTxt = side === "none" ? "不对冲" : `对冲 ${SIDE[side]} €${(STAKE / (hOdds - 1)).toFixed(2)}（${hOdds.toFixed(2)}）`;
+    const ok = act === "lock" ? confirm(`锁定 ${teamZh(m.home)} ${d[0]} : ${d[1]} ${teamZh(m.away)}？\n${hTxt}\n锁定后不能修改。`) : confirm("跳过这场？跳过后不能再选。");
     if (!ok) return;
     const btns = cardEl.querySelectorAll(".btn"); btns.forEach(b => (b.disabled = true));
     try {
-      await savePick(id, act === "lock" ? { h: d[0], a: d[1], locked_at: new Date().toISOString() } : { skip: true, locked_at: new Date().toISOString() });
+      await savePick(id, act === "lock" ? { h: d[0], a: d[1], hedge: side, hedge_odds: hOdds, hedge_book: hOdds ? HEDGE_BOOK : null, locked_at: new Date().toISOString() } : { skip: true, locked_at: new Date().toISOString() });
       toast(act === "lock" ? "已锁定，系统答案已揭晓" : "已跳过");
     } catch (err) { toast(err.message || "保存失败"); }
     render(); return;

@@ -7,7 +7,7 @@ import statistics
 from datetime import timedelta
 
 import model
-from common import (COMPARE_BOOKS, LEAGUES, MARKET_BOOK, ODDS_API, http_json, iso, log,
+from common import (COMPARE_BOOKS, HEDGE_BOOK, LEAGUES, MARKET_BOOK, ODDS_API, http_json, iso, log,
                     now, parse_iso)
 
 WINDOW_H = 36          # 关注未来 36 小时内的比赛
@@ -66,12 +66,12 @@ def build_market(event):
         lh, la = model.fit(ph, pa)
 
     market = {"source": source, "h2h": h2h, "total": tot}
-    # 对冲用的大小 2.5 球赔率：各家 2.5 盘的中位数（Pinnacle 常开 2.75 等亚盘，不能直接用）
-    t25 = [x for x in (_totals(b) for b in books.values()) if x and x["line"] == 2.5]
-    if t25:
-        market["t25"] = {"over": round(statistics.median(x["over"] for x in t25), 3),
-                         "under": round(statistics.median(x["under"] for x in t25), 3), "n": len(t25)}
     market.update(model.summarize(lh, la))
+    # 对冲用：只取 William Hill 的大/小 2.5 球（主盘不是 2.5 时这场就没有）
+    wh = books.get(HEDGE_BOOK)
+    wt = _totals(wh) if wh else None
+    if wt and wt["line"] == 2.5:
+        market["wh25"] = {"over": wt["over"], "under": wt["under"]}
 
     compare = {}
     for key in COMPARE_BOOKS:

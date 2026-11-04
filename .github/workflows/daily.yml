@@ -12,7 +12,7 @@ on:
       step:
         description: "运行哪一步"
         type: choice
-        options: [all, odds, ai, scores]
+        options: [all, odds, scores]
         default: all
       force_odds:
         description: "强制拉一次赔率（每个联赛消耗 4 次额度）"
@@ -41,7 +41,6 @@ jobs:
       - name: 运行
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/run.py ${{ inputs.step || 'all' }} ${{ inputs.force_odds && '--force-odds' || '' }}
       - name: 保存数据
         if: always()

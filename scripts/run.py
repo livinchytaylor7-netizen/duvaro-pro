@@ -1,4 +1,4 @@
-"""每日任务入口：python scripts/run.py [all|odds|ai|scores] [--force-odds]
+"""每日任务入口：python scripts/run.py [all|odds|scores] [--force-odds]
 
 每一步单独捕获错误：一步出错不影响其他步骤，错误详情写进 data/meta.json 的 errors，
 数据照常保存。只有所有步骤都出错时才以失败状态退出。
@@ -6,7 +6,6 @@
 import sys
 import traceback
 
-import ai
 import odds
 import scores
 from common import MATCHES, META, iso, load, log, now, save
@@ -23,9 +22,7 @@ def main(argv):
     if step in ("all", "scores"):
         plan.append(("赛果", lambda: scores.run(db, meta)))
     if step in ("all", "odds"):
-        plan.append(("赔率", lambda: (odds.run(db, meta, force=force), ai.reapply(db))))
-    if step in ("all", "ai"):
-        plan.append(("AI", lambda: ai.run(db, meta)))
+        plan.append(("赔率", lambda: odds.run(db, meta, force=force)))
 
     errors = []
     for name, fn in plan:
