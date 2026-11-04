@@ -156,8 +156,8 @@ def analyze(match, key, t, model_name):
             "generationConfig": {"temperature": 0.2}}
     status, data, _ = http_json(GEMINI_URL.format(model=model_name), body=body,
                                 headers={"x-goog-api-key": key}, timeout=120)
-    if status in (400, 403, 404, 429) and isinstance(data, dict):
-        # 429 也换模型：免费版各模型额度分开计算，有的模型免费额度为 0
+    if status in (0, 400, 403, 404, 429, 500, 503) or (status != 200 and not isinstance(data, dict)):
+        # 额度不足、繁忙(503)、超时(0)都换下一个模型
         raise ModelUnavailable(f"{model_name} {status}: {str(data)[:700]}")
     if status != 200 or not isinstance(data, dict):
         raise RuntimeError(f"Gemini {model_name} {status}: {str(data)[:300]}")
