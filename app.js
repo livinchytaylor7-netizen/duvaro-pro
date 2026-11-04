@@ -281,6 +281,19 @@ function verdict(a) {
 function settledList() {
   return Object.values(S.matches).filter(m => result(m) && m.market);
 }
+// 第二热门比分（不含 skip 指定的比分）
+function topScoreExcept(mk, skip) {
+  const g = matrix(mk.lam_h, mk.lam_a); let best = null, bp = -1;
+  for (let i = 0; i <= 6; i++) for (let j = 0; j <= 6; j++) if (!same([i, j], skip) && g[i][j] > bp) { bp = g[i][j]; best = [i, j]; }
+  return best;
+}
+// 规则线：盘口线，但遇到 1-1 改选第二热门比分
+function no11(m) { const t = m.market && m.market.top; return t && same(t, [1, 1]) ? topScoreExcept(m.market, [1, 1]) : t; }
+function itemsOf(list, pick) {
+  const out = [];
+  for (const m of list) { const t = pick(m); if (t) out.push({ m, t, p: pScore(m.market, t), hit: same(t, result(m)) }); }
+  return out;
+}
 function itemsFor(list, key) {
   const out = [];
   for (const m of list) {
@@ -341,6 +354,26 @@ function viewStats() {
     .map(([s, it]) => row(s, agg(it))).join("");
   out += `<div class="sec"><h3>按比分类型</h3><p>某个比分长期命中少于预期，说明市场高估了它（例如检验 2-1 是否被压价）。</p>
     ${sr ? `<table><tr><th>比分</th><th>命中 / 次数</th></tr>${sr}</table>` : `<p>还没有数据。</p>`}</div>`;
+
+  // 规则对比
+  {
+    const top11 = all.filter(m => same(m.market.top, [1, 1]));
+    const conc = all.filter(m => m.market.top_p >= 0.12);
+    const r = (label, a) => `<tr><td>${label}</td><td>${a.n ? `<b>${a.hits}</b>/${a.n}（预期 ${a.exp.toFixed(1)}）` : "—"}</td><td>${a.n ? signed(a.roiB) : "—"}</td></tr>`;
+    out += `<div class="sec"><h3>规则对比</h3><p>只统计“如果当时按这条规则选”会怎样，不改变你的选法。ROI 为扣水后。</p>
+      <h3 style="margin-top:10px">规则 1：实力接近时不选 1-1</h3><p>盘口线选到 1-1 的比赛，改选第二热门的比分。</p>
+      <table><tr><th></th><th>命中 / 场数</th><th>ROI</th></tr>
+      ${r("盘口线选 1-1 的场次：照选 1-1", agg(itemsOf(top11, m => m.market.top)))}
+      ${r("同样场次：改选第二热门", agg(itemsOf(top11, m => topScoreExcept(m.market, [1, 1]))))}
+      ${r("全部场次：盘口线", agg(itemsOf(all, m => m.market.top)))}
+      ${r("全部场次：按规则 1", agg(itemsOf(all, no11)))}</table>
+      <h3 style="margin-top:10px">规则 2：只买比分集中的比赛</h3><p>只算最热门比分概率 ≥12% 的场次（共 ${conc.length} 场），和全部场次对比。</p>
+      <table><tr><th></th><th>命中 / 场数</th><th>ROI</th></tr>
+      ${r("盘口线 · 集中场次", agg(itemsFor(conc, "market")))}
+      ${r("盘口线 · 全部场次", agg(itemsFor(all, "market")))}
+      ${r("我的线 · 集中场次", agg(itemsFor(conc, "mine")))}
+      ${r("我的线 · 全部场次", agg(itemsFor(all, "mine")))}</table></div>`;
+  }
 
   // 按集中度
   const bucket = m => m.market.top_p >= 0.12 ? "≥12%" : m.market.top_p >= 0.10 ? "10–12%" : "<10%";
