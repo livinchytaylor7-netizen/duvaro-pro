@@ -4586,6 +4586,113 @@
    "odds_at": "2026-11-04T18:15:12Z"
   },
   "47523374e8d8cdd5b43677e358317587": {
+   "ai": {
+    "adjustments": [
+     {
+      "category": "coach",
+      "delta": 0.1,
+      "reason": "西汉姆联解雇努诺并于比赛日官宣斯科特·帕克接任主教练",
+      "source": "The Guardian",
+      "team": "away"
+     }
+    ],
+    "at": "2026-11-04T18:38:17Z",
+    "base": {
+     "lam_a": 2.117,
+     "lam_h": 1.523
+    },
+    "confidence": "medium",
+    "lam_a": 2.217,
+    "lam_h": 1.523,
+    "model": "gemini-3.6-flash",
+    "news_error": null,
+    "probs": {
+     "a": 0.5278,
+     "d": 0.2161,
+     "h": 0.2561
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-11-04",
+      "source": "Cardiff City",
+      "team": "home",
+      "title": "Team News | Cardiff City vs. West Ham United",
+      "url": "https://www.cardiffcityfc.co.uk"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "Yahoo Sports",
+      "team": "home",
+      "title": "Preview: Cardiff City and West Ham face off amid Hammers’ managerial uncertainty",
+      "url": "https://sports.yahoo.com"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "WhoScored.com",
+      "team": "home",
+      "title": "Cardiff City vs West Ham: Lineups, Prediction, Betting Tips & Odds",
+      "url": "https://www.whoscored.com"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "BBC",
+      "team": "home",
+      "title": "Scott Parker: West Ham United confirm ex-midfielder as head coach",
+      "url": "https://www.bbc.com"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "Wales Online",
+      "team": "home",
+      "title": "Cardiff City v West Ham LIVE: Kick-off time, TV channel and team news",
+      "url": "https://www.walesonline.co.uk"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "West Ham United",
+      "team": "away",
+      "title": "Scott Parker appointed West Ham United Head Coach",
+      "url": "https://www.whufc.com"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "BBC",
+      "team": "away",
+      "title": "Scott Parker: West Ham United confirm ex-midfielder as head coach",
+      "url": "https://www.bbc.com"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "The Guardian",
+      "team": "away",
+      "title": "West Ham confirm Scott Parker as head coach after sacking Nuno Espírito Santo",
+      "url": "https://www.theguardian.com"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "Cardiff City",
+      "team": "away",
+      "title": "Team News | Cardiff City vs. West Ham United",
+      "url": "https://www.cardiffcityfc.co.uk"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "Sky Sports",
+      "team": "away",
+      "title": "West Ham: Scott Parker returns to east London after 15 years to succeed Nuno Espirito Santo as Hammers head coach",
+      "url": "https://www.skysports.com"
+     }
+    ],
+    "status": "ok",
+    "summary": "西汉姆联在比赛日当天官宣新帅斯科特·帕克履新，换帅效应或给客队带来短期士气提升。",
+    "top": [
+     1,
+     2
+    ],
+    "top_p": 0.0889,
+    "tries": 1
+   },
    "away": "West Ham United",
    "books": {
     "betfair_ex_uk": {
@@ -8578,6 +8685,105 @@
    "odds_at": "2026-11-04T18:13:58Z"
   },
   "7d58b1a0732fa9d2c2fa42d44e636eed": {
+   "ai": {
+    "adjustments": [],
+    "at": "2026-11-04T18:39:20Z",
+    "base": {
+     "lam_a": 1.534,
+     "lam_h": 1.114
+    },
+    "confidence": "high",
+    "lam_a": 1.534,
+    "lam_h": 1.114,
+    "model": "gemini-3.5-flash-lite",
+    "news_error": null,
+    "probs": {
+     "a": 0.46,
+     "d": 0.2737,
+     "h": 0.2662
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-11-04",
+      "source": "WhoScored.com",
+      "team": "home",
+      "title": "Bristol City vs Wolverhampton: Lineups, Prediction, Odds & Bet Builder Tip",
+      "url": "https://www.whoscored.com"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "Oddschecker",
+      "team": "home",
+      "title": "Bristol City vs Wolverhampton: Lineups, Prediction, Betting Tips & Odds",
+      "url": "https://www.oddschecker.com"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "Yahoo",
+      "team": "home",
+      "title": "Young Bristol City goalkeeper named in Wales squad for Nations League games",
+      "url": "https://uk.sports.yahoo.com"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "Odds Scanner",
+      "team": "home",
+      "title": "Bristol City vs Wolverhampton – Prediction, Where to Watch, Kick-off Time and Lineups 04-11",
+      "url": "https://oddsscanner.com"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "talkSPORT",
+      "team": "home",
+      "title": "Bristol City vs Wolves prediction and betting tips – Lopez continues form",
+      "url": "https://talksport.com"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "Derby County",
+      "team": "away",
+      "title": "TICKETS: Wolverhampton Wanderers (A)",
+      "url": "https://www.dcfc.co.uk"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "Cardiff City",
+      "team": "away",
+      "title": "Team News | Cardiff City vs. West Ham United",
+      "url": "https://www.cardiffcityfc.co.uk"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "WhoScored.com",
+      "team": "away",
+      "title": "Bristol City vs Wolverhampton: Lineups, Prediction, Odds & Bet Builder Tip",
+      "url": "https://www.whoscored.com"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "Kuwait Times",
+      "team": "away",
+      "title": "West Ham turn to Parker as new boss after sacking Nuno",
+      "url": "https://kuwaittimes.com"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "Last Word On Sports",
+      "team": "away",
+      "title": "Bristol City vs Wolves Team News and Predicted Lineups for Nov. 4",
+      "url": "https://lastwordonsports.com"
+     }
+    ],
+    "status": "ok",
+    "summary": "新闻头条中未包含任何遗漏的重大伤停或突发情况，市场定价合理。",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1307,
+    "tries": 1
+   },
    "away": "Wolverhampton Wanderers",
    "books": {
     "betfair_ex_uk": {
@@ -14768,6 +14974,105 @@
    "odds_at": "2026-11-04T18:13:58Z"
   },
   "e35b42924a5fe785a52709c4d17c14c2": {
+   "ai": {
+    "adjustments": [],
+    "at": "2026-11-04T18:39:04Z",
+    "base": {
+     "lam_a": 1.97,
+     "lam_h": 1.083
+    },
+    "confidence": "high",
+    "lam_a": 1.97,
+    "lam_h": 1.083,
+    "model": "gemini-3.5-flash-lite",
+    "news_error": null,
+    "probs": {
+     "a": 0.5716,
+     "d": 0.2324,
+     "h": 0.196
+    },
+    "searched": true,
+    "sources": [
+     {
+      "date": "2026-11-04",
+      "source": "Sports Illustrated",
+      "team": "home",
+      "title": "Wrexham vs. Middlesbrough: Preview, Predictions and Lineups",
+      "url": "https://www.si.com"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "roundtable.io",
+      "team": "home",
+      "title": "Wrexham vs Middlesbrough Preview: Team News, Injuries, Form And Odds",
+      "url": "https://roundtable.io"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "Border Counties Advertizer",
+      "team": "home",
+      "title": "Wrexham star Josh Windass suffers slight injury setback",
+      "url": "https://www.bordercountiesadvertizer.co.uk"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "Border Counties Advertizer",
+      "team": "home",
+      "title": "Wrexham predicted XI: Cleworth and Thomason in contention to start against Boro",
+      "url": "https://www.bordercountiesadvertizer.co.uk"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "Border Counties Advertizer",
+      "team": "home",
+      "title": "Wrexham pair Moore and Ward named in Wales squad for Nations League games",
+      "url": "https://www.bordercountiesadvertizer.co.uk"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "Sports Illustrated",
+      "team": "away",
+      "title": "Wrexham vs. Middlesbrough: Preview, Predictions and Lineups",
+      "url": "https://www.si.com"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "Yorkshire Post",
+      "team": "away",
+      "title": "Middlesbrough and Sheffield United's rivals appoint ex-England international as boss",
+      "url": "https://www.yorkshirepost.co.uk"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "The Northern Echo",
+      "team": "away",
+      "title": "Middlesbrough's 'perfect player' has taken 'big steps' as league tally proves",
+      "url": "https://www.thenorthernecho.co.uk"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "roundtable.io",
+      "team": "away",
+      "title": "Wrexham vs Middlesbrough Preview: Team News, Injuries, Form And Odds",
+      "url": "https://roundtable.io"
+     },
+     {
+      "date": "2026-11-04",
+      "source": "WhoScored.com",
+      "team": "away",
+      "title": "Wrexham vs Middlesbrough: Lineups, Prediction, Odds & Bet Builder Tip",
+      "url": "https://www.whoscored.com"
+     }
+    ],
+    "status": "ok",
+    "summary": "新闻头条中没有发现市场遗漏的具体重大伤停或赛程信息",
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1088,
+    "tries": 1
+   },
    "away": "Middlesbrough",
    "books": {
     "betfair_ex_uk": {
@@ -15797,5 +16102,5 @@
    "odds_at": "2026-11-04T18:13:58Z"
   }
  },
- "updated": "2026-11-04T18:15:12Z"
+ "updated": "2026-11-04T18:39:20Z"
 }
