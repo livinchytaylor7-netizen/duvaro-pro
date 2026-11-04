@@ -1988,6 +1988,86 @@
    },
    "odds_at": "2026-11-04T18:13:58Z"
   },
+  "228a3fca36f1fc8943ab0b7c54f06860": {
+   "away": "West Ham United",
+   "books": {
+    "betfair_ex_uk": {
+     "a": 1.46,
+     "d": 2.84,
+     "h": 5.1
+    },
+    "boylesports": {
+     "a": 1.57,
+     "d": 4.0,
+     "h": 4.5
+    },
+    "ladbrokes_uk": {
+     "a": 1.61,
+     "d": 4.0,
+     "h": 5.0
+    },
+    "paddypower": {
+     "a": 1.62,
+     "d": 4.0,
+     "h": 4.75
+    },
+    "skybet": {
+     "a": 1.62,
+     "d": 4.0,
+     "h": 4.75
+    },
+    "smarkets": {
+     "a": 1.57,
+     "d": 3.95,
+     "h": 5.0
+    },
+    "unibet_uk": {
+     "a": 1.6,
+     "d": 4.25,
+     "h": 5.0
+    },
+    "williamhill": {
+     "a": 1.62,
+     "d": 4.0,
+     "h": 4.8
+    }
+   },
+   "home": "Blackburn Rovers",
+   "id": "228a3fca36f1fc8943ab0b7c54f06860",
+   "kickoff": "2026-11-07T15:00:00Z",
+   "league": "champ",
+   "market": {
+    "h2h": {
+     "a": 1.61,
+     "d": 4.0,
+     "h": 4.75
+    },
+    "lam_a": 1.956,
+    "lam_h": 1.063,
+    "probs": {
+     "a": 0.5733,
+     "d": 0.2334,
+     "h": 0.1933
+    },
+    "source": "33 家中位数",
+    "t25": {
+     "n": 15,
+     "over": 1.61,
+     "under": 2.23
+    },
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1097,
+    "total": {
+     "line": 2.5,
+     "over": 1.61,
+     "under": 2.23
+    }
+   },
+   "odds_at": "2026-11-04T18:15:12Z"
+  },
   "23bf8ea47358ef82f65aa7398a2b3921": {
    "away": "Lazio",
    "books": {
@@ -4340,6 +4420,256 @@
    },
    "odds_at": "2026-11-04T18:13:58Z"
   },
+  "4330962b4e3ef6768d90008d6befb10d": {
+   "away": "Southampton",
+   "books": {
+    "betfair_ex_uk": {
+     "a": 1.7,
+     "d": 4.3,
+     "h": 4.9
+    },
+    "boylesports": {
+     "a": 1.62,
+     "d": 4.0,
+     "h": 4.2
+    },
+    "ladbrokes_uk": {
+     "a": 1.67,
+     "d": 4.0,
+     "h": 4.6
+    },
+    "paddypower": {
+     "a": 1.65,
+     "d": 4.0,
+     "h": 4.5
+    },
+    "pinnacle": {
+     "a": 1.66,
+     "d": 4.22,
+     "h": 4.72
+    },
+    "skybet": {
+     "a": 1.67,
+     "d": 4.0,
+     "h": 4.5
+    },
+    "smarkets": {
+     "a": 1.68,
+     "d": 4.2,
+     "h": 4.8
+    },
+    "unibet_uk": {
+     "a": 1.7,
+     "d": 4.0,
+     "h": 4.5
+    },
+    "williamhill": {
+     "a": 1.65,
+     "d": 4.0,
+     "h": 4.6
+    }
+   },
+   "home": "Preston North End",
+   "id": "4330962b4e3ef6768d90008d6befb10d",
+   "kickoff": "2026-11-07T15:00:00Z",
+   "league": "champ",
+   "market": {
+    "h2h": {
+     "a": 1.66,
+     "d": 4.22,
+     "h": 4.72
+    },
+    "lam_a": 2.013,
+    "lam_h": 1.124,
+    "probs": {
+     "a": 0.5715,
+     "d": 0.229,
+     "h": 0.1995
+    },
+    "source": "Pinnacle",
+    "t25": {
+     "n": 7,
+     "over": 1.55,
+     "under": 2.37
+    },
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1061,
+    "total": {
+     "line": 3.0,
+     "over": 1.94,
+     "under": 1.89
+    }
+   },
+   "odds_at": "2026-11-04T18:15:12Z"
+  },
+  "463c2870517b0ad28afcbd8775287064": {
+   "away": "Burnley",
+   "books": {
+    "betfair_ex_uk": {
+     "a": 1.29,
+     "d": 1.45,
+     "h": 1.26
+    },
+    "boylesports": {
+     "a": 2.62,
+     "d": 3.6,
+     "h": 2.1
+    },
+    "ladbrokes_uk": {
+     "a": 2.8,
+     "d": 3.7,
+     "h": 2.3
+    },
+    "paddypower": {
+     "a": 2.75,
+     "d": 3.75,
+     "h": 2.25
+    },
+    "skybet": {
+     "a": 2.75,
+     "d": 3.75,
+     "h": 2.25
+    },
+    "smarkets": {
+     "a": 2.7,
+     "d": 3.55,
+     "h": 2.18
+    },
+    "unibet_uk": {
+     "a": 2.85,
+     "d": 3.75,
+     "h": 2.25
+    },
+    "williamhill": {
+     "a": 2.8,
+     "d": 3.6,
+     "h": 2.3
+    }
+   },
+   "home": "Cardiff City",
+   "id": "463c2870517b0ad28afcbd8775287064",
+   "kickoff": "2026-11-07T15:00:00Z",
+   "league": "champ",
+   "market": {
+    "h2h": {
+     "a": 2.8,
+     "d": 3.62,
+     "h": 2.25
+    },
+    "lam_a": 1.446,
+    "lam_h": 1.633,
+    "probs": {
+     "a": 0.3316,
+     "d": 0.2557,
+     "h": 0.4126
+    },
+    "source": "33 家中位数",
+    "t25": {
+     "n": 7,
+     "over": 1.57,
+     "under": 2.3
+    },
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1173,
+    "total": {
+     "line": 2.5,
+     "over": 1.57,
+     "under": 2.3
+    }
+   },
+   "odds_at": "2026-11-04T18:15:12Z"
+  },
+  "47523374e8d8cdd5b43677e358317587": {
+   "away": "West Ham United",
+   "books": {
+    "betfair_ex_uk": {
+     "a": 1.96,
+     "d": 4.3,
+     "h": 3.8
+    },
+    "boylesports": {
+     "a": 1.8,
+     "d": 4.0,
+     "h": 3.1
+    },
+    "ladbrokes_uk": {
+     "a": 1.91,
+     "d": 4.0,
+     "h": 3.4
+    },
+    "paddypower": {
+     "a": 1.85,
+     "d": 4.0,
+     "h": 3.5
+    },
+    "pinnacle": {
+     "a": 1.92,
+     "d": 4.28,
+     "h": 3.61
+    },
+    "skybet": {
+     "a": 1.85,
+     "d": 4.2,
+     "h": 3.5
+    },
+    "smarkets": {
+     "a": 1.94,
+     "d": 4.2,
+     "h": 3.8
+    },
+    "unibet_uk": {
+     "a": 1.9,
+     "d": 4.0,
+     "h": 3.5
+    },
+    "williamhill": {
+     "a": 1.91,
+     "d": 3.9,
+     "h": 3.4
+    }
+   },
+   "home": "Cardiff City",
+   "id": "47523374e8d8cdd5b43677e358317587",
+   "kickoff": "2026-11-04T19:45:00Z",
+   "league": "champ",
+   "market": {
+    "h2h": {
+     "a": 1.92,
+     "d": 4.28,
+     "h": 3.61
+    },
+    "lam_a": 2.117,
+    "lam_h": 1.523,
+    "probs": {
+     "a": 0.5067,
+     "d": 0.2228,
+     "h": 0.2706
+    },
+    "source": "Pinnacle",
+    "t25": {
+     "n": 3,
+     "over": 1.35,
+     "under": 3.15
+    },
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.0914,
+    "total": {
+     "line": 3.5,
+     "over": 1.97,
+     "under": 1.92
+    }
+   },
+   "odds_at": "2026-11-04T18:15:12Z"
+  },
   "482c18a8081afdfa310324fa8f37e95a": {
    "ai": {
     "adjustments": [],
@@ -5928,6 +6258,91 @@
     }
    },
    "odds_at": "2026-11-04T18:13:58Z"
+  },
+  "611adbd4bc3a3e1b8b03def9d8a29e54": {
+   "away": "Lincoln City",
+   "books": {
+    "betfair_ex_uk": {
+     "a": 5.1,
+     "d": 4.3,
+     "h": 1.69
+    },
+    "boylesports": {
+     "a": 4.33,
+     "d": 3.8,
+     "h": 1.62
+    },
+    "ladbrokes_uk": {
+     "a": 4.5,
+     "d": 3.9,
+     "h": 1.7
+    },
+    "paddypower": {
+     "a": 4.75,
+     "d": 4.0,
+     "h": 1.62
+    },
+    "pinnacle": {
+     "a": 4.65,
+     "d": 4.21,
+     "h": 1.67
+    },
+    "skybet": {
+     "a": 4.75,
+     "d": 4.0,
+     "h": 1.62
+    },
+    "smarkets": {
+     "a": 4.9,
+     "d": 4.2,
+     "h": 1.67
+    },
+    "unibet_uk": {
+     "a": 4.5,
+     "d": 3.9,
+     "h": 1.73
+    },
+    "williamhill": {
+     "a": 4.2,
+     "d": 3.8,
+     "h": 1.75
+    }
+   },
+   "home": "Queens Park Rangers",
+   "id": "611adbd4bc3a3e1b8b03def9d8a29e54",
+   "kickoff": "2026-11-07T15:00:00Z",
+   "league": "champ",
+   "market": {
+    "h2h": {
+     "a": 4.65,
+     "d": 4.21,
+     "h": 1.67
+    },
+    "lam_a": 1.011,
+    "lam_h": 1.853,
+    "probs": {
+     "a": 0.1949,
+     "d": 0.2428,
+     "h": 0.5623
+    },
+    "source": "Pinnacle",
+    "t25": {
+     "n": 18,
+     "over": 1.735,
+     "under": 2.02
+    },
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1154,
+    "total": {
+     "line": 2.75,
+     "over": 1.97,
+     "under": 1.87
+    }
+   },
+   "odds_at": "2026-11-04T18:15:12Z"
   },
   "63aa6e3f679ee4c68de5b4bd8d3361bb": {
    "ai": {
@@ -8162,6 +8577,91 @@
    },
    "odds_at": "2026-11-04T18:13:58Z"
   },
+  "7d58b1a0732fa9d2c2fa42d44e636eed": {
+   "away": "Wolverhampton Wanderers",
+   "books": {
+    "betfair_ex_uk": {
+     "a": 2.16,
+     "d": 3.65,
+     "h": 3.7
+    },
+    "boylesports": {
+     "a": 2.0,
+     "d": 3.3,
+     "h": 3.4
+    },
+    "ladbrokes_uk": {
+     "a": 2.15,
+     "d": 3.4,
+     "h": 3.3
+    },
+    "paddypower": {
+     "a": 2.0,
+     "d": 3.4,
+     "h": 3.4
+    },
+    "pinnacle": {
+     "a": 2.11,
+     "d": 3.52,
+     "h": 3.65
+    },
+    "skybet": {
+     "a": 2.05,
+     "d": 3.5,
+     "h": 3.4
+    },
+    "smarkets": {
+     "a": 2.14,
+     "d": 3.65,
+     "h": 3.7
+    },
+    "unibet_uk": {
+     "a": 2.1,
+     "d": 3.5,
+     "h": 3.4
+    },
+    "williamhill": {
+     "a": 2.05,
+     "d": 3.3,
+     "h": 3.4
+    }
+   },
+   "home": "Bristol City",
+   "id": "7d58b1a0732fa9d2c2fa42d44e636eed",
+   "kickoff": "2026-11-04T20:00:00Z",
+   "league": "champ",
+   "market": {
+    "h2h": {
+     "a": 2.11,
+     "d": 3.52,
+     "h": 3.65
+    },
+    "lam_a": 1.534,
+    "lam_h": 1.114,
+    "probs": {
+     "a": 0.4599,
+     "d": 0.2738,
+     "h": 0.2663
+    },
+    "source": "Pinnacle",
+    "t25": {
+     "n": 19,
+     "over": 1.88,
+     "under": 1.88
+    },
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1307,
+    "total": {
+     "line": 2.5,
+     "over": 1.97,
+     "under": 1.92
+    }
+   },
+   "odds_at": "2026-11-04T18:15:12Z"
+  },
   "7d989a0a7bae47eb957731e97c5bd9c1": {
    "ai": {
     "adjustments": [],
@@ -8791,6 +9291,91 @@
    },
    "odds_at": "2026-11-04T18:13:58Z"
   },
+  "82688a32b0049a0c66b2e56309b6b67b": {
+   "away": "Swansea City",
+   "books": {
+    "betfair_ex_uk": {
+     "a": 4.6,
+     "d": 3.9,
+     "h": 1.88
+    },
+    "boylesports": {
+     "a": 4.0,
+     "d": 3.6,
+     "h": 1.75
+    },
+    "ladbrokes_uk": {
+     "a": 4.0,
+     "d": 3.6,
+     "h": 1.85
+    },
+    "paddypower": {
+     "a": 4.33,
+     "d": 3.6,
+     "h": 1.75
+    },
+    "pinnacle": {
+     "a": 4.24,
+     "d": 3.72,
+     "h": 1.83
+    },
+    "skybet": {
+     "a": 4.2,
+     "d": 3.6,
+     "h": 1.8
+    },
+    "smarkets": {
+     "a": 4.5,
+     "d": 3.8,
+     "h": 1.88
+    },
+    "unibet_uk": {
+     "a": 4.25,
+     "d": 3.6,
+     "h": 1.84
+    },
+    "williamhill": {
+     "a": 3.8,
+     "d": 3.4,
+     "h": 1.91
+    }
+   },
+   "home": "Birmingham City",
+   "id": "82688a32b0049a0c66b2e56309b6b67b",
+   "kickoff": "2026-11-07T15:00:00Z",
+   "league": "champ",
+   "market": {
+    "h2h": {
+     "a": 4.24,
+     "d": 3.72,
+     "h": 1.83
+    },
+    "lam_a": 1.031,
+    "lam_h": 1.687,
+    "probs": {
+     "a": 0.2221,
+     "d": 0.2599,
+     "h": 0.5181
+    },
+    "source": "Pinnacle",
+    "t25": {
+     "n": 19,
+     "over": 1.84,
+     "under": 1.91
+    },
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.124,
+    "total": {
+     "line": 2.5,
+     "over": 1.88,
+     "under": 1.96
+    }
+   },
+   "odds_at": "2026-11-04T18:15:12Z"
+  },
   "8553a80cf1ae5cbe3e7a69b76ce8167f": {
    "away": "Paris FC",
    "books": {
@@ -9117,6 +9702,86 @@
     }
    },
    "odds_at": "2026-11-04T18:13:58Z"
+  },
+  "89fe6860f3058526dd227dc27efd902a": {
+   "away": "Norwich City",
+   "books": {
+    "betfair_ex_uk": {
+     "a": 2.6,
+     "d": 3.55,
+     "h": 2.8
+    },
+    "boylesports": {
+     "a": 2.4,
+     "d": 3.75,
+     "h": 2.4
+    },
+    "ladbrokes_uk": {
+     "a": 2.6,
+     "d": 3.5,
+     "h": 2.6
+    },
+    "paddypower": {
+     "a": 2.5,
+     "d": 3.5,
+     "h": 2.6
+    },
+    "skybet": {
+     "a": 2.5,
+     "d": 3.5,
+     "h": 2.6
+    },
+    "smarkets": {
+     "a": 2.56,
+     "d": 3.25,
+     "h": 2.74
+    },
+    "unibet_uk": {
+     "a": 2.45,
+     "d": 3.5,
+     "h": 2.7
+    },
+    "williamhill": {
+     "a": 2.6,
+     "d": 3.3,
+     "h": 2.6
+    }
+   },
+   "home": "Bristol City",
+   "id": "89fe6860f3058526dd227dc27efd902a",
+   "kickoff": "2026-11-07T12:30:00Z",
+   "league": "champ",
+   "market": {
+    "h2h": {
+     "a": 2.5,
+     "d": 3.5,
+     "h": 2.55
+    },
+    "lam_a": 1.467,
+    "lam_h": 1.45,
+    "probs": {
+     "a": 0.371,
+     "d": 0.2653,
+     "h": 0.3637
+    },
+    "source": "35 家中位数",
+    "t25": {
+     "n": 15,
+     "over": 1.68,
+     "under": 2.12
+    },
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1243,
+    "total": {
+     "line": 2.5,
+     "over": 1.68,
+     "under": 2.12
+    }
+   },
+   "odds_at": "2026-11-04T18:15:12Z"
   },
   "8e6ee05b6ac28dc2357f72b9f5a0643e": {
    "away": "Rennes",
@@ -10853,6 +11518,81 @@
    },
    "odds_at": "2026-11-04T18:13:58Z"
   },
+  "a30b201e4df636949371d73491c620b5": {
+   "away": "Middlesbrough",
+   "books": {
+    "betfair_ex_uk": {
+     "a": 1.45,
+     "d": 4.6,
+     "h": 6.0
+    },
+    "boylesports": {
+     "a": 1.44,
+     "d": 4.5,
+     "h": 5.0
+    },
+    "paddypower": {
+     "a": 1.44,
+     "d": 4.5,
+     "h": 5.5
+    },
+    "skybet": {
+     "a": 1.44,
+     "d": 4.6,
+     "h": 5.75
+    },
+    "smarkets": {
+     "a": 1.4,
+     "d": 4.2,
+     "h": 5.9
+    },
+    "unibet_uk": {
+     "a": 1.45,
+     "d": 4.75,
+     "h": 6.0
+    },
+    "williamhill": {
+     "a": 1.5,
+     "d": 4.2,
+     "h": 5.5
+    }
+   },
+   "home": "Watford",
+   "id": "a30b201e4df636949371d73491c620b5",
+   "kickoff": "2026-11-07T15:00:00Z",
+   "league": "champ",
+   "market": {
+    "h2h": {
+     "a": 1.46,
+     "d": 4.5,
+     "h": 5.75
+    },
+    "lam_a": 2.281,
+    "lam_h": 1.09,
+    "probs": {
+     "a": 0.6343,
+     "d": 0.2037,
+     "h": 0.162
+    },
+    "source": "33 家中位数",
+    "t25": {
+     "n": 4,
+     "over": 1.415,
+     "under": 2.685
+    },
+    "top": [
+     1,
+     2
+    ],
+    "top_p": 0.0974,
+    "total": {
+     "line": 2.5,
+     "over": 1.415,
+     "under": 2.685
+    }
+   },
+   "odds_at": "2026-11-04T18:15:12Z"
+  },
   "a362cccad837f1ffae61ff43a3536688": {
    "ai": {
     "adjustments": [],
@@ -11124,6 +11864,86 @@
     }
    },
    "odds_at": "2026-11-04T18:13:58Z"
+  },
+  "a88341ac02c8103eedc594a2ceb3a400": {
+   "away": "Wolverhampton Wanderers",
+   "books": {
+    "betfair_ex_uk": {
+     "a": 1.37,
+     "d": 1.69,
+     "h": 1.12
+    },
+    "boylesports": {
+     "a": 2.2,
+     "d": 3.4,
+     "h": 2.8
+    },
+    "ladbrokes_uk": {
+     "a": 2.25,
+     "d": 3.6,
+     "h": 2.9
+    },
+    "paddypower": {
+     "a": 2.2,
+     "d": 3.6,
+     "h": 2.9
+    },
+    "skybet": {
+     "a": 2.2,
+     "d": 3.5,
+     "h": 2.9
+    },
+    "smarkets": {
+     "a": 2.14,
+     "d": 3.35,
+     "h": 2.86
+    },
+    "unibet_uk": {
+     "a": 2.25,
+     "d": 3.6,
+     "h": 3.0
+    },
+    "williamhill": {
+     "a": 2.25,
+     "d": 3.4,
+     "h": 2.9
+    }
+   },
+   "home": "Wrexham AFC",
+   "id": "a88341ac02c8103eedc594a2ceb3a400",
+   "kickoff": "2026-11-07T12:30:00Z",
+   "league": "champ",
+   "market": {
+    "h2h": {
+     "a": 2.25,
+     "d": 3.41,
+     "h": 2.9
+    },
+    "lam_a": 1.444,
+    "lam_h": 1.244,
+    "probs": {
+     "a": 0.4077,
+     "d": 0.2769,
+     "h": 0.3154
+    },
+    "source": "34 家中位数",
+    "t25": {
+     "n": 16,
+     "over": 1.85,
+     "under": 1.87
+    },
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.132,
+    "total": {
+     "line": 2.5,
+     "over": 1.85,
+     "under": 1.87
+    }
+   },
+   "odds_at": "2026-11-04T18:15:12Z"
   },
   "abec89862e33762414fcb8b2232aba08": {
    "ai": {
@@ -11521,6 +12341,91 @@
     "at": "2026-11-02T01:50:27Z",
     "h": 2
    }
+  },
+  "af665449ac9e2c4e1f183376e85fc936": {
+   "away": "Bolton Wanderers",
+   "books": {
+    "betfair_ex_uk": {
+     "a": 2.86,
+     "d": 3.8,
+     "h": 2.54
+    },
+    "boylesports": {
+     "a": 2.5,
+     "d": 3.5,
+     "h": 2.25
+    },
+    "ladbrokes_uk": {
+     "a": 2.7,
+     "d": 3.7,
+     "h": 2.37
+    },
+    "paddypower": {
+     "a": 2.75,
+     "d": 3.6,
+     "h": 2.3
+    },
+    "pinnacle": {
+     "a": 2.75,
+     "d": 3.68,
+     "h": 2.43
+    },
+    "skybet": {
+     "a": 2.75,
+     "d": 3.6,
+     "h": 2.3
+    },
+    "smarkets": {
+     "a": 2.84,
+     "d": 3.75,
+     "h": 2.52
+    },
+    "unibet_uk": {
+     "a": 2.75,
+     "d": 3.6,
+     "h": 2.35
+    },
+    "williamhill": {
+     "a": 2.7,
+     "d": 3.5,
+     "h": 2.4
+    }
+   },
+   "home": "Derby County",
+   "id": "af665449ac9e2c4e1f183376e85fc936",
+   "kickoff": "2026-11-06T20:00:00Z",
+   "league": "champ",
+   "market": {
+    "h2h": {
+     "a": 2.75,
+     "d": 3.68,
+     "h": 2.43
+    },
+    "lam_a": 1.448,
+    "lam_h": 1.552,
+    "probs": {
+     "a": 0.3469,
+     "d": 0.2605,
+     "h": 0.3926
+    },
+    "source": "Pinnacle",
+    "t25": {
+     "n": 15,
+     "over": 1.67,
+     "under": 2.13
+    },
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1208,
+    "total": {
+     "line": 2.75,
+     "over": 1.83,
+     "under": 2.01
+    }
+   },
+   "odds_at": "2026-11-04T18:15:12Z"
   },
   "afae1c9d986e4ab2200dc9bd44b6b6c4": {
    "away": "Elche CF",
@@ -12061,6 +12966,91 @@
     "at": "2026-10-24T18:48:00Z",
     "h": 0
    }
+  },
+  "b990dcb534c9019a2846d11c7d879030": {
+   "away": "Millwall",
+   "books": {
+    "betfair_ex_uk": {
+     "a": 3.6,
+     "d": 3.65,
+     "h": 2.04
+    },
+    "boylesports": {
+     "a": 3.3,
+     "d": 3.5,
+     "h": 1.95
+    },
+    "ladbrokes_uk": {
+     "a": 3.5,
+     "d": 3.5,
+     "h": 2.05
+    },
+    "paddypower": {
+     "a": 3.4,
+     "d": 3.5,
+     "h": 2.0
+    },
+    "pinnacle": {
+     "a": 3.57,
+     "d": 3.62,
+     "h": 2.03
+    },
+    "skybet": {
+     "a": 3.4,
+     "d": 3.5,
+     "h": 2.0
+    },
+    "smarkets": {
+     "a": 3.55,
+     "d": 3.6,
+     "h": 2.02
+    },
+    "unibet_uk": {
+     "a": 3.5,
+     "d": 3.6,
+     "h": 2.0
+    },
+    "williamhill": {
+     "a": 3.4,
+     "d": 3.4,
+     "h": 2.05
+    }
+   },
+   "home": "West Bromwich Albion",
+   "id": "b990dcb534c9019a2846d11c7d879030",
+   "kickoff": "2026-11-07T15:00:00Z",
+   "league": "champ",
+   "market": {
+    "h2h": {
+     "a": 3.57,
+     "d": 3.62,
+     "h": 2.03
+    },
+    "lam_a": 1.161,
+    "lam_h": 1.61,
+    "probs": {
+     "a": 0.2657,
+     "d": 0.2658,
+     "h": 0.4685
+    },
+    "source": "Pinnacle",
+    "t25": {
+     "n": 19,
+     "over": 1.74,
+     "under": 2.0
+    },
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1264,
+    "total": {
+     "line": 2.5,
+     "over": 1.83,
+     "under": 2.01
+    }
+   },
+   "odds_at": "2026-11-04T18:15:12Z"
   },
   "be2fcabc408be29ca01ce92ab266f8b7": {
    "away": "Venezia",
@@ -13637,6 +14627,91 @@
    },
    "odds_at": "2026-11-04T18:13:58Z"
   },
+  "e1b2a10bfd51e1716202de92f585f502": {
+   "away": "Sheffield United",
+   "books": {
+    "betfair_ex_uk": {
+     "a": 2.1,
+     "d": 3.55,
+     "h": 3.4
+    },
+    "boylesports": {
+     "a": 2.05,
+     "d": 3.3,
+     "h": 3.1
+    },
+    "ladbrokes_uk": {
+     "a": 2.1,
+     "d": 3.5,
+     "h": 3.3
+    },
+    "paddypower": {
+     "a": 2.1,
+     "d": 3.4,
+     "h": 3.3
+    },
+    "pinnacle": {
+     "a": 2.12,
+     "d": 3.5,
+     "h": 3.45
+    },
+    "skybet": {
+     "a": 2.1,
+     "d": 3.4,
+     "h": 3.25
+    },
+    "smarkets": {
+     "a": 2.08,
+     "d": 3.5,
+     "h": 3.35
+    },
+    "unibet_uk": {
+     "a": 2.1,
+     "d": 3.5,
+     "h": 3.4
+    },
+    "williamhill": {
+     "a": 2.1,
+     "d": 3.3,
+     "h": 3.3
+    }
+   },
+   "home": "Charlton Athletic",
+   "id": "e1b2a10bfd51e1716202de92f585f502",
+   "kickoff": "2026-11-07T15:00:00Z",
+   "league": "champ",
+   "market": {
+    "h2h": {
+     "a": 2.12,
+     "d": 3.5,
+     "h": 3.45
+    },
+    "lam_a": 1.54,
+    "lam_h": 1.161,
+    "probs": {
+     "a": 0.4508,
+     "d": 0.272,
+     "h": 0.2772
+    },
+    "source": "Pinnacle",
+    "t25": {
+     "n": 19,
+     "over": 1.85,
+     "under": 1.91
+    },
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1297,
+    "total": {
+     "line": 2.5,
+     "over": 1.89,
+     "under": 1.94
+    }
+   },
+   "odds_at": "2026-11-04T18:15:12Z"
+  },
   "e22f82b10fe71d230248b88fef87e58f": {
    "away": "Inter Milan",
    "books": {
@@ -13691,6 +14766,91 @@
     }
    },
    "odds_at": "2026-11-04T18:13:58Z"
+  },
+  "e35b42924a5fe785a52709c4d17c14c2": {
+   "away": "Middlesbrough",
+   "books": {
+    "betfair_ex_uk": {
+     "a": 1.72,
+     "d": 4.3,
+     "h": 5.2
+    },
+    "boylesports": {
+     "a": 1.62,
+     "d": 4.0,
+     "h": 4.33
+    },
+    "ladbrokes_uk": {
+     "a": 1.73,
+     "d": 3.9,
+     "h": 4.5
+    },
+    "paddypower": {
+     "a": 1.62,
+     "d": 4.0,
+     "h": 4.5
+    },
+    "pinnacle": {
+     "a": 1.68,
+     "d": 4.28,
+     "h": 4.83
+    },
+    "skybet": {
+     "a": 1.62,
+     "d": 4.2,
+     "h": 4.75
+    },
+    "smarkets": {
+     "a": 1.71,
+     "d": 4.3,
+     "h": 5.2
+    },
+    "unibet_uk": {
+     "a": 1.7,
+     "d": 4.0,
+     "h": 4.5
+    },
+    "williamhill": {
+     "a": 1.67,
+     "d": 3.9,
+     "h": 4.5
+    }
+   },
+   "home": "Wrexham AFC",
+   "id": "e35b42924a5fe785a52709c4d17c14c2",
+   "kickoff": "2026-11-04T19:45:00Z",
+   "league": "champ",
+   "market": {
+    "h2h": {
+     "a": 1.68,
+     "d": 4.28,
+     "h": 4.83
+    },
+    "lam_a": 1.97,
+    "lam_h": 1.083,
+    "probs": {
+     "a": 0.5717,
+     "d": 0.2324,
+     "h": 0.196
+    },
+    "source": "Pinnacle",
+    "t25": {
+     "n": 16,
+     "over": 1.6,
+     "under": 2.24
+    },
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.1088,
+    "total": {
+     "line": 3.0,
+     "over": 2.07,
+     "under": 1.83
+    }
+   },
+   "odds_at": "2026-11-04T18:15:12Z"
   },
   "e59809eb38340e3bca323cef070dfd34": {
    "away": "Torino",
@@ -13953,6 +15113,91 @@
     "at": "2026-11-01T01:28:39Z",
     "h": 3
    }
+  },
+  "e8492593cecfc388af8a4852f06599c6": {
+   "away": "Stoke City",
+   "books": {
+    "betfair_ex_uk": {
+     "a": 3.35,
+     "d": 3.3,
+     "h": 2.38
+    },
+    "boylesports": {
+     "a": 3.0,
+     "d": 3.1,
+     "h": 2.25
+    },
+    "ladbrokes_uk": {
+     "a": 3.0,
+     "d": 3.25,
+     "h": 2.37
+    },
+    "paddypower": {
+     "a": 3.0,
+     "d": 3.2,
+     "h": 2.3
+    },
+    "pinnacle": {
+     "a": 3.21,
+     "d": 3.21,
+     "h": 2.36
+    },
+    "skybet": {
+     "a": 3.0,
+     "d": 3.2,
+     "h": 2.3
+    },
+    "smarkets": {
+     "a": 3.25,
+     "d": 3.25,
+     "h": 2.34
+    },
+    "unibet_uk": {
+     "a": 3.1,
+     "d": 3.25,
+     "h": 2.35
+    },
+    "williamhill": {
+     "a": 3.0,
+     "d": 3.0,
+     "h": 2.4
+    }
+   },
+   "home": "Portsmouth",
+   "id": "e8492593cecfc388af8a4852f06599c6",
+   "kickoff": "2026-11-07T12:30:00Z",
+   "league": "champ",
+   "market": {
+    "h2h": {
+     "a": 3.21,
+     "d": 3.21,
+     "h": 2.36
+    },
+    "lam_a": 1.086,
+    "lam_h": 1.307,
+    "probs": {
+     "a": 0.2986,
+     "d": 0.2957,
+     "h": 0.4057
+    },
+    "source": "Pinnacle",
+    "t25": {
+     "n": 18,
+     "over": 2.075,
+     "under": 1.695
+    },
+    "top": [
+     1,
+     1
+    ],
+    "top_p": 0.14,
+    "total": {
+     "line": 2.25,
+     "over": 1.93,
+     "under": 1.9
+    }
+   },
+   "odds_at": "2026-11-04T18:15:12Z"
   },
   "ebe638278f4d70eaf211ad5be9795fa0": {
    "away": "Valencia",
@@ -14552,5 +15797,5 @@
    "odds_at": "2026-11-04T18:13:58Z"
   }
  },
- "updated": "2026-11-04T18:13:59Z"
+ "updated": "2026-11-04T18:15:12Z"
 }
