@@ -66,6 +66,11 @@ def build_market(event):
         lh, la = model.fit(ph, pa)
 
     market = {"source": source, "h2h": h2h, "total": tot}
+    # 对冲用的大小 2.5 球赔率：各家 2.5 盘的中位数（Pinnacle 常开 2.75 等亚盘，不能直接用）
+    t25 = [x for x in (_totals(b) for b in books.values()) if x and x["line"] == 2.5]
+    if t25:
+        market["t25"] = {"over": round(statistics.median(x["over"] for x in t25), 3),
+                         "under": round(statistics.median(x["under"] for x in t25), 3), "n": len(t25)}
     market.update(model.summarize(lh, la))
 
     compare = {}
@@ -75,6 +80,14 @@ def build_market(event):
             if x:
                 compare[key] = x
     return market, compare
+
+
+def _budget_floor(t):
+    """到月底前应保留的额度：每月 500 次按剩余天数比例保留。"""
+    import calendar
+    days = calendar.monthrange(t.year, t.month)[1]
+    left = days - t.day + 1
+    return int(500 * left / days * 0.85)
 
 
 def _plan(db, meta, league, t):
@@ -93,6 +106,8 @@ def _plan(db, meta, league, t):
         return f"{len(missing)} 场缺盘口"
     if remaining is not None and remaining < RESERVE:
         return None
+    if remaining is not None and remaining < _budget_floor(t):
+        return None  # 本月额度按天数平均分配：用得太快就暂停刷新，只补缺失的盘口
     if soon and (last is None or t - last >= timedelta(hours=REFRESH_H)):
         return f"{len(soon)} 场即将开赛，刷新"
     if not upcoming and (last is None or t - last >= timedelta(hours=DISCOVER_H)):

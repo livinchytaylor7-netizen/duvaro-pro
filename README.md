@@ -9,8 +9,8 @@
 | 部分 | 位置 | 说明 |
 | --- | --- | --- |
 | 每日任务 | `.github/workflows/daily.yml` | UTC 06:15 / 11:15 / 16:15 / 22:45 自动运行 |
-| 赔率 | `scripts/odds.py` | The Odds API，只在 36 小时内有比赛时拉取 |
-| AI 分析 | `scripts/ai.py` | Gemini 2.5 Flash + Google 搜索，开赛前 30 小时内逐场分析 |
+| 赔率 | `scripts/odds.py` | The Odds API：西甲、意甲、法甲、英冠；每月 500 次额度按天平均分配 |
+| AI 分析 | `scripts/ai.py` | Gemini（自动选可用模型）+ Google 新闻 RSS，开赛前 30 小时内逐场分析 |
 | 赛果 | `scripts/scores.py` | 赛后自动拉比分 |
 | 比分模型 | `scripts/model.py` | Dixon-Coles 修正泊松模型 |
 | 手机 app | `index.html` `app.js` | GitHub Pages 托管 |

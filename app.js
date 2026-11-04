@@ -6,7 +6,8 @@ const STAKE = 10;           // 每场模拟 €10
 const MARGIN = 0.25;        // 博彩公司正确比分约 25% 抽水
 const N = 11;
 const TZ = "Europe/Dublin";
-const LEAGUE = { laliga: "西甲", seriea: "意甲" };
+const LEAGUE = { laliga: "西甲", seriea: "意甲", ligue1: "法甲", champ: "英冠" };
+const T25_MARGIN = 0.05;     // 没有真实 2.5 球赔率时，按模型概率加 5% 抽水估算
 const BOOK = { pinnacle: "Pinnacle", paddypower: "Paddy Power", boylesports: "BoyleSports",
   betfair_ex_uk: "Betfair 交易所", williamhill: "William Hill", skybet: "Sky Bet",
   ladbrokes_uk: "Ladbrokes", betvictor: "BetVictor", unibet_uk: "Unibet", smarkets: "Smarkets" };
@@ -51,6 +52,56 @@ function matrix(lh, la) {
   for (const r of m) for (let j = 0; j < N; j++) r[j] /= s;
   _mcache.set(key, m); return m;
 }
+// ---------- 总进球对冲 ----------
+// 比分 €10 + 大/小 2.5 球对冲：对冲赢 = 刚好持平；比分中 = 赚；两个都输 = 全输（接受）
+// 比分总进球 ≥3 → 对冲“小 2.5”；≤2 → 对冲“大 2.5”。两者互斥，不会同时赢。
+function pTotalSide(mk, side) {
+  const g = matrix(mk.lam_h, mk.lam_a); let p = 0;
+  for (let i = 0; i < N; i++) for (let j = 0; j < N; j++) if (side === "under" ? i + j <= 2 : i + j >= 3) p += g[i][j];
+  return p;
+}
+function hedgeOf(m, t) {
+  const mk = m.market; if (!mk || !t) return null;
+  const side = t[0] + t[1] >= 3 ? "under" : "over";
+  const pH = pTotalSide(mk, side), pS = pScore(mk, t);
+  const real = mk.t25 && mk.t25[side];
+  const oH = real || Math.max(1.02, (1 / pH) * (1 - T25_MARGIN));
+  const hStake = STAKE / (oH - 1);
+  const oSf = 1 / pS, oSb = Math.max(1.01, oSf * (1 - MARGIN));
+  return { side, label: side === "under" ? "小 2.5 球" : "大 2.5 球", oH, real: !!real, hStake, pS, pH,
+    pLose: Math.max(0, 1 - pS - pH), oSf, oSb,
+    winF: STAKE * (oSf - 1) - hStake, winB: STAKE * (oSb - 1) - hStake, lose: -(STAKE + hStake) };
+}
+function hedgeOutcome(m, t) {
+  const r = result(m), h = hedgeOf(m, t); if (!r || !h) return null;
+  const tot = r[0] + r[1];
+  const kind = same(t, r) ? "hit" : (h.side === "under" ? tot <= 2 : tot >= 3) ? "even" : "lose";
+  return { h, kind, netF: kind === "hit" ? h.winF : kind === "even" ? 0 : h.lose,
+    netB: kind === "hit" ? h.winB : kind === "even" ? 0 : h.lose };
+}
+function hedgeAgg(list, key) {
+  const a = { n: 0, hit: 0, even: 0, lose: 0, eHit: 0, eEven: 0, eLose: 0, cost: 0, netF: 0, netB: 0 };
+  for (const m of list) {
+    const t = lines(m)[key]; const o = t && hedgeOutcome(m, t); if (!o) continue;
+    a.n++; a[o.kind]++; a.eHit += o.h.pS; a.eEven += o.h.pH; a.eLose += o.h.pLose;
+    a.cost += STAKE + o.h.hStake; a.netF += o.netF; a.netB += o.netB;
+  }
+  return a;
+}
+function hedgeHtml(m, t, who) {
+  const h = hedgeOf(m, t); if (!h) return "";
+  const eu = x => `${x >= 0 ? "+" : "−"}€${Math.abs(x).toFixed(2)}`;
+  return `<h3>总进球对冲（${who} ${sc(t)}）</h3>
+    <table><tr><th>投注</th><th>金额</th><th>赔率</th></tr>
+    <tr><td>比分 ${sc(t)}</td><td>€${STAKE.toFixed(2)}</td><td>${h.oSf.toFixed(1)} 公平 / ${h.oSb.toFixed(1)} 扣水</td></tr>
+    <tr><td>${h.label}</td><td>€${h.hStake.toFixed(2)}</td><td>${h.oH.toFixed(2)}${h.real ? "" : "（估算）"}</td></tr></table>
+    <table style="margin-top:8px"><tr><th>结果</th><th>概率</th><th>盈亏</th></tr>
+    <tr><td>比分命中</td><td>${pct(h.pS, 1)}</td><td class="pos">${eu(h.winF)} / ${eu(h.winB)}</td></tr>
+    <tr><td>对冲命中（持平）</td><td>${pct(h.pH, 1)}</td><td>€0.00</td></tr>
+    <tr><td>全部失败</td><td>${pct(h.pLose, 1)}</td><td class="neg">${eu(h.lose)}</td></tr></table>
+    <div class="legend">总投入 €${(STAKE + h.hStake).toFixed(2)}。比分总进球${h.side === "under" ? "≥3，对冲小 2.5" : "≤2，对冲大 2.5"}，两者不会同时赢。概率按 Pinnacle 推算；${h.real ? `2.5 球赔率取 ${m.market.t25.n} 家庄家中位数` : "没有真实 2.5 球赔率，按模型加 5% 抽水估算"}。</div>`;
+}
+
 function pScore(mk, t) { return t && t[0] < N && t[1] < N ? matrix(mk.lam_h, mk.lam_a)[t[0]][t[1]] : 0; }
 
 // ---------- 三条线 ----------
@@ -247,6 +298,21 @@ function viewStats() {
   let out = `${overview(A)}
     <p class="hint">“市场预期”= 按 Pinnacle 概率，这条线本应命中的场数。命中数长期高于预期，才说明方法真的有效。ROI 按每场 €10 模拟：“公平”用无抽水赔率，“扣水”按博彩公司约 25% 抽水估算。</p>`;
 
+  // 总进球对冲
+  {
+    const cols = [["盘口线", hedgeAgg(all, "market")], ["AI 线", hedgeAgg(all, "aiOrMarket")], ["我的线", hedgeAgg(all, "mine")]];
+    const r = (label, f) => `<tr><td>${label}</td>${cols.map(([, a]) => `<td>${a.n ? f(a) : "—"}</td>`).join("")}</tr>`;
+    out += `<div class="sec ov"><h3>加总进球对冲后</h3><p>每场比分 €10，再按赔率配一注大/小 2.5 球，使对冲赢时刚好持平。括号内为按概率的预期次数。</p><table>
+      <tr><th></th>${cols.map(([t]) => `<th>${t}</th>`).join("")}</tr>
+      ${r("比分命中", a => `<b>${a.hit}</b>（${a.eHit.toFixed(1)}）`)}
+      ${r("对冲持平", a => `${a.even}（${a.eEven.toFixed(1)}）`)}
+      ${r("全部失败", a => `${a.lose}（${a.eLose.toFixed(1)}）`)}
+      ${r("总投入", a => `€${a.cost.toFixed(0)}`)}
+      ${r("ROI 公平", a => signed(a.netF / a.cost))}
+      ${r("ROI 扣水", a => signed(a.netB / a.cost))}
+    </table></div>`;
+  }
+
   // AI 改了比分的场次
   const changed = all.filter(m => m.ai && m.ai.status === "ok" && !same(m.ai.top, m.market.top));
   out += `<div class="sec"><h3>AI 改了比分的场次</h3><p>只看 AI 和盘口选了不同比分的比赛，场外信息有没有用一目了然。</p>
@@ -313,6 +379,7 @@ function detail(id) {
   if (!rv) h += `<p class="hint">选好比分并锁定（或跳过）后，才显示比分概率、盘口线和 AI 分析，避免影响你的判断。</p>`;
   else {
     h += chipsHtml(m);
+    h += L.mine ? hedgeHtml(m, L.mine, "我的线") : hedgeHtml(m, L.market, "盘口线");
     h += `<h3>预期进球</h3><table><tr><th></th><th>${esc(teamZh(m.home))}</th><th>${esc(teamZh(m.away))}</th></tr>
       <tr><td>盘口（${esc(mk.source)}）</td><td>${mk.lam_h.toFixed(2)}</td><td>${mk.lam_a.toFixed(2)}</td></tr>
       ${m.ai && m.ai.status === "ok" ? `<tr><td>AI 修正后</td><td>${m.ai.lam_h.toFixed(2)}</td><td>${m.ai.lam_a.toFixed(2)}</td></tr>` : ""}</table>`;

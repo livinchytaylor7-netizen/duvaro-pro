@@ -16,6 +16,8 @@ META = DATA / "meta.json"
 LEAGUES = {
     "laliga": {"sport": "soccer_spain_la_liga", "name": "西甲"},
     "seriea": {"sport": "soccer_italy_serie_a", "name": "意甲"},
+    "ligue1": {"sport": "soccer_france_ligue_one", "name": "法甲"},
+    "champ": {"sport": "soccer_efl_champ", "name": "英冠"},
 }
 
 # 市场基准优先用 Pinnacle；其余仅用于胜平负价格对比

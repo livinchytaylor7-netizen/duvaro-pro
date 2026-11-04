@@ -58,8 +58,8 @@ def main():
     ms = db["matches"]
     live = [e for e in SAMPLE if e["commence_time"] <= "2026-10-18T12:00:00Z"]
     assert len(ms) == len(SAMPLE) - len(live), (len(ms), len(SAMPLE), len(live))
-    assert meta["credits_remaining"] == 480
-    odds_calls = [c for c in calls if "/odds/" in c]; assert len(odds_calls) == 2, odds_calls
+    assert meta["credits_remaining"] == 476
+    odds_calls = [c for c in calls if "/odds/" in c]; assert len(odds_calls) == 4, odds_calls
     juve = next(m for m in ms.values() if m["home"] == "Juventus")
     print("Juventus v Lazio market:", juve["market"]["source"], juve["market"]["lam_h"], juve["market"]["lam_a"], juve["market"]["top"], juve["market"]["top_p"])
     assert juve["market"]["source"] == "Pinnacle" and "paddypower" in juve["books"]
