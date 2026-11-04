@@ -1,6 +1,12 @@
 {
- "credits_remaining": 462,
- "errors": [],
+ "credits_remaining": 450,
+ "errors": [
+  {
+   "at": "2026-11-04T18:13:59Z",
+   "step": "赔率",
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/duvaro-pro/duvaro-pro/scripts/run.py\", line 33, in main\n    fn()\n  File \"/home/runner/work/duvaro-pro/duvaro-pro/scripts/run.py\", line 26, in <lambda>\n    plan.append((\"赔率\", lambda: (odds.run(db, meta, force=force), ai.reapply(db))))\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/duvaro-pro/duvaro-pro/scripts/odds.py\", line 157, in run\n    meta[\"leagues\"][league][\"odds_at\"] = iso(t)\n    ~~~~~~~~~~~~~~~^^^^^^^^\nKeyError: 'ligue1'\n"
+  }
+ ],
  "gemini_errors": [
   "gemini-3.8-flash 429: {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}]}}",
   "gemini-flash-latest 429: {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}]}}",
@@ -17,16 +23,16 @@
   "status": 200
  },
  "last_run": {
-  "at": "2026-11-04T14:28:55Z",
-  "ok": true,
+  "at": "2026-11-04T18:13:58Z",
+  "ok": false,
   "step": "all"
  },
  "leagues": {
   "laliga": {
-   "odds_at": "2026-11-02T15:46:45Z"
+   "odds_at": "2026-11-04T18:13:58Z"
   },
   "seriea": {
-   "odds_at": "2026-11-02T15:46:45Z"
+   "odds_at": "2026-11-04T18:13:58Z"
   }
  },
  "log": [
@@ -212,6 +218,10 @@
   "2026-11-03T18:26:33Z 完成：共 78 场比赛记录",
   "2026-11-03T21:47:38Z 完成：共 78 场比赛记录",
   "2026-11-04T02:42:27Z 完成：共 78 场比赛记录",
-  "2026-11-04T14:28:55Z 完成：共 78 场比赛记录"
+  "2026-11-04T14:28:55Z 完成：共 78 场比赛记录",
+  "2026-11-04T18:13:59Z 赔率：西甲（手动强制）新增 10 场，更新 20 场，剩余额度 458",
+  "2026-11-04T18:13:59Z 赔率：意甲（手动强制）新增 10 场，更新 20 场，剩余额度 454",
+  "2026-11-04T18:13:59Z 赔率：程序出错，详情见 errors",
+  "2026-11-04T18:13:59Z 完成：共 116 场比赛记录"
  ]
 }
