@@ -27,7 +27,7 @@ const TEAM_ZH = {
   "swansea city": "斯旺西", "cardiff city": "卡迪夫城", "queens park rangers": "女王公园巡游者", "qpr": "女王公园巡游者",
   "hull city": "赫尔城", "coventry city": "考文垂", "derby county": "德比郡", "portsmouth": "朴茨茅斯",
   "oxford united": "牛津联", "plymouth argyle": "普利茅斯", "luton town": "卢顿", "burnley": "伯恩利",
-  "leeds united": "利兹联", "sunderland": "桑德兰", "wrexham": "雷克瑟姆", "charlton athletic": "查尔顿",
+  "leeds united": "利兹联", "sunderland": "桑德兰", "wrexham": "雷克瑟姆", "wrexham afc": "雷克瑟姆", "west ham united": "西汉姆联", "lincoln city": "林肯城", "wolverhampton wanderers": "狼队", "wolves": "狼队", "leeds": "利兹联", "brentford": "布伦特福德", "crystal palace": "水晶宫", "aston villa": "阿斯顿维拉", "newcastle united": "纽卡斯尔联", "brighton and hove albion": "布莱顿", "afc bournemouth": "伯恩茅斯", "manchester united": "曼联", "chelsea": "切尔西", "liverpool": "利物浦", "arsenal": "阿森纳", "manchester city": "曼城", "mansfield town": "曼斯菲尔德", "stockport county": "斯托克港", "doncaster rovers": "唐卡斯特", "peterborough united": "彼得堡联", "exeter city": "埃克塞特", "cambridge united": "剑桥联", "bradford city": "布拉德福德", "charlton athletic": "查尔顿",
   "birmingham city": "伯明翰", "wigan athletic": "维冈", "huddersfield town": "哈德斯菲尔德", "bolton wanderers": "博尔顿",
   "rotherham united": "罗瑟汉姆", "barnsley": "巴恩斯利", "reading": "雷丁", "blackpool": "布莱克浦",
   "nottingham forest": "诺丁汉森林", "fulham": "富勒姆", "tottenham hotspur": "托特纳姆", "everton": "埃弗顿",
