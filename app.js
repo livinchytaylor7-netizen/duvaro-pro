@@ -7,11 +7,12 @@ const MARGIN = 0.25;        // 博彩公司正确比分约 25% 抽水
 const N = 11;
 const TZ = "Europe/Dublin";
 const LEAGUE = { laliga: "西甲", seriea: "意甲", ligue1: "法甲", champ: "英冠" };
+const inLeague = m => S.league === "all" || m.league === S.league;
 const BOOK = { pinnacle: "Pinnacle", paddypower: "Paddy Power", boylesports: "BoyleSports",
   betfair_ex_uk: "Betfair 交易所", williamhill: "William Hill", skybet: "Sky Bet",
   ladbrokes_uk: "Ladbrokes", betvictor: "BetVictor", unibet_uk: "Unibet", smarkets: "Smarkets" };
 
-const S = { matches: {}, picks: {}, meta: {}, updated: null, tab: "today", draft: {}, hedgeDraft: {},
+const S = { matches: {}, picks: {}, meta: {}, updated: null, tab: "today", draft: {}, hedgeDraft: {}, league: lsGet("duvaro_league") || "all",
   token: lsGet("duvaro_token"), repo: lsGet("duvaro_repo") || detectRepo() };
 
 // ---------- 工具 ----------
@@ -51,7 +52,7 @@ function matrix(lh, la) {
 // ---------- 总进球对冲（William Hill 大/小 2.5 球） ----------
 // 比分 €10 + 一注大/小 2.5 球，金额 = 10 ÷ (赔率 − 1)：对冲赢、比分没中 = 刚好持平；都输 = 全输（接受）
 const HEDGE_BOOK = "William Hill";
-const SIDE = { over: "大 2.5 球", under: "小 2.5 球" };
+const SIDE = { over: "大 2.5", under: "小 2.5" };
 const inSide = (side, tot) => side === "under" ? tot <= 2 : tot >= 3;
 function defaultSide(t) { return t[0] + t[1] >= 3 ? "under" : "over"; } // 与比分互斥的一边
 function pTotalSide(mk, side) {
@@ -92,7 +93,7 @@ function hedgeAgg(list, key) {
   return a;
 }
 const eu = x => `${x >= 0 ? "+" : "−"}€${Math.abs(x).toFixed(2)}`;
-function hedgeLine(h) { return h ? `对冲：${h.label} €${h.hStake.toFixed(2)}（${HEDGE_BOOK} ${h.oH.toFixed(2)}）` : ""; }
+function hedgeLine(h) { return h ? `对冲 <b>${h.label}</b> · <b>€${h.hStake.toFixed(2)}</b> · 赔率 ${h.oH.toFixed(2)}（${HEDGE_BOOK}）` : ""; }
 function hedgeHtml(m, key, who) {
   const t = lines(m)[key]; if (!t) return "";
   const p = S.picks[m.id] || {};
@@ -172,60 +173,67 @@ async function savePick(id, value) {
 function render() {
   document.querySelectorAll(".tabs button").forEach(b => b.classList.toggle("on", b.dataset.tab === S.tab));
   const acc = $("#account"); acc.textContent = S.token ? "已登录" : "登录"; acc.classList.toggle("ok", !!S.token);
+  const now = Date.now(), open = m => !result(m) && !(m.result && m.result.void) && kt(m) > now - 3 * 3600e3;
+  const cnt = k => S.tab === "today" ? Object.values(S.matches).filter(m => open(m) && (k === "all" || m.league === k)).length : null;
+  $("#leagues").innerHTML = [["all", "全部"], ...Object.entries(LEAGUE)].map(([k, n]) => {
+    const c = cnt(k); return `<button data-league="${k}" class="${S.league === k ? "on" : ""}">${n}${c != null ? `<small>${c}</small>` : ""}</button>`; }).join("");
   const v = $("#view");
   v.innerHTML = S.tab === "today" ? viewToday() : S.tab === "records" ? viewRecords() : viewStats();
 }
 
-function teamsHtml(m, mid) {
-  return `<div class="teams"><div class="h">${esc(teamZh(m.home))}<span class="en">${esc(m.home)}</span></div>
-    ${mid}<div class="a">${esc(teamZh(m.away))}<span class="en">${esc(m.away)}</span></div></div>`;
+function boardHtml(m, scoreSide) {
+  const p = m.market && m.market.probs, res = result(m);
+  const side = (name, prob, g, fav) => `<div class="side"><div class="name">${esc(name)}${teamZh(name) !== name ? `<span class="zh">${esc(teamZh(name))}</span>` : ""}</div>
+    ${res ? `<span class="goals">${g}</span>` : p ? `<span class="prob ${fav ? "fav" : ""}">${Math.round(prob * 100)}%</span>` : ""}</div>`;
+  const favH = p && p.h >= p.a;
+  return `<div class="board">${side(m.home, p && p.h, res && res[0], favH)}${side(m.away, p && p.a, res && res[1], p && !favH)}</div>
+    ${p ? `<div class="drawline"><div class="split"><i class="ph" style="width:${p.h * 100}%"></i><i class="pd" style="width:${p.d * 100}%"></i><i class="pa" style="width:${p.a * 100}%"></i></div><span>平 ${Math.round(p.d * 100)}%</span></div>` : `<div class="hint">赔率未到</div>`}`;
 }
-function barHtml(mk) {
-  if (!mk) return `<div class="hint">赔率未到</div>`;
-  const p = mk.probs;
-  return `<div class="bar"><i class="ph" style="width:${p.h * 100}%"></i><i class="pd" style="width:${p.d * 100}%"></i><i class="pa" style="width:${p.a * 100}%"></i></div>
-    <div class="barlbl"><span>主胜 ${pct(p.h)}</span><span>平 ${pct(p.d)}</span><span>客胜 ${pct(p.a)}</span></div>`;
+function metaHtml(m, right) {
+  return `<div class="meta"><span><span class="kick">${fTime.format(kt(m))}</span><span class="lg">${LEAGUE[m.league] || ""}</span></span><span>${right}</span></div>`;
 }
 function chipsHtml(m) {
   const L = lines(m), res = result(m);
   const one = (cls, label, t, extra = "") => {
-    let st = "", mark = "";
-    if (res && t) { st = same(t, res) ? " hit" : " miss"; mark = same(t, res) ? `<span class="mk pos">✓</span>` : ""; }
-    return `<div class="chip ${cls}${st}"><small>${label}</small><b>${sc(t)}</b>${mark}${extra}</div>`;
+    const st = res && t ? (same(t, res) ? " hit" : " miss") : "";
+    return `<div class="chip ${cls}${st}"><small>${label}${extra}</small><b>${sc(t)}</b></div>`;
   };
   const p = S.picks[m.id];
-  const meExtra = p && p.skip ? `<small>跳过</small>` : (!p ? `<small>未选</small>` : "");
+  const meExtra = p && p.skip ? " · 跳过" : (!p ? " · 未选" : "");
   const hm = L.mine && hedgeFor(m, "mine");
   return `<div class="lines">${one("mk", "盘口线", L.market)}${one("me", "我的线", L.mine, meExtra)}</div>${hm ? `<div class="hedge-line">${hedgeLine(hm)}</div>` : ""}`;
 }
+function pickSide(m, d) { // 你选的边；没有赔率时自动换到另一边；两边都没有 = none
+  let side = (S.hedgeDraft || {})[m.id] || defaultSide(d);
+  if (!whOdds(m, side)) side = side === "over" ? "under" : "over";
+  return whOdds(m, side) ? side : "none";
+}
 function hedgePickerHtml(m, d) {
-  const chosen = (S.hedgeDraft || {})[m.id] || defaultSide(d);
+  const chosen = pickSide(m, d);
+  if (chosen === "none") return `<div class="hedge-pick"><span class="tag">${HEDGE_BOOK} 这场还没开大小 2.5 球盘，锁定后不对冲。</span></div>`;
   const btn = side => { const o = whOdds(m, side);
     return `<button class="hbtn ${chosen === side ? "on" : ""}" data-act="hedge" data-side="${side}" ${o ? "" : "disabled"}>${SIDE[side]}<small>${o ? `€${(STAKE / (o - 1)).toFixed(2)} · ${o.toFixed(2)}` : "未开盘"}</small></button>`; };
-  return `<div class="hedge-pick"><span class="tag">对冲（${HEDGE_BOOK}）</span>${btn("over")}${btn("under")}
-    <button class="hbtn ${chosen === "none" ? "on" : ""}" data-act="hedge" data-side="none">不对冲</button></div>`;
+  return `<div class="hedge-pick"><span class="tag">对冲 · ${HEDGE_BOOK}</span>${btn("over")}${btn("under")}</div>`;
 }
 function card(m) {
   const res = result(m), started = Date.now() >= kt(m);
-  const mid = res ? `<div class="vs res">${res[0]} : ${res[1]}</div>` : `<div class="vs">${started ? "进行中" : "vs"}</div>`;
   let bottom = "";
   if (revealed(m)) bottom = chipsHtml(m);
   if (!started && !S.picks[m.id] && m.market) {
-    if (!S.token) bottom = `<div class="hint">登录后才能选比分。选好并锁定后，才会显示盘口线。</div>`;
+    if (!S.token) bottom = `<div class="hint">登录后才能选比分。锁定后才显示盘口线。</div>`;
     else {
       const d = S.draft[m.id] || [0, 0];
       bottom = `<div class="pick">
-        <div class="stepper"><button data-act="dec" data-i="0">−</button><b>${d[0]}</b><button data-act="inc" data-i="0">+</button></div>
+        <div class="score-in"><div class="stepper"><button data-act="dec" data-i="0" aria-label="主队减一">−</button><b>${d[0]}</b><button data-act="inc" data-i="0" aria-label="主队加一">+</button></div>
         <span class="colon">:</span>
-        <div class="stepper"><button data-act="dec" data-i="1">−</button><b>${d[1]}</b><button data-act="inc" data-i="1">+</button></div>
-        <div class="actions"><button class="btn ghost" data-act="skip">跳过</button><button class="btn" data-act="lock">锁定</button></div></div>
-        ${hedgePickerHtml(m, d)}`;
+        <div class="stepper"><button data-act="dec" data-i="1" aria-label="客队减一">−</button><b>${d[1]}</b><button data-act="inc" data-i="1" aria-label="客队加一">+</button></div></div>
+        ${hedgePickerHtml(m, d)}
+        <div class="actions"><button class="btn ghost" data-act="skip">跳过</button><button class="btn" data-act="lock">锁定</button></div></div>`;
     }
   }
   if (m.result && m.result.void) bottom += `<div class="hint">${esc(m.result.note || "无法结算")}</div>`;
-  return `<div class="card" data-id="${esc(m.id)}">
-    <div class="meta"><span><span class="lg">${LEAGUE[m.league] || ""}</span>${fTime.format(kt(m))}</span><span class="tag">详情 ›</span></div>
-    ${teamsHtml(m, mid)}${barHtml(m.market)}${bottom}</div>`;
+  const state = res ? "完场" : started ? `<span class="state">进行中</span>` : "详情 ›";
+  return `<div class="card" data-id="${esc(m.id)}">${metaHtml(m, state)}${boardHtml(m)}${bottom}</div>`;
 }
 function grouped(list) {
   let out = "", last = "";
@@ -238,23 +246,21 @@ function grouped(list) {
 }
 function viewToday() {
   const now = Date.now();
-  const list = Object.values(S.matches).filter(m => !result(m) && !(m.result && m.result.void) && kt(m) > now - 3 * 3600e3)
+  const list = Object.values(S.matches).filter(m => inLeague(m) && !result(m) && !(m.result && m.result.void) && kt(m) > now - 3 * 3600e3)
     .sort((a, b) => kt(a) - kt(b));
   if (!list.length) return `<p class="empty">暂无即将开赛的比赛。<br>系统每天自动更新${S.updated ? `，最近一次：${fFull.format(Date.parse(S.updated))}` : ""}。</p>`;
   return grouped(list);
 }
 function viewRecords() {
   const now = Date.now();
-  const list = Object.values(S.matches).filter(m => result(m) || (m.result && m.result.void) || kt(m) < now - 3 * 3600e3)
+  const list = Object.values(S.matches).filter(m => inLeague(m) && (result(m) || (m.result && m.result.void) || kt(m) < now - 3 * 3600e3))
     .sort((a, b) => kt(b) - kt(a));
   if (!list.length) return `<p class="empty">还没有已结束的比赛。</p>`;
   let out = "", last = "";
   for (const m of list) {
     const d = fDay.format(kt(m));
     if (d !== last) { out += `<div class="day">${d}</div>`; last = d; }
-    const res = result(m);
-    out += `<div class="card" data-id="${esc(m.id)}"><div class="meta"><span><span class="lg">${LEAGUE[m.league] || ""}</span>${fTime.format(kt(m))}</span><span class="tag">详情 ›</span></div>
-      ${teamsHtml(m, `<div class="vs ${res ? "res" : ""}">${res ? `${res[0]} : ${res[1]}` : "待结算"}</div>`)}${chipsHtml(m)}
+    out += `<div class="card" data-id="${esc(m.id)}">${metaHtml(m, result(m) ? "完场" : "待结算")}${boardHtml(m)}${chipsHtml(m)}
       ${m.result && m.result.void ? `<div class="hint">${esc(m.result.note)}</div>` : ""}</div>`;
   }
   return out;
@@ -279,7 +285,7 @@ function verdict(a) {
   return ["还不能确定", ""];
 }
 function settledList() {
-  return Object.values(S.matches).filter(m => result(m) && m.market);
+  return Object.values(S.matches).filter(m => inLeague(m) && result(m) && m.market);
 }
 // 第二热门比分（不含 skip 指定的比分）
 function topScoreExcept(mk, skip) {
@@ -405,10 +411,8 @@ function closeSheet() { $("#sheet").hidden = true; }
 function detail(id) {
   const m = S.matches[id]; if (!m) return;
   const L = lines(m), rv = revealed(m), res = result(m), mk = m.market;
-  let h = `<div class="meta"><span><span class="lg">${LEAGUE[m.league] || ""}</span>${fFull.format(kt(m))}</span></div>
-    <h2>${esc(teamZh(m.home))} ${res ? `${res[0]} : ${res[1]}` : "vs"} ${esc(teamZh(m.away))}</h2>`;
-  if (!mk) return openSheet(h + `<p class="hint">赔率未到。</p>`);
-  h += barHtml(mk);
+  let h = `<div class="meta"><span><span class="kick">${fFull.format(kt(m))}</span><span class="lg">${LEAGUE[m.league] || ""}</span></span></div>${boardHtml(m)}`;
+  if (!mk) return openSheet(h);
   if (!rv) h += `<p class="hint">选好比分并锁定（或跳过）后，才显示比分概率和盘口线，避免影响你的判断。</p>`;
   else {
     h += chipsHtml(m);
@@ -466,6 +470,8 @@ async function login() {
 
 // ---------- 事件 ----------
 document.addEventListener("click", async e => {
+  const lgb = e.target.closest("[data-league]");
+  if (lgb) { S.league = lgb.dataset.league; lsSet("duvaro_league", S.league); render(); return; }
   const tab = e.target.closest(".tabs button");
   if (tab) { S.tab = tab.dataset.tab; render(); window.scrollTo(0, 0); return; }
   const act = e.target.closest("[data-act]")?.dataset.act;
@@ -491,10 +497,9 @@ document.addEventListener("click", async e => {
   if (act === "lock" || act === "skip") {
     if (Date.now() >= kt(m)) return toast("已经开赛，不能再选");
     const d = S.draft[id] || [0, 0];
-    let side = S.hedgeDraft[id] || defaultSide(d), hOdds = side !== "none" ? whOdds(m, side) : null;
-    if (side !== "none" && !hOdds) side = "none";
+    const side = pickSide(m, d), hOdds = side !== "none" ? whOdds(m, side) : null;
     const hTxt = side === "none" ? "不对冲" : `对冲 ${SIDE[side]} €${(STAKE / (hOdds - 1)).toFixed(2)}（${hOdds.toFixed(2)}）`;
-    const ok = act === "lock" ? confirm(`锁定 ${teamZh(m.home)} ${d[0]} : ${d[1]} ${teamZh(m.away)}？\n${hTxt}\n锁定后不能修改。`) : confirm("跳过这场？跳过后不能再选。");
+    const ok = act === "lock" ? confirm(`锁定 ${m.home} ${d[0]} : ${d[1]} ${m.away}？\n${hTxt}\n锁定后不能修改。`) : confirm("跳过这场？跳过后不能再选。");
     if (!ok) return;
     const btns = cardEl.querySelectorAll(".btn"); btns.forEach(b => (b.disabled = true));
     try {

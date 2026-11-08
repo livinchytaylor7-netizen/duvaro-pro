@@ -12,13 +12,13 @@ ms, picks = {}, {}
 for i, e in enumerate(ev):
     mk, books = odds.build_market(e)
     k = (now - timedelta(days=1, hours=i)) if i < 4 else (now + timedelta(hours=3 + i))
-    m = {"id": e["id"], "league": "seriea", "home": e["home_team"], "away": e["away_team"],
+    m = {"id": e["id"], "league": ["seriea", "laliga", "ligue1", "champ"][i % 4], "home": e["home_team"], "away": e["away_team"],
          "kickoff": k.strftime("%Y-%m-%dT%H:%M:%SZ"), "market": mk, "books": books, "odds_at": now.strftime("%Y-%m-%dT%H:%M:%SZ")}
     if i < 4:
         m["result"] = {"h": [2, 1, 0, 3][i], "a": [1, 1, 2, 1][i]}
         lk = (k - timedelta(hours=2)).strftime("%Y-%m-%dT%H:%M:%SZ")
-        sides = ["under", "over", "over", "none"]
-        picks[e["id"]] = {"h": 2, "a": 1, "hedge": sides[i], "hedge_odds": mk["wh25"].get(sides[i]) if sides[i] != "none" else None, "locked_at": lk}
+        sides = ["under", "over", "over", "under"]
+        picks[e["id"]] = {"h": 2, "a": 1, "hedge": sides[i], "hedge_odds": mk["wh25"].get(sides[i]), "locked_at": lk}
     ms[e["id"]] = m
 (out / "data/matches.json").write_text(json.dumps({"matches": ms, "updated": now.isoformat()}))
 (out / "data/picks.json").write_text(json.dumps(picks))
