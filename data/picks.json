@@ -492,5 +492,13 @@
   "hedge_odds": 2.9,
   "hedge_book": "William Hill",
   "locked_at": "2026-11-21T13:02:35.790Z"
+ },
+ "88b33c34df3a5d9450602451e50dfcc9": {
+  "h": 3,
+  "a": 1,
+  "hedge": "under",
+  "hedge_odds": 2.3,
+  "hedge_book": "William Hill",
+  "locked_at": "2026-11-21T13:04:25.793Z"
  }
 }
